@@ -16,9 +16,7 @@ que deje en la web.
       Y poner la URL del portfolio.
 - [ ] **Añadir al CV el proyecto de moda** (16 cadenas, octubre 2026). Ahora mismo la web
       tendría cuatro proyectos y el CV tres.
-- [ ] **Moneda del proyecto de Barcelona:** el informe usa "$" porque Inside Airbnb pone ese
-      símbolo en la columna `price`, pero en Barcelona los precios suelen venir en euros.
-      Comprobarlo antes de publicar cifras; un reclutador de datos lo notaría.
+- [x] **Moneda del proyecto de Barcelona:** confirmado por Javi, son dólares. La web usa "$".
 - [x] **Teléfono en la web:** no (por defecto). Tampoco va en el CV descargable.
 
 ## Repositorios de los proyectos (los va a abrir el reclutador)
@@ -45,21 +43,17 @@ que deje en la web.
 - [ ] ¿Mencionar el objetivo del Máster en Big Data y Business Analytics (ESIC)? Puede reforzar
       el mensaje de "voy en serio con los datos".
 - [ ] Ámbito de las prácticas: Granada / Málaga / remoto / cualquier sitio.
-- [ ] Fechas de la formación (año de inicio del grado, años del ciclo superior).
+- [ ] Fechas de la formación (año de inicio del grado, años del ciclo superior). Aplazado por
+      decisión de Javi: de momento la web muestra solo la duración, sin marcador.
 - [x] Reescribir la frase del perfil — aprobada y publicada en "Sobre mí".
 - [ ] ¿Versión en inglés? Recomendable a medio plazo (el CV dice inglés profesional).
-- [ ] Uso de IA: los proyectos se apoyan en Claude para algunas partes (dashboard, informes).
-      Decidir cómo contarlo con naturalidad en "Cómo trabajo" (p. ej. "uso asistentes de IA
-      para acelerar el código; el planteamiento, la métrica y las conclusiones son míos").
-      Mejor contarlo tú que que lo descubra el reclutador.
+- [x] Uso de IA: decidido no mencionarlo en la web.
 
 ## Marcadores [PENDIENTE] visibles en la web
 
 | Página | Marcador | Se resuelve con |
 |---|---|---|
-| Portada · Trayectoria | `[PENDIENTE: años]` en UGR e IES Ángel Ganivet | Fechas de inicio/fin de cada formación |
 | hueco-comercial · ilusion-descuento · alquiler-turistico-barcelona | `[PENDIENTE: enlace público de Looker Studio]` | Enlace de "Insertar" de Looker Studio (el `<iframe>` ya está preparado en un comentario del HTML) |
-| alquiler-turistico-barcelona | `[PENDIENTE: confirmar que son euros]` | Confirmar la moneda; si son euros, añadir € a las cifras |
 | alquiler-turistico-barcelona | `[PENDIENTE: repositorio público con el SQL]` | Crear el repo y enlazarlo |
 | posicionamiento-moda | `[PENDIENTE: repositorio limpio y con README]` | Limpiar/renombrar PROYECTOROPA y enlazarlo |
 
@@ -68,7 +62,7 @@ Notas de la primera versión:
 - `la-ilusion-del-descuento` sí se enlaza (ya aparece en el CV), aunque sigue sin README.
 - En el embudo de moda, el paso 890 → 873 se ha etiquetado con el criterio "marcas con 5 modelos
   o más por prenda", que es el que figura en el `.md` para las métricas. Comprobar que es el motivo.
-- La línea sobre el uso de IA en "Cómo trabajo" **no** se ha publicado: falta el visto bueno de Javi.
+- Uso de IA: decidido **no** mencionarlo en la web.
 - Foto del hero: `site/assets/img/javier-benitez-640.webp` y `-1000.webp`, en B/N, a partir de la
   foto de estudio nueva. `foto-perfil.webp` se conserva pero ya no se usa.
 
