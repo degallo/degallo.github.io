@@ -3,23 +3,424 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Javier Benítez Escobedo · Análisis de datos</title>
-  <meta name="description" content="Portfolio de análisis de datos de Javier Benítez Escobedo. En construcción.">
-  <meta name="robots" content="noindex">
-  <style>
-    :root { --ink:#191918; --bg:#F6F1E6; --accent:#A4472B; }
-    body { margin:0; min-height:100vh; display:grid; place-items:center; background:var(--bg); color:var(--ink);
-           font:400 1rem/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; padding:1rem; }
-    h1 { font-size:clamp(2.5rem, 8vw, 6rem); letter-spacing:-0.04em; line-height:1; margin:0 0 1rem; font-weight:500; }
-    p { margin:.25rem 0; }
-    a { color:var(--accent); }
-  </style>
+  <title>Javier Benítez Escobedo · Análisis de datos · Prácticas feb–jun 2027</title>
+  <meta name="description" content="Estudiante de último curso de Marketing e Investigación de Mercados (UGR). Busco prácticas en análisis de datos para febrero–junio de 2027. Cuatro proyectos propios con datos públicos reales.">
+  <link rel="canonical" href="https://degallo.github.io/">
+  <meta name="theme-color" content="#F6F1E6">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+  <meta property="og:type" content="profile">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="Javier Benítez Escobedo">
+  <meta property="og:title" content="Javier Benítez Escobedo · Datos con criterio de negocio">
+  <meta property="og:description" content="Busco prácticas en análisis de datos (feb–jun 2027). Cuatro proyectos propios con datos públicos reales: INE, MITECO, Inside Airbnb y catálogos de moda.">
+  <meta property="og:url" content="https://degallo.github.io/">
+  <meta property="og:image" content="https://degallo.github.io/assets/img/og-portfolio.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap">
+  <link rel="preload" as="image" href="assets/img/javier-benitez-640.webp" imagesrcset="assets/img/javier-benitez-640.webp 640w, assets/img/javier-benitez-1000.webp 1000w" imagesizes="(max-width: 860px) 300px, 38vw">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>document.documentElement.classList.add('js')</script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Javier Benítez Escobedo",
+    "url": "https://degallo.github.io/",
+    "image": "https://degallo.github.io/assets/img/javier-benitez-1000.webp",
+    "email": "mailto:javibenitez039@gmail.com",
+    "description": "Estudiante de último curso del Grado en Marketing e Investigación de Mercados. Busca prácticas curriculares en análisis de datos (febrero–junio 2027).",
+    "alumniOf": [
+      { "@type": "CollegeOrUniversity", "name": "Universidad de Granada" },
+      { "@type": "EducationalOrganization", "name": "IES Ángel Ganivet" }
+    ],
+    "knowsAbout": ["Análisis de datos", "SQL", "SQLite", "Looker Studio", "Investigación de mercados", "Datos abiertos"],
+    "knowsLanguage": ["es", "en"],
+    "sameAs": [
+      "https://www.linkedin.com/in/javierbenitezescobedo",
+      "https://github.com/degallo"
+    ]
+  }
+  </script>
 </head>
 <body>
-  <main>
-    <h1>Javier Benítez Escobedo</h1>
-    <p>Análisis de datos · Investigación de mercados</p>
-    <p>Portfolio en construcción. Mientras tanto: <a href="https://github.com/degallo">github.com/degallo</a></p>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="#inicio">Javier Benítez <span>Escobedo</span></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav">Menú</button>
+      <nav class="nav" id="nav" aria-label="Principal" data-spy>
+        <ul>
+          <li><a href="#sobre-mi">Sobre mí</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#trayectoria">Trayectoria</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+        <a class="link-arrow" href="assets/docs/CV_Javier_Benitez_Escobedo.pdf" download>Descargar CV <span class="arrow" aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+
+    <!-- ===== Hero ===== -->
+    <section class="hero" id="inicio" aria-labelledby="titulo">
+      <div class="container">
+        <div class="hero__text">
+          <p class="eyebrow">Análisis de datos · Investigación de mercados</p>
+          <h1 class="hero__title" id="titulo">Datos con criterio de negocio.</h1>
+          <p class="hero__lead">— Javier Benítez. Último curso de Marketing e Investigación de Mercados (UGR). Busco prácticas en análisis de datos.</p>
+          <div class="hero__actions">
+            <span class="pill pill--status">Disponible para prácticas · feb–jun 2027</span>
+            <a class="link-arrow" href="#proyectos">Ver proyectos <span class="arrow down" aria-hidden="true">↓</span></a>
+          </div>
+          <a class="hero__down" href="#sobre-mi">Bajar <span aria-hidden="true">↓</span></a>
+        </div>
+        <figure class="hero__photo">
+          <img src="assets/img/javier-benitez-640.webp"
+               srcset="assets/img/javier-benitez-640.webp 640w, assets/img/javier-benitez-1000.webp 1000w"
+               sizes="(max-width: 860px) 300px, 38vw"
+               width="640" height="800" fetchpriority="high"
+               alt="Retrato en blanco y negro de Javier Benítez, con americana oscura y camisa blanca.">
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===== Sobre mí ===== -->
+    <section class="section" id="sobre-mi" aria-labelledby="sobre-mi-titulo">
+      <div class="container about">
+        <div class="about__text reveal">
+          <p class="eyebrow">Sobre mí</p>
+          <h2 class="section__title" id="sobre-mi-titulo">Pregunto primero. Después, SQL.</h2>
+          <p class="about__first">Estudiante de último curso del Grado en Marketing e Investigación de Mercados (UGR), especializándome en análisis de datos aplicado a negocio.</p>
+          <p>Construyo por iniciativa propia proyectos de análisis con fuentes públicas españolas (INE, MITECO): limpieza y modelado en SQL, dashboards en Looker Studio, y conclusiones accionables para una decisión real.</p>
+          <p>En las prácticas quiero trabajar con datos internos de una empresa, pasar de SQL a Python/pandas en un caso real y aprender cómo se usa un cuadro de mando en un equipo.</p>
+          <p>Busco <strong>prácticas curriculares en análisis de datos</strong> para el segundo semestre (febrero–junio 2027), vía Ícaro.</p>
+        </div>
+
+        <div>
+          <div class="stats">
+            <a class="stat reveal" href="proyectos/hueco-comercial.html">
+              <span class="stat__num">277</span>
+              <span class="stat__label">municipios de Granada y Málaga medidos uno a uno.</span>
+              <span class="stat__src">El hueco comercial →</span>
+            </a>
+            <a class="stat reveal" href="proyectos/ilusion-descuento.html" style="--d:.08s">
+              <span class="stat__num">11.237</span>
+              <span class="stat__label">gasolineras analizadas del registro oficial del MITECO.</span>
+              <span class="stat__src">La ilusión del descuento →</span>
+            </a>
+            <a class="stat reveal" href="proyectos/alquiler-turistico-barcelona.html">
+              <span class="stat__num">15.293</span>
+              <span class="stat__label">anuncios de Inside Airbnb depurados hasta 6.520 pisos comparables.</span>
+              <span class="stat__src">Alquiler turístico en Barcelona →</span>
+            </a>
+            <a class="stat reveal" href="proyectos/posicionamiento-moda.html" style="--d:.08s">
+              <span class="stat__num">1.697</span>
+              <span class="stat__label">modelos de ropa de 16 cadenas comparados por precio.</span>
+              <span class="stat__src">Posicionamiento en moda →</span>
+            </a>
+          </div>
+
+          <div class="tools reveal">
+            <h3>Herramientas</h3>
+            <ul class="tools__list">
+              <li><span>SQL</span><span>SQLite, DB Browser</span></li>
+              <li><span>Looker Studio</span><span>cuadros de mando</span></li>
+              <li><span>Datos abiertos</span><span>limpieza y modelado de INE y MITECO</span></li>
+              <li><span>Excel / Google Sheets</span><span>—</span></li>
+              <li><span>Python y pandas</span><span>en aprendizaje</span></li>
+              <li><span>Git / GitHub</span><span>—</span></li>
+            </ul>
+            <div class="tools__langs">
+              <span class="pill">Español · nativo</span>
+              <span class="pill">Inglés · profesional</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Proyectos ===== -->
+    <section class="section section--tight" id="proyectos" aria-labelledby="proyectos-titulo">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="eyebrow">Proyectos</p>
+          <h2 class="section__title" id="proyectos-titulo">Cuatro preguntas de negocio, cuatro fuentes públicas.</h2>
+          <p class="section__intro">Cada proyecto es un caso de estudio completo: la pregunta, la métrica, cada filtro con su motivo, el hallazgo y lo que el análisis no resuelve.</p>
+        </div>
+
+        <div class="projects">
+          <!-- 1 -->
+          <article class="project reveal">
+            <a class="project__media" href="proyectos/hueco-comercial.html" tabindex="-1" aria-hidden="true">
+              <img src="assets/img/proyectos/hueco-comercial/pagina-04.webp" width="1600" height="900" loading="lazy" decoding="async"
+                   alt="Mapa coroplético de los 277 municipios de Granada y Málaga: cuanto más oscuro, más renta disponible por comercio abierto.">
+            </a>
+            <div class="project__body">
+              <p class="project__meta">01 · Análisis territorial · agosto 2026</p>
+              <h3 class="project__title"><a href="proyectos/hueco-comercial.html">El hueco comercial</a></h3>
+              <dl class="project__rows">
+                <div><dt>Pregunta</dt><dd>¿Dónde hay dinero que el comercio local no está recogiendo?</dd></div>
+                <div><dt>Hallazgo</dt><dd>De 277 municipios, solo Rincón de la Victoria y Antequera combinan mercado grande, renta alta y comercio insuficiente, confirmado por tres medidas independientes.</dd></div>
+              </dl>
+              <div class="project__foot">
+                <ul class="tags" aria-label="Herramientas y fuentes">
+                  <li>SQL</li><li>Looker Studio</li><li>INE</li><li>IGN</li>
+                </ul>
+                <a class="link-arrow" href="proyectos/hueco-comercial.html">Ver caso <span class="arrow" aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 2 -->
+          <article class="project reveal" style="--d:.08s">
+            <a class="project__media" href="proyectos/ilusion-descuento.html" tabindex="-1" aria-hidden="true">
+              <img src="assets/img/proyectos/ilusion-descuento/pagina-06.webp" width="1600" height="900" loading="lazy" decoding="async"
+                   alt="Gráfico de puntos con cada plan de descuento frente al umbral low-cost de 1,614 € en gasolina 95: solo Esclatoil y Carrefour quedan por debajo.">
+            </a>
+            <div class="project__body">
+              <p class="project__meta">02 · Estaciones de servicio de España · agosto 2026</p>
+              <h3 class="project__title"><a href="proyectos/ilusion-descuento.html">La ilusión del descuento</a></h3>
+              <dl class="project__rows">
+                <div><dt>Pregunta</dt><dd>¿El descuento de tu tarjeta es real, o solo compensa un precio de partida más alto?</dd></div>
+                <div><dt>Hallazgo</dt><dd>De 47 planes oficiales evaluables, 3 bajan del precio que ya paga sin tarjeta quien reposta en una low-cost. Ninguno es de una petrolera.</dd></div>
+              </dl>
+              <div class="project__foot">
+                <ul class="tags" aria-label="Herramientas y fuentes">
+                  <li>SQL</li><li>Looker Studio</li><li>MITECO</li>
+                </ul>
+                <a class="link-arrow" href="proyectos/ilusion-descuento.html">Ver caso <span class="arrow" aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 3 -->
+          <article class="project reveal">
+            <a class="project__media" href="proyectos/alquiler-turistico-barcelona.html" tabindex="-1" aria-hidden="true">
+              <img src="assets/img/proyectos/alquiler-turistico-bcn/pagina-07.webp" width="1600" height="900" loading="lazy" decoding="async"
+                   alt="Mapa de Barcelona por barrios con el ingreso anual estimado por piso turístico con licencia HUTB y la tabla de los diez primeros, encabezada por Diagonal Mar.">
+            </a>
+            <div class="project__body">
+              <p class="project__meta">03 · Análisis de mercado · agosto 2026</p>
+              <h3 class="project__title"><a href="proyectos/alquiler-turistico-barcelona.html">Alquiler turístico legal en Barcelona</a></h3>
+              <dl class="project__rows">
+                <div><dt>Pregunta</dt><dd>¿Dónde concentrar las licencias HUTB que quedan antes de noviembre de 2028?</dd></div>
+                <div><dt>Hallazgo</dt><dd>El mapa del negocio cambia al cambiar la forma de medirlo: el total casi coincide (244,0 M frente a 241,5 M), pero el orden de los barrios no (correlación de rangos 0,31).</dd></div>
+              </dl>
+              <div class="project__foot">
+                <ul class="tags" aria-label="Herramientas y fuentes">
+                  <li>SQL</li><li>Looker Studio</li><li>Inside Airbnb</li>
+                </ul>
+                <a class="link-arrow" href="proyectos/alquiler-turistico-barcelona.html">Ver caso <span class="arrow" aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 4 -->
+          <article class="project reveal" style="--d:.08s">
+            <a class="project__media" href="proyectos/posicionamiento-moda.html" tabindex="-1" aria-hidden="true">
+              <img src="assets/img/proyectos/posicionamiento-moda/pagina-01.webp" width="1600" height="900" loading="lazy" decoding="async"
+                   alt="Escalera de precio mediano del vaquero básico por marca, de Primark (18,00 €) a Cortefiel (59,99 €), con las marcas de Inditex en azul y las de Tendam en naranja.">
+            </a>
+            <div class="project__body">
+              <p class="project__meta">04 · Pricing · moda · octubre 2026</p>
+              <h3 class="project__title"><a href="proyectos/posicionamiento-moda.html">Posicionamiento de precio en moda</a></h3>
+              <dl class="project__rows">
+                <div><dt>Pregunta</dt><dd>¿Dónde se posiciona en precio cada gran cadena de moda en España y con quién se solapa?</dd></div>
+                <div><dt>Hallazgo</dt><dd>Cada escalón de Inditex cuesta aproximadamente el doble; Lefties y Primark comparten el 97 % de su rango de precios en vaqueros.</dd></div>
+              </dl>
+              <div class="project__foot">
+                <ul class="tags" aria-label="Herramientas y fuentes">
+                  <li>SQL</li><li>Python</li><li>Catálogos online</li>
+                </ul>
+                <a class="link-arrow" href="proyectos/posicionamiento-moda.html">Ver caso <span class="arrow" aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Cómo trabajo ===== -->
+    <section class="section" id="como-trabajo" aria-labelledby="como-trabajo-titulo">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="eyebrow">Cómo trabajo</p>
+          <h2 class="section__title" id="como-trabajo-titulo">Lo que se repite en los cuatro proyectos.</h2>
+        </div>
+        <ol class="principles">
+          <li class="principle reveal">
+            <span class="principle__n">01</span>
+            <h3>La pregunta de negocio va primero.</h3>
+            <p>Antes de abrir los datos defino quién decide y qué decide. La métrica sale de ahí, no al revés.</p>
+            <blockquote>
+              <p>Para un responsable de flota: 15 furgonetas gastan 50.000–80.000 € al año en combustible; una desviación del 3 % son ~2.000 € anuales.</p>
+              <cite>La ilusión del descuento</cite>
+            </blockquote>
+          </li>
+          <li class="principle reveal" style="--d:.08s">
+            <span class="principle__n">02</span>
+            <h3>Cada filtro, con su motivo.</h3>
+            <p>Todos los descartes quedan a la vista en un embudo: cuántos salen y por qué. Así se puede discutir el criterio, no adivinarlo.</p>
+            <blockquote>
+              <p>De 277 a 113 municipios: 103 por secreto estadístico, 26 por muestra pequeña, 33 por efecto dormitorio y las 2 capitales.</p>
+              <cite>El hueco comercial</cite>
+            </blockquote>
+          </li>
+          <li class="principle reveal">
+            <span class="principle__n">03</span>
+            <h3>Un hallazgo llamativo se confirma por otra vía.</h3>
+            <p>Si un resultado sorprende, primero sospecho del dato. Lo doy por bueno cuando aguanta con una métrica o una fuente independiente.</p>
+            <blockquote>
+              <p>Una filial canaria de DISA parecía la única petrolera cuyo descuento compensaba. La causa era fiscal: IGIC del 7 % frente al IVA del 21 %.</p>
+              <cite>La ilusión del descuento</cite>
+            </blockquote>
+          </li>
+          <li class="principle reveal" style="--d:.08s">
+            <span class="principle__n">04</span>
+            <h3>Digo en voz alta lo que el análisis no resuelve.</h3>
+            <p>Cada proyecto cierra con sus limitaciones y con qué haría falta para decidir de verdad.</p>
+            <blockquote>
+              <p>Es ingreso bruto, no beneficio. Es una foto de junio de 2026, no una serie. Es inteligencia de mercado: no sustituye los datos internos de una cartera.</p>
+              <cite>Alquiler turístico legal en Barcelona</cite>
+            </blockquote>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== Trayectoria ===== -->
+    <section class="section section--tight" id="trayectoria" aria-labelledby="trayectoria-titulo">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="eyebrow">Trayectoria</p>
+          <h2 class="section__title" id="trayectoria-titulo">Formación y experiencia.</h2>
+        </div>
+
+        <ul class="journey">
+          <li class="journey__group">Formación</li>
+          <li class="journey__row reveal">
+            <div class="journey__place">
+              <h3>Universidad de Granada</h3>
+              <p>4 años · en curso (último curso) <span class="pendiente">[PENDIENTE: años]</span></p>
+            </div>
+            <div class="journey__desc">
+              <p class="role">Grado en Marketing e Investigación de Mercados</p>
+              <p>Último curso. Prácticas curriculares previstas para el segundo semestre (febrero–junio 2027), vía Ícaro.</p>
+            </div>
+            <ul class="tags" aria-label="Áreas">
+              <li>Investigación de mercados</li><li>Marketing</li>
+            </ul>
+          </li>
+          <li class="journey__row reveal">
+            <div class="journey__place">
+              <h3>IES Ángel Ganivet</h3>
+              <p>2 años <span class="pendiente">[PENDIENTE: años]</span></p>
+            </div>
+            <div class="journey__desc">
+              <p class="role">Técnico Superior en Marketing y Publicidad</p>
+            </div>
+            <ul class="tags" aria-label="Áreas">
+              <li>Marketing</li><li>Publicidad</li>
+            </ul>
+          </li>
+
+          <li class="journey__group">Proyectos y experiencia</li>
+          <li class="journey__row reveal">
+            <div class="journey__place">
+              <h3>Proyectos propios de análisis</h3>
+              <p>agosto–octubre 2026</p>
+            </div>
+            <div class="journey__desc">
+              <p class="role">Cuatro casos de estudio con datos públicos</p>
+              <p>Comercio local en Granada y Málaga, tarjetas de descuento en gasolineras, alquiler turístico en Barcelona y precios de moda. <a href="#proyectos">Ver proyectos</a>.</p>
+            </div>
+            <ul class="tags" aria-label="Herramientas">
+              <li>SQL</li><li>Looker Studio</li><li>Python</li><li>Git</li>
+            </ul>
+          </li>
+          <li class="journey__row reveal">
+            <div class="journey__place">
+              <h3>Cafetería Bar El Gallo</h3>
+              <p>Alhama de Granada · 6 años · actual</p>
+            </div>
+            <div class="journey__desc">
+              <p class="role">Gestión del negocio</p>
+              <p>Dirección integral del negocio familiar: gestión de equipo, control de costes y proveedores, y atención al cliente.</p>
+            </div>
+            <ul class="tags" aria-label="Áreas">
+              <li>Equipo</li><li>Costes</li><li>Proveedores</li><li>Cliente</li>
+            </ul>
+          </li>
+          <li class="journey__row reveal">
+            <div class="journey__place">
+              <h3>MODE Foundation</h3>
+              <p>Breslavia (Wrocław), Polonia · abril–junio 2023</p>
+            </div>
+            <div class="journey__desc">
+              <p class="role">Digital Marketing Manager</p>
+              <p>Gestión de campañas de marketing en redes sociales y seguimiento de KPIs en distintos mercados europeos.</p>
+            </div>
+            <ul class="tags" aria-label="Áreas">
+              <li>Redes sociales</li><li>KPIs</li><li>Internacional</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="section section--tight" id="contacto" aria-labelledby="contacto-titulo">
+      <div class="container">
+        <div class="cta reveal">
+          <p class="eyebrow">Contacto</p>
+          <h2 id="contacto-titulo">¿Buscas a alguien para prácticas en análisis de datos?</h2>
+          <p>Disponible de febrero a junio de 2027, en prácticas curriculares vía Ícaro (UGR).</p>
+          <div class="cta__actions">
+            <a class="link-arrow cta__mail" href="mailto:javibenitez039@gmail.com">javibenitez039@gmail.com <span class="arrow" aria-hidden="true">↗</span></a>
+            <a class="link-arrow cta__mail" href="assets/docs/CV_Javier_Benitez_Escobedo.pdf" download>Descargar CV <span class="arrow" aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__top">
+        <nav class="footer__nav" aria-label="Pie">
+          <ul>
+            <li><a href="#sobre-mi">Sobre mí</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#trayectoria">Trayectoria</a></li>
+            <li><a href="assets/docs/CV_Javier_Benitez_Escobedo.pdf" download>CV</a></li>
+          </ul>
+        </nav>
+        <div class="footer__contact">
+          <p>Escríbeme</p>
+          <a href="mailto:javibenitez039@gmail.com">javibenitez039@gmail.com</a>
+        </div>
+        <ul class="footer__social">
+          <li><a class="link-arrow" href="https://www.linkedin.com/in/javierbenitezescobedo" rel="me noopener" target="_blank">LinkedIn <span class="arrow" aria-hidden="true">↗</span></a></li>
+          <li><a class="link-arrow" href="https://github.com/degallo" rel="me noopener" target="_blank">GitHub <span class="arrow" aria-hidden="true">↗</span></a></li>
+        </ul>
+      </div>
+      <div class="footer__bottom">
+        <span>© <span data-year>2026</span> Javier Benítez Escobedo · Granada</span>
+        <span>Fuentes de los proyectos: INE, MITECO, Inside Airbnb y catálogos online.</span>
+      </div>
+    </div>
+    <p class="footer__name" aria-hidden="true">Javier Benítez</p>
+  </footer>
+
+  <script src="js/main.js" defer></script>
 </body>
 </html>
