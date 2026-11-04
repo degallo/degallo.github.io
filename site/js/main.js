@@ -71,6 +71,9 @@
   var targets = links
     .map(function (a) { return document.getElementById(a.getAttribute('href').split('#')[1]); })
     .filter(Boolean);
+  // El hero no está en el menú: al volver arriba se limpia el resaltado.
+  var top = document.getElementById('inicio');
+  if (top && targets.length) targets.push(top);
   if (targets.length) {
     var spy = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
