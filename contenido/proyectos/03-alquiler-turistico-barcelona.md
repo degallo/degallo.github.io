@@ -24,12 +24,10 @@
 
 Imagen de tarjeta recomendada: `pagina-07.webp` (el mapa).
 
-## Aviso sobre la moneda
+## Moneda
 
-El informe usa "$" porque Inside Airbnb formatea la columna `price` con el símbolo $, pero
-en Barcelona los precios están en la moneda local. [PENDIENTE: Javi debe confirmarlo; si son
-euros, en la web usar €.] Mientras tanto, en la web escribir las cifras sin símbolo de moneda
-ambiguo o con "€" solo si Javi lo confirma.
+Confirmado por Javi: los precios están en **dólares** ($), como los publica Inside Airbnb.
+En la web se escriben con "$" detrás (p. ej. 47.739 $).
 
 ## La pregunta de negocio
 
