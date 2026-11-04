@@ -19,8 +19,8 @@
 | `pagina-02.webp` | La pregunta y las cuatro cifras clave (277 · 113 · 103 · 34,5 mil M €) |
 | `pagina-04.webp` | Mapa coroplético: renta disponible por comercio en los 277 municipios |
 | `pagina-05.webp` | Embudo de filtrado de 277 a 113 municipios candidatos |
-| `pagina-10.webp` | Gráfico de burbujas: los tres grupos ocupan zonas que no se solapan |
-| `pagina-11.webp` | Coordenadas paralelas: la "huella" de cada grupo en las tres métricas |
+| `pagina-10.webp` | Urbanización de lujo: fichas de Benahavís, Casares y Ojén ("Alto ratio, mecanismo distinto") |
+| `pagina-11.webp` | Gráfico de burbujas: los tres grupos ocupan zonas que no se solapan |
 | `pagina-16.webp` | Conclusión: dos candidatos verificados, no intuidos |
 
 Imagen de tarjeta recomendada: `pagina-04.webp` (el mapa).
