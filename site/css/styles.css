@@ -28,7 +28,7 @@
   --fs-lead: clamp(1.05rem, 1.35vw, 1.2rem);
   --fs-body: 0.98rem;
   --fs-small: 0.84rem;
-  --fs-label: 0.68rem;
+  --fs-label: 0.86rem;
 
   --gutter: clamp(16px, 3.4vw, 40px);
   --maxw: 1320px;
@@ -106,13 +106,12 @@ code { font-size: .9em; }
 
 /* ---------- Componentes ---------- */
 
-/* Etiqueta (tipografía terciaria: Montserrat en mayúsculas espaciadas) */
+/* Etiqueta: Helvetica, caja normal */
 .label, .eyebrow {
-  font-family: var(--font-text);
+  font-family: var(--font-display);
   font-size: var(--fs-label);
-  font-weight: 600;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: -0.005em;
   color: var(--ink-2);
 }
 .eyebrow { display: inline-flex; align-items: center; gap: 0.6em; margin: 0 0 1.4rem; }
@@ -399,7 +398,7 @@ code { font-size: .9em; }
 .ficha h2 { font-size: 1.05rem; letter-spacing: -0.01em; margin-bottom: 8px; }
 .ficha dl { margin: 0; }
 .ficha dl div { padding: 12px 0; border-top: 1px solid var(--line); }
-.ficha dt { font-size: var(--fs-label); font-weight: 600; text-transform: uppercase; letter-spacing: 0.14em; color: var(--ink-2); margin-bottom: 4px; }
+.ficha dt { font-size: var(--fs-label); font-family: var(--font-display); font-weight: 500; letter-spacing: -0.005em; color: var(--ink-2); margin-bottom: 4px; }
 .ficha dd { margin: 0; line-height: 1.5; }
 .ficha__actions { display: grid; gap: 8px; margin-top: 18px; }
 .ficha__actions .btn { width: 100%; }
@@ -429,7 +428,7 @@ code { font-size: .9em; }
   margin: 0 0 16px;
 }
 .case-body .formula { color: var(--on-dark); }
-.formula small { display: block; font-family: var(--font-text); color: var(--on-dark-2); font-size: var(--fs-label); font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 10px; }
+.formula small { display: block; font-family: var(--font-display); color: var(--on-dark-2); font-size: var(--fs-label); font-weight: 500; margin-bottom: 10px; }
 .is-isnt { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-bottom: 16px; }
 .is-isnt > div { background: var(--surface); border-radius: var(--r-md); padding: 22px; }
 .is-isnt h3 { margin: 0 0 8px; font-size: 1.1rem; display: flex; align-items: center; gap: .5em; }
@@ -460,7 +459,7 @@ code { font-size: .9em; }
 
 .groups { display: grid; gap: 12px; margin: 1.6rem 0; }
 .group { background: var(--surface); border-radius: var(--r-md); padding: 24px; }
-.group__tag, .callout__tag { font-size: var(--fs-label); font-weight: 600; text-transform: uppercase; letter-spacing: 0.14em; color: var(--accent); margin-bottom: 8px; }
+.group__tag, .callout__tag { font-size: var(--fs-label); font-family: var(--font-display); font-weight: 500; letter-spacing: -0.005em; color: var(--accent); margin-bottom: 8px; }
 .group h3 { margin: 0 0 10px; }
 .group p, .group li { font-size: 0.93rem; }
 .group ul { margin: 0; }
@@ -470,7 +469,7 @@ code { font-size: .9em; }
 
 .table-wrap { overflow-x: auto; margin: 1.6rem 0; border-radius: var(--r-md); background: var(--surface); -webkit-overflow-scrolling: touch; }
 table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
-caption { text-align: left; padding: 16px 18px 4px; font-size: var(--fs-label); font-weight: 600; text-transform: uppercase; letter-spacing: 0.14em; color: var(--ink-2); }
+caption { text-align: left; padding: 16px 18px 4px; font-size: var(--fs-label); font-family: var(--font-display); font-weight: 500; letter-spacing: -0.005em; color: var(--ink-2); }
 th, td { padding: 11px 18px; text-align: left; border-bottom: 1px solid var(--line); vertical-align: top; }
 tr:last-child td { border-bottom: 0; }
 th { font-weight: 600; color: var(--ink-2); font-size: 0.8rem; }
@@ -481,7 +480,7 @@ tbody td:first-child { color: var(--ink); }
 .numbered li { counter-increment: n; position: relative; padding: 16px 0 16px 48px; border-top: 1px solid var(--line); margin: 0; }
 .numbered li::before { content: counter(n, decimal-leading-zero); position: absolute; left: 0; top: 17px; font-family: var(--font-display); font-size: var(--fs-small); color: var(--accent); }
 .numbered .stop { display: block; margin-top: 6px; font-size: 0.9rem; }
-.numbered .stop::before { content: "Criterio de parada · "; font-size: var(--fs-label); font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); }
+.numbered .stop::before { content: "Criterio de parada · "; font-size: var(--fs-label); font-family: var(--font-display); font-weight: 500; color: var(--accent); }
 
 .dashboard { border: 1px dashed var(--line); border-radius: var(--r-md); padding: 28px; background: var(--surface); }
 .dashboard__frame { aspect-ratio: 16 / 10; width: 100%; border: 0; border-radius: var(--r-sm); }
@@ -500,7 +499,7 @@ tbody td:first-child { color: var(--ink); }
   padding: clamp(20px, 3vw, 32px); text-decoration: none; transition: background .2s;
 }
 .case-nav a:hover { background: var(--surface-2); color: inherit; }
-.case-nav small { font-size: var(--fs-label); font-weight: 600; text-transform: uppercase; letter-spacing: 0.14em; color: var(--ink-2); }
+.case-nav small { font-size: var(--fs-label); font-family: var(--font-display); font-weight: 500; letter-spacing: -0.005em; color: var(--ink-2); }
 .case-nav span { font-family: var(--font-display); font-size: clamp(1.2rem, 2.2vw, 1.7rem); letter-spacing: -0.03em; line-height: 1.15; }
 .case-nav a:last-child { text-align: right; align-items: flex-end; }
 
