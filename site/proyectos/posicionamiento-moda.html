@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>¿Compiten de verdad en precio las grandes cadenas de moda en España? · Caso de estudio · Javier Benítez Escobedo</title>
+  <meta name="description" content="Posicionamiento de precio de 16 cadenas de moda en España a partir de su catálogo online: dónde está cada una y con quién se solapa. 1.697 modelos analizados.">
+  <link rel="canonical" href="https://degallo.github.io/proyectos/posicionamiento-moda.html">
+  <meta name="theme-color" content="#F6F1E6">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="Javier Benítez Escobedo">
+  <meta property="og:title" content="¿Compiten de verdad en precio las grandes cadenas de moda en España? · Caso de estudio">
+  <meta property="og:description" content="Posicionamiento de precio de 16 cadenas de moda en España a partir de su catálogo online: dónde está cada una y con quién se solapa. 1.697 modelos analizados.">
+  <meta property="og:url" content="https://degallo.github.io/proyectos/posicionamiento-moda.html">
+  <meta property="og:image" content="https://degallo.github.io/assets/img/proyectos/posicionamiento-moda/pagina-01.webp">
+  <meta property="og:image:width" content="1600">
+  <meta property="og:image:height" content="900">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="../css/styles.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="../index.html">Javier Benítez <span>Escobedo</span></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav">Menú</button>
+      <nav class="nav" id="nav" aria-label="Principal">
+        <ul>
+          <li><a href="../index.html#sobre-mi">Sobre mí</a></li>
+          <li><a href="../index.html#proyectos" aria-current="true">Proyectos</a></li>
+          <li><a href="../index.html#trayectoria">Trayectoria</a></li>
+          <li><a href="../index.html#contacto">Contacto</a></li>
+        </ul>
+        <a class="link-arrow" href="../assets/docs/CV_Javier_Benitez_Escobedo.pdf" download>Descargar CV <span class="arrow" aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="container case-hero" aria-labelledby="titulo">
+      <a class="back" href="../index.html#proyectos"><span aria-hidden="true">←</span> Todos los proyectos</a>
+      <p><span class="pill">Pricing · Moda · Catálogos online</span></p>
+      <h1 id="titulo">¿Compiten de verdad en precio las grandes cadenas de moda en España?</h1>
+      <p class="case-hero__sub">Posicionamiento de precio de 16 cadenas a partir de su catálogo online.</p>
+      <figure class="case-cover">
+        <img src="../assets/img/proyectos/posicionamiento-moda/pagina-01.webp" width="1600" height="900" fetchpriority="high"
+             alt="Portada del informe: escalera de precio mediano del vaquero básico por marca, de Primark (18,00 €) a Cortefiel (59,99 €), con las marcas de Inditex en azul y las de Tendam en naranja.">
+      </figure>
+    </section>
+
+    <div class="container case-layout">
+      <aside class="ficha" aria-labelledby="ficha-titulo">
+        <h2 id="ficha-titulo">Ficha del proyecto</h2>
+        <dl>
+          <div><dt>Fecha</dt><dd>Octubre 2026 · datos recogidos el 10/10/2026</dd></div>
+          <div><dt>Fuentes</dt><dd>Catálogo online de cada marca en España (sección mujer), 10/10/2026. Precio de catálogo y precio rebajado.</dd></div>
+          <div><dt>Herramientas</dt><dd>SQL (SQLite: 7 scripts, de creación de tabla a solapamiento) · Python (unificación de los catálogos en bruto) · cuartiles con NTILE(4)</dd></div>
+          <div><dt>Volumen</dt><dd>1.697 modelos de 16 cadenas → 890 prendas básicas (873 en las métricas)</dd></div>
+          <div><dt>Código</dt><dd><span class="pendiente">[PENDIENTE: repositorio limpio y con README]</span></dd></div>
+        </dl>
+        <div class="ficha__actions">
+          <a class="btn" href="../assets/docs/posicionamiento-precio-moda.pdf" download>Descargar informe PDF · 18 págs.</a>
+        </div>
+        <nav class="ficha__toc" aria-label="En esta página" data-spy>
+          <ol>
+            <li><a href="#pregunta">La pregunta</a></li>
+            <li><a href="#que-se-compara">Qué se compara</a></li>
+            <li><a href="#embudo">El embudo</a></li>
+            <li><a href="#hallazgos">Hallazgos</a></li>
+            <li><a href="#tramos">Cómo posicionar una marca</a></li>
+            <li><a href="#limitaciones">Limitaciones</a></li>
+            <li><a href="#conclusion">Conclusión</a></li>
+          </ol>
+        </nav>
+      </aside>
+
+      <article class="case-body">
+        <section id="cifras" aria-label="Cifras clave">
+          <div class="kpis">
+            <div class="kpi reveal"><p class="kpi__num">×2</p><p class="kpi__label">cada escalón de Inditex cuesta aproximadamente el doble (×1,7 a ×2,0). Tendam repite el patrón un peldaño más arriba.</p></div>
+            <div class="kpi reveal" style="--d:.06s"><p class="kpi__num">97 %</p><p class="kpi__label">de solapamiento entre Lefties y Primark en vaqueros: el choque de la gama baja.</p></div>
+            <div class="kpi reveal"><p class="kpi__num">78 %</p><p class="kpi__label">entre Mango y Zara en vaqueros: la gama media es un choque a tres con H&amp;M (87 % con Zara).</p></div>
+            <div class="kpi reveal" style="--d:.06s"><p class="kpi__num">16</p><p class="kpi__label">cadenas comparadas con 1.697 modelos de su catálogo online.</p></div>
+          </div>
+        </section>
+
+        <section id="pregunta" aria-labelledby="pregunta-t">
+          <p class="eyebrow">La pregunta</p>
+          <h2 id="pregunta-t">¿Dónde se posiciona en precio cada gran cadena y con quién se solapa?</h2>
+          <p class="lead">¿Escalona Inditex sus marcas sin pisarse, y dónde chocan con sus rivales?</p>
+          <p><strong>Para quién:</strong> un equipo de marketing o una agencia que tiene que fijar el precio de entrada de una marca y decidir contra quién compararse.</p>
+          <figure class="figure reveal">
+            <a href="../assets/img/proyectos/posicionamiento-moda/pagina-02.webp"><img src="../assets/img/proyectos/posicionamiento-moda/pagina-02.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Página de resumen con tres cifras: ×2 entre escalones de Inditex, 97 % de solapamiento entre Lefties y Primark en vaqueros y 78 % entre Mango y Zara."></a>
+            <figcaption><b>El resumen:</b> Inditex y Tendam escalonan sus marcas; los choques de precio están en la gama baja y en la media.</figcaption>
+          </figure>
+        </section>
+
+        <section id="que-se-compara" aria-labelledby="compara-t">
+          <p class="eyebrow">Qué se compara</p>
+          <h2 id="compara-t">Dos prendas básicas, mismo criterio para todas las marcas.</h2>
+          <ul>
+            <li>Camiseta de manga larga y vaquero largo, sección mujer. Cada modelo cuenta una vez (las variantes de color no son filas nuevas).</li>
+            <li><strong>Prenda básica:</strong> camiseta lisa o de canalé, sin estampado; vaquero de cualquier corte, sin rotos, tachas ni estampados.</li>
+            <li>Métricas sobre precio de catálogo; marcas con 5 modelos o más por prenda.</li>
+            <li><strong>Marcas:</strong> Inditex (Lefties, Zara, Massimo Dutti) · Tendam (Springfield, Cortefiel, Pedro del Hierro; Women'secret fuera) · Mango · H&amp;M · Primark · premium española (Desigual, Adolfo Domínguez, Bimba y Lola, Scalpers, El Ganso, Silbon).</li>
+          </ul>
+        </section>
+
+        <section id="embudo" aria-labelledby="embudo-t">
+          <p class="eyebrow">El embudo</p>
+          <h2 id="embudo-t">De 1.697 modelos a 873 prendas comparables.</h2>
+          <ol class="funnel">
+            <li><div class="funnel__bar"><span style="--w:100%"></span><b>1.697</b></div><div class="funnel__txt"><span>Modelos de las 16 cadenas</span><span>camiseta y vaquero, sección mujer</span></div></li>
+            <li><div class="funnel__bar"><span style="--w:52.4%; --d:.1s"></span><b>890</b></div><div class="funnel__txt"><span>Prendas básicas</span><span>sin estampados, rotos ni tachas</span></div></li>
+            <li><div class="funnel__bar"><span style="--w:51.4%; --d:.2s"></span><b>873</b></div><div class="funnel__txt"><span>En las métricas</span><span>marcas con 5 modelos o más por prenda</span></div></li>
+          </ol>
+        </section>
+
+        <section id="hallazgos" aria-labelledby="hallazgos-t">
+          <p class="eyebrow">Hallazgos</p>
+          <h2 id="hallazgos-t">Escaleras dentro de cada grupo, choques entre grupos.</h2>
+
+          <div class="table-wrap reveal" tabindex="0" role="region" aria-label="Mediana del vaquero básico">
+            <table>
+              <caption>Mediana del vaquero básico</caption>
+              <thead><tr><th scope="col">Marca</th><th scope="col" class="num">Mediana</th></tr></thead>
+              <tbody>
+                <tr><td>Primark</td><td class="num">18,00 €</td></tr>
+                <tr><td>Lefties</td><td class="num">19,99 €</td></tr>
+                <tr><td>Mango</td><td class="num">29,99 €</td></tr>
+                <tr><td>H&amp;M</td><td class="num">34,99 €</td></tr>
+                <tr><td>Zara</td><td class="num">35,95 €</td></tr>
+                <tr><td>Springfield</td><td class="num">35,99 €</td></tr>
+                <tr><td>Massimo Dutti</td><td class="num">59,95 €</td></tr>
+                <tr><td>Cortefiel</td><td class="num">59,99 €</td></tr>
+                <tr><td>… hasta Adolfo Domínguez</td><td class="num">130,00 €</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <figure class="figure reveal">
+            <a href="../assets/img/proyectos/posicionamiento-moda/pagina-04.webp"><img src="../assets/img/proyectos/posicionamiento-moda/pagina-04.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Rango de precios por cadena en camiseta de manga larga y en vaquero, en escala logarítmica: el vaquero mediano va de 18,00 € en Primark a 130,00 € en Adolfo Domínguez."></a>
+            <figcaption><b>Cada cadena ocupa su tramo.</b> Rango de precios por marca en camiseta y vaquero.</figcaption>
+          </figure>
+
+          <div class="groups">
+            <div class="group reveal">
+              <p class="group__tag">Escalera de Inditex</p>
+              <h3>Lefties → Zara → Massimo Dutti, casi al doble en cada peldaño.</h3>
+              <p>Lefties → Zara ×2,0 en camiseta (15,95/7,99) y ×1,8 en vaquero (35,95/19,99); Zara → Massimo Dutti ×1,9 y ×1,7. Tendam: Springfield → Cortefiel ×1,7; Cortefiel → Pedro del Hierro ×2,0.</p>
+            </div>
+            <div class="group reveal">
+              <p class="group__tag">El espejismo de la media</p>
+              <h3>H&amp;M rodea a Zara en camisetas y choca de frente en vaqueros.</h3>
+              <p>H&amp;M parece más cara que Zara por la media (vaquero 36,38 € frente a 34,41 €) pero no por la mediana (34,99 € frente a 35,95 €): su cola cara sube la media.</p>
+            </div>
+            <div class="group reveal">
+              <p class="group__tag">Coinciden en catálogo, se separan en rebaja</p>
+              <h3>Cortefiel coincide con Massimo Dutti.</h3>
+              <p>A precio de catálogo, un 91 % de solapamiento en vaqueros; con la rebaja se separa (56 %).</p>
+            </div>
+          </div>
+
+          <figure class="figure reveal">
+            <a href="../assets/img/proyectos/posicionamiento-moda/pagina-06.webp"><img src="../assets/img/proyectos/posicionamiento-moda/pagina-06.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Barras de solapamiento de precios entre pares de marcas, en camiseta (tramos de 5 €) y vaquero (tramos de 10 €). En negro, los choques frontales; el mayor, Lefties–Primark en vaqueros con un 97 %."></a>
+            <figcaption><b>Cinco choques frontales de precio</b>, y en la gama baja sigue habiendo solo uno: Lefties–Primark.</figcaption>
+          </figure>
+
+          <ul>
+            <li><strong>Por encima de 60 €, dos niveles:</strong> Scalpers en torno a 60–80 €; Desigual, Pedro del Hierro y Adolfo Domínguez en 90–135 €. Ancla de control: 0 % de solapamiento entre este tramo y Primark o Lefties (el método separa bien).</li>
+            <li><strong>Psicología de precio:</strong> en 10 de 20 combinaciones marca-prenda, 3 precios o menos cubren todo el catálogo de básicas. El ,95 es de Zara y Massimo Dutti; el ,99, de H&amp;M, Lefties, Mango, Cortefiel y Springfield.</li>
+            <li><strong>El hueco:</strong> entre Zara y Massimo Dutti (camiseta 17,95–29,95 €, vaquero 39,95–49,95 €) está la zona menos ocupada.</li>
+          </ul>
+
+          <div class="callout reveal">
+            <p class="callout__tag">Robustez</p>
+            <h3>Un choque solo se da por bueno si aguanta al cambiar el ancho de tramo y con el precio rebajado.</h3>
+            <p>4 de los 11 solapamientos por encima del 50 % caían 20 puntos o más. Al añadir 11 marcas al análisis original, cinco conclusiones se mantienen y dos cambian («solo dos choques» → cinco; «Massimo Dutti aislado» → Cortefiel coincide con él).</p>
+          </div>
+        </section>
+
+        <section id="tramos" aria-labelledby="tramos-t">
+          <p class="eyebrow">Cómo usarlo</p>
+          <h2 id="tramos-t">Para posicionar una marca: primero el tramo, después contra quién compararse.</h2>
+          <ol class="numbered">
+            <li><strong>Gama baja:</strong> vaquero 18,00–19,99 €, camiseta 7,00–7,99 € → referencia Lefties y Primark.</li>
+            <li><strong>Gama media:</strong> vaquero 29,99–35,95 €, camiseta 14,99–15,95 € → compararse con Zara, H&amp;M y Mango a la vez.</li>
+            <li><strong>Gama media-alta:</strong> vaquero 59,95 €, camiseta 29,95 € → Massimo Dutti y Cortefiel (mirar su precio rebajado).</li>
+            <li><strong>Zona a investigar:</strong> camiseta 17,95–29,95 €, vaquero 39,95–49,95 € → validar demanda antes de decidir.</li>
+          </ol>
+          <figure class="figure reveal">
+            <a href="../assets/img/proyectos/posicionamiento-moda/pagina-13.webp"><img src="../assets/img/proyectos/posicionamiento-moda/pagina-13.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Cuatro tarjetas con los tramos para posicionar una marca: gama baja, gama media, gama media-alta y zona a investigar, cada una con sus precios de vaquero y camiseta y las marcas de referencia."></a>
+            <figcaption><b>Los cuatro tramos</b>, con las marcas contra las que compararse en cada uno.</figcaption>
+          </figure>
+        </section>
+
+        <section id="limitaciones" aria-labelledby="limitaciones-t">
+          <p class="eyebrow">Limitaciones</p>
+          <h2 id="limitaciones-t">Lo que este análisis no resuelve.</h2>
+          <ol class="numbered">
+            <li>Es posicionamiento, no estrategia.</li>
+            <li>Es la foto de un solo día: Springfield tenía el 90 % rebajado y Cortefiel el 41 %.</li>
+            <li>Las muestras de las marcas premium son pequeñas.</li>
+            <li>Las básicas se clasifican por palabras clave.</li>
+            <li>Shein queda fuera (protección anti-bot) y Women'secret también (sin vaqueros).</li>
+            <li>Los cuartiles son aproximados con NTILE(4).</li>
+          </ol>
+        </section>
+
+        <section id="conclusion" aria-labelledby="conclusion-t">
+          <div class="conclusion reveal">
+            <p class="eyebrow" id="conclusion-t">Conclusión</p>
+            <blockquote>Un mapa de precios para decidir dónde entrar y contra quién medirse.</blockquote>
+            <p>Un mapa del precio de catálogo de 16 cadenas, comprobado con dos métricas, dos anchos de tramo y el precio rebajado, que dice en qué tramo está cada una y con quién comparte precios.</p>
+            <p><strong>No mide ventas ni demanda:</strong> es el punto de partida para preguntarlas.</p>
+          </div>
+          <figure class="figure reveal">
+            <a href="../assets/img/proyectos/posicionamiento-moda/pagina-16.webp"><img src="../assets/img/proyectos/posicionamiento-moda/pagina-16.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Página de conclusión con lo que podría hacer una marca de ropa y lo que podría hacer una agencia con este mapa de precios."></a>
+            <figcaption><b>La conclusión del informe:</b> qué podría hacer una marca y qué podría hacer una agencia.</figcaption>
+          </figure>
+        </section>
+      </article>
+    </div>
+
+    <div class="container">
+      <nav class="case-nav" aria-label="Otros proyectos">
+        <a href="alquiler-turistico-barcelona.html"><small>← Anterior</small><span>Alquiler turístico legal en Barcelona</span></a>
+        <a href="hueco-comercial.html"><small>Siguiente →</small><span>El hueco comercial</span></a>
+      </nav>
+    </div>
+
+    <section class="section section--tight" style="padding-top: var(--section)" aria-labelledby="contacto-titulo">
+      <div class="container">
+        <div class="cta reveal">
+          <p class="eyebrow">Contacto</p>
+          <h2 id="contacto-titulo">¿Buscas a alguien para prácticas en análisis de datos?</h2>
+          <p>Disponible de febrero a junio de 2027, en prácticas curriculares vía Ícaro (UGR).</p>
+          <div class="cta__actions">
+            <a class="link-arrow cta__mail" href="mailto:javibenitez039@gmail.com">javibenitez039@gmail.com <span class="arrow" aria-hidden="true">↗</span></a>
+            <a class="link-arrow cta__mail" href="../assets/docs/CV_Javier_Benitez_Escobedo.pdf" download>Descargar CV <span class="arrow" aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__top">
+        <nav class="footer__nav" aria-label="Pie">
+          <ul>
+            <li><a href="../index.html#sobre-mi">Sobre mí</a></li>
+            <li><a href="../index.html#proyectos">Proyectos</a></li>
+            <li><a href="../index.html#trayectoria">Trayectoria</a></li>
+            <li><a href="../assets/docs/CV_Javier_Benitez_Escobedo.pdf" download>CV</a></li>
+          </ul>
+        </nav>
+        <div class="footer__contact">
+          <p>Escríbeme</p>
+          <a href="mailto:javibenitez039@gmail.com">javibenitez039@gmail.com</a>
+        </div>
+        <ul class="footer__social">
+          <li><a class="link-arrow" href="https://www.linkedin.com/in/javierbenitezescobedo" rel="me noopener" target="_blank">LinkedIn <span class="arrow" aria-hidden="true">↗</span></a></li>
+          <li><a class="link-arrow" href="https://github.com/degallo" rel="me noopener" target="_blank">GitHub <span class="arrow" aria-hidden="true">↗</span></a></li>
+        </ul>
+      </div>
+      <div class="footer__bottom">
+        <span>© <span data-year>2026</span> Javier Benítez Escobedo · Granada</span>
+        <span>Fuentes de los proyectos: INE, MITECO, Inside Airbnb y catálogos online.</span>
+      </div>
+    </div>
+    <p class="footer__name" aria-hidden="true">Javier Benítez</p>
+  </footer>
+
+  <script src="../js/main.js" defer></script>
+</body>
+</html>

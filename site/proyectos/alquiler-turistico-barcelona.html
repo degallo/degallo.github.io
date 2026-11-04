@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alquiler turístico legal en Barcelona · Caso de estudio · Javier Benítez Escobedo</title>
+  <meta name="description" content="Antes de que se extingan las licencias HUTB en 2028: en qué barrios de Barcelona renta de verdad un piso turístico legal, y en cuáles solo lo parecía. 15.293 anuncios de Inside Airbnb.">
+  <link rel="canonical" href="https://degallo.github.io/proyectos/alquiler-turistico-barcelona.html">
+  <meta name="theme-color" content="#F6F1E6">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="Javier Benítez Escobedo">
+  <meta property="og:title" content="Alquiler turístico legal en Barcelona · Caso de estudio">
+  <meta property="og:description" content="Antes de que se extingan las licencias HUTB en 2028: en qué barrios de Barcelona renta de verdad un piso turístico legal, y en cuáles solo lo parecía. 15.293 anuncios de Inside Airbnb.">
+  <meta property="og:url" content="https://degallo.github.io/proyectos/alquiler-turistico-barcelona.html">
+  <meta property="og:image" content="https://degallo.github.io/assets/img/proyectos/alquiler-turistico-bcn/pagina-01.webp">
+  <meta property="og:image:width" content="1600">
+  <meta property="og:image:height" content="900">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="../css/styles.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="../index.html">Javier Benítez <span>Escobedo</span></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav">Menú</button>
+      <nav class="nav" id="nav" aria-label="Principal">
+        <ul>
+          <li><a href="../index.html#sobre-mi">Sobre mí</a></li>
+          <li><a href="../index.html#proyectos" aria-current="true">Proyectos</a></li>
+          <li><a href="../index.html#trayectoria">Trayectoria</a></li>
+          <li><a href="../index.html#contacto">Contacto</a></li>
+        </ul>
+        <a class="link-arrow" href="../assets/docs/CV_Javier_Benitez_Escobedo.pdf" download>Descargar CV <span class="arrow" aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="container case-hero" aria-labelledby="titulo">
+      <a class="back" href="../index.html#proyectos"><span aria-hidden="true">←</span> Todos los proyectos</a>
+      <p><span class="pill">Análisis de mercado · Inside Airbnb</span></p>
+      <h1 id="titulo">Alquiler turístico legal en Barcelona</h1>
+      <p class="case-hero__sub">Quedan 29 meses de licencia HUTB (a fecha del snapshot, junio de 2026). ¿En qué barrios renta de verdad un piso turístico legal, y en cuáles solo lo parecía?</p>
+      <figure class="case-cover">
+        <img src="../assets/img/proyectos/alquiler-turistico-bcn/pagina-01.webp" width="1600" height="900" fetchpriority="high"
+             alt="Portada del informe Rentabilidad del alquiler turístico legal en Barcelona, con la pregunta de en qué barrios renta de verdad un piso turístico legal.">
+      </figure>
+    </section>
+
+    <div class="container case-layout">
+      <aside class="ficha" aria-labelledby="ficha-titulo">
+        <h2 id="ficha-titulo">Ficha del proyecto</h2>
+        <dl>
+          <div><dt>Fecha</dt><dd>Agosto 2026 · snapshot del 25/06/2026</dd></div>
+          <div><dt>Fuentes</dt><dd>Inside Airbnb, snapshot de Barcelona del 25/06/2026 (15.293 anuncios) · Cartografía de barrios y distritos: Ajuntament de Barcelona vía bcn-geodata</dd></div>
+          <div><dt>Herramientas</dt><dd>SQL (SQLite) · Looker Studio · mapas coropléticos</dd></div>
+          <div><dt>Volumen</dt><dd>15.293 anuncios → 6.520 pisos HUTB comparables · 48 barrios</dd></div>
+          <div><dt>Moneda</dt><dd>Cifras sin símbolo: Inside Airbnb marca la columna de precio con «$», pero los precios están en la moneda local. <span class="pendiente">[PENDIENTE: confirmar que son euros]</span></dd></div>
+          <div><dt>Código</dt><dd><span class="pendiente">[PENDIENTE: repositorio público con el SQL]</span></dd></div>
+        </dl>
+        <div class="ficha__actions">
+          <a class="btn" href="../assets/docs/alquiler-turistico-barcelona.pdf" download>Descargar informe PDF · 19 diapositivas</a>
+        </div>
+        <nav class="ficha__toc" aria-label="En esta página" data-spy>
+          <ol>
+            <li><a href="#pregunta">La pregunta</a></li>
+            <li><a href="#mercado">El mercado hoy</a></li>
+            <li><a href="#metrica">La métrica</a></li>
+            <li><a href="#embudo">El embudo</a></li>
+            <li><a href="#hallazgos">Hallazgos</a></li>
+            <li><a href="#limitaciones">Limitaciones</a></li>
+            <li><a href="#uso">Cómo usarlo</a></li>
+            <li><a href="#conclusion">Conclusión</a></li>
+          </ol>
+        </nav>
+      </aside>
+
+      <article class="case-body">
+        <section id="cifras" aria-label="Cifras clave">
+          <div class="kpis">
+            <div class="kpi reveal"><p class="kpi__num">15.293</p><p class="kpi__label">anuncios activos en Barcelona</p></div>
+            <div class="kpi reveal" style="--d:.06s"><p class="kpi__num">6.520</p><p class="kpi__label">pisos HUTB con dato usable</p></div>
+            <div class="kpi reveal"><p class="kpi__num">57 %</p><p class="kpi__label">del universo se descarta por precio, licencia o tipo de alojamiento</p></div>
+            <div class="kpi reveal" style="--d:.06s"><p class="kpi__num">242 M</p><p class="kpi__label">de ingreso anual estimado del mercado HUTB legal</p></div>
+          </div>
+        </section>
+
+        <section id="pregunta" aria-labelledby="pregunta-t">
+          <p class="eyebrow">La pregunta de negocio</p>
+          <h2 id="pregunta-t">¿Dónde concentrar las licencias que quedan antes de noviembre de 2028?</h2>
+          <p class="lead">El 24 de noviembre de 2028 se extinguen todas las licencias HUTB de Barcelona: el Plan Especial no las renueva y el Tribunal Constitucional avaló la medida.</p>
+          <p><strong>Para quién:</strong> una gestora de alquiler turístico que tiene que decidir hoy en qué pisos invierte reforma, captación y equipo, y de cuáles salir antes.</p>
+          <figure class="figure reveal">
+            <a href="../assets/img/proyectos/alquiler-turistico-bcn/pagina-02.webp"><img src="../assets/img/proyectos/alquiler-turistico-bcn/pagina-02.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Diapositiva con la pregunta de negocio y las cifras clave: 15.293 anuncios activos, 6.520 pisos HUTB con dato usable, 57 % del universo descartado y 242 millones de ingreso anual estimado."></a>
+            <figcaption><b>La pregunta de negocio y las cifras clave.</b> El informe marca las cifras con «$» porque así viene la columna de precio en Inside Airbnb.</figcaption>
+          </figure>
+        </section>
+
+        <section id="mercado" aria-labelledby="mercado-t">
+          <p class="eyebrow">El mercado hoy</p>
+          <h2 id="mercado-t">Menos de la mitad de los anuncios con precio tiene licencia HUTB.</h2>
+          <p>De 13.355 anuncios con precio, solo el <strong>48,7 %</strong> tiene licencia HUTB (7.195 anuncios, los que desaparecen en 2028). El <strong>25,4 %</strong> ya está en alquiler de temporada, una figura que 2028 no toca. El 19,9 % no declara información (no necesariamente irregular).</p>
+        </section>
+
+        <section id="metrica" aria-labelledby="metrica-t">
+          <p class="eyebrow">La métrica y su ajuste</p>
+          <h2 id="metrica-t">Ingreso anual estimado por piso.</h2>
+          <p class="formula"><small>Fórmula del panel</small>precio por noche × (365 − noches disponibles)</p>
+          <div class="is-isnt">
+            <div>
+              <h3>Qué señala</h3>
+              <p>El techo de ingreso bruto si cada noche bloqueada fuese una noche vendida.</p>
+            </div>
+            <div>
+              <h3>Qué no es</h3>
+              <p>No es beneficio (no descuenta gestión, limpieza, comisiones ni impuestos) ni ocupación real.</p>
+            </div>
+          </div>
+          <div class="example">
+            <p><strong>Caso real · un ático en Sarrià:</strong> 451 la noche, 31 noches disponibles, 0 reseñas en 12 meses, última reseña en abril de 2024 → <strong>150.634 al año</strong> según la fórmula. Ese piso, él solo, colocaba a Sarrià como el barrio más rentable.</p>
+          </div>
+
+          <div class="callout reveal">
+            <p class="callout__tag">El ajuste · desconfiar del calendario</p>
+            <h3>Se sustituye el calendario por la ocupación estimada a partir del ritmo de reseñas.</h3>
+            <p>395 pisos HUTB (6,0 %) tienen el calendario cerrado más de 200 noches y casi ninguna reseña; 129, ninguna en 12 meses. Aportan 29,5 M al año con la fórmula del panel (12,1 % del mercado) y 1,3 M con el modelo de reseñas.</p>
+            <p>Correlación entre las dos estimaciones de noches ocupadas: <strong>0,15</strong>. En total casi coinciden (244,0 M frente a 241,5 M, un 1 %), pero barrio a barrio no: correlación de rangos <strong>0,31</strong>.</p>
+          </div>
+        </section>
+
+        <section id="embudo" aria-labelledby="embudo-t">
+          <p class="eyebrow">El embudo</p>
+          <h2 id="embudo-t">De 15.293 anuncios a 6.520 pisos comparables.</h2>
+          <ol class="funnel">
+            <li><div class="funnel__bar"><span style="--w:100%"></span><b>15.293</b></div><div class="funnel__txt"><span>Anuncios activos en Barcelona</span><span>snapshot de junio de 2026</span></div></li>
+            <li><div class="funnel__bar"><span style="--w:87.3%; --d:.1s"></span><b>13.355</b></div><div class="funnel__txt"><span>Con precio por noche publicado</span><span>−1.938</span></div></li>
+            <li><div class="funnel__bar"><span style="--w:47%; --d:.2s"></span><b>7.195</b></div><div class="funnel__txt"><span>Con licencia HUTB</span><span>−6.160</span></div></li>
+            <li><div class="funnel__bar"><span style="--w:42.8%; --d:.3s"></span><b>6.548</b></div><div class="funnel__txt"><span>Vivienda entera</span><span>−647</span></div></li>
+            <li><div class="funnel__bar"><span style="--w:42.6%; --d:.4s"></span><b>6.520</b></div><div class="funnel__txt"><span>En barrios con 5 pisos HUTB o más</span><span>−28 (13 barrios)</span></div></li>
+          </ol>
+          <p class="funnel-note">Los 13 barrios descartados suman 28 anuncios.</p>
+          <figure class="figure reveal">
+            <a href="../assets/img/proyectos/alquiler-turistico-bcn/pagina-08.webp"><img src="../assets/img/proyectos/alquiler-turistico-bcn/pagina-08.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Embudo de barras: 15.293 anuncios activos, 13.355 con precio, 7.195 con licencia HUTB, 6.548 de vivienda entera y 6.520 en barrios con 5 pisos HUTB o más, con el motivo de cada descarte."></a>
+            <figcaption><b>El embudo en el informe</b>, con el motivo de cada descarte al lado.</figcaption>
+          </figure>
+        </section>
+
+        <section id="hallazgos" aria-labelledby="hallazgos-t">
+          <p class="eyebrow">Hallazgos</p>
+          <h2 id="hallazgos-t">Tres grupos, tres mecanismos.</h2>
+          <figure class="figure reveal">
+            <a href="../assets/img/proyectos/alquiler-turistico-bcn/pagina-07.webp"><img src="../assets/img/proyectos/alquiler-turistico-bcn/pagina-07.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Mapa de Barcelona por barrios con el ingreso anual estimado por piso HUTB, más oscuro cuanto más alto, junto a la tabla de los diez primeros barrios, encabezada por Diagonal Mar."></a>
+            <figcaption><b>El mapa.</b> Ingreso anual por piso HUTB, corregido con el modelo de reseñas, en los 48 barrios con 5 pisos o más.</figcaption>
+          </figure>
+
+          <div class="table-wrap reveal" tabindex="0" role="region" aria-label="Diez primeros barrios">
+            <table>
+              <caption>Top 10 · ingreso anual por piso (corregido)</caption>
+              <thead><tr><th scope="col">#</th><th scope="col">Barrio</th><th scope="col" class="num">Ingreso por piso</th><th scope="col" class="num">Pisos</th></tr></thead>
+              <tbody>
+                <tr><td>1</td><td>Diagonal Mar</td><td class="num">47.739</td><td class="num">73</td></tr>
+                <tr><td>2</td><td>Sant Martí de Provençals</td><td class="num">45.970</td><td class="num">11</td></tr>
+                <tr><td>3</td><td>la Dreta de l'Eixample</td><td class="num">45.505</td><td class="num">1.081</td></tr>
+                <tr><td>4</td><td>el Fort Pienc</td><td class="num">45.311</td><td class="num">238</td></tr>
+                <tr><td>5</td><td>l'Antiga Esquerra</td><td class="num">44.671</td><td class="num">378</td></tr>
+                <tr><td>6</td><td>la Sagrada Família</td><td class="num">43.350</td><td class="num">559</td></tr>
+                <tr><td>7</td><td>el Camp d'en Grassot</td><td class="num">42.777</td><td class="num">123</td></tr>
+                <tr><td>8</td><td>la Vila Olímpica</td><td class="num">41.672</td><td class="num">65</td></tr>
+                <tr><td>9</td><td>la Vila de Gràcia</td><td class="num">39.744</td><td class="num">461</td></tr>
+                <tr><td>10</td><td>el Parc i la Llacuna</td><td class="num">39.699</td><td class="num">85</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Mediana de los 48 barrios: 31.967. Entre el primero y el último, 23 veces de diferencia.</p>
+
+          <div class="groups">
+            <div class="group reveal">
+              <p class="group__tag">Motor del Eixample · confirmado por las dos métricas</p>
+              <h3>5 barrios contiguos, 2.379 pisos HUTB y una media de 44.700 al año por piso.</h3>
+              <p>Dreta de l'Eixample, Fort Pienc, Antiga Esquerra, Sagrada Família y Camp d'en Grassot. Ninguno baja de 42.700.</p>
+            </div>
+            <div class="group reveal">
+              <p class="group__tag">Nichos al alza</p>
+              <h3>Barrios que el panel infravaloraba: suben entre 8 y 26 puestos al corregir.</h3>
+              <p>Diagonal Mar, Sant Martí de Provençals, Hostafrancs, el Camp de l'Arpa y la Salut. Diagonal Mar, con 73 pisos, es el más sólido y el primero de la ciudad.</p>
+            </div>
+            <div class="group reveal">
+              <p class="group__tag">Trampas del calendario</p>
+              <h3>Los que más caen al corregir.</h3>
+              <p>El Besòs i el Maresme, Sarrià, el Clot, les Corts y la Verneda. Sarrià pasa de 67.870 a 26.100 por piso; sin el ático, 51.317.</p>
+            </div>
+          </div>
+
+          <figure class="figure reveal">
+            <a href="../assets/img/proyectos/alquiler-turistico-bcn/pagina-13.webp"><img src="../assets/img/proyectos/alquiler-turistico-bcn/pagina-13.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Dos gráficos de dispersión por barrio, número de pisos HUTB frente a ingreso por piso: con el proxy de calendario la nube está desordenada (correlación de rangos 0,16); con el modelo de reseñas se ordena (0,48) y se separan el motor del Eixample, los nichos al alza y las trampas del calendario."></a>
+            <figcaption><b>La métrica creaba la incompatibilidad, no el mercado.</b> Con el modelo de reseñas, la correlación entre número de pisos e ingreso por piso pasa de 0,16 a 0,48.</figcaption>
+          </figure>
+
+          <div class="callout reveal">
+            <p class="callout__tag">Triangulación</p>
+            <h3>Un particular con un solo piso ingresa más por unidad que una gran cartera.</h3>
+            <p>Un particular con un solo piso ingresa 47.021 al año; una cartera de más de 20 pisos, 31.077 (un 34 % menos por unidad). El precio por noche es plano (285–298); lo que cae es la ocupación, las reseñas y el sello superhost (del 55 % al 15 %).</p>
+          </div>
+
+          <h3>Por distrito</h3>
+          <p>Eixample concentra 3.073 de los 6.520 pisos (47 %) y el ingreso por piso más alto (41.600). Ciutat Vella rinde menos de lo supuesto (31.116). Les Corts es donde más se desvía el calendario (41.073 frente a 26.460).</p>
+
+          <h3>Dashboard interactivo</h3>
+          <div class="dashboard">
+            <p><span class="pendiente">[PENDIENTE: enlace público de Looker Studio]</span></p>
+            <p>Aquí irá el cuadro de mando de Looker Studio incrustado.</p>
+            <!-- Para activarlo, sustituir por:
+            <iframe class="dashboard__frame" src="https://lookerstudio.google.com/embed/reporting/ID/page/ID" title="Dashboard del alquiler turístico en Barcelona en Looker Studio" loading="lazy" allowfullscreen></iframe>
+            -->
+          </div>
+        </section>
+
+        <section id="limitaciones" aria-labelledby="limitaciones-t">
+          <p class="eyebrow">Limitaciones</p>
+          <h2 id="limitaciones-t">Lo que este análisis no resuelve.</h2>
+          <ol class="numbered">
+            <li>Es ingreso bruto, no beneficio.</li>
+            <li>El modelo de reseñas topa la ocupación en el 70 % del año: subestima a los mejores.</li>
+            <li>Es una foto de junio de 2026, no una serie.</li>
+            <li>Las medias de barrios pequeños siguen siendo frágiles (Sarrià y la Verneda: 6 pisos).</li>
+            <li>Es inteligencia de mercado: no sustituye los datos internos de una cartera.</li>
+          </ol>
+        </section>
+
+        <section id="uso" aria-labelledby="uso-t">
+          <p class="eyebrow">Cómo usarlo</p>
+          <h2 id="uso-t">Tres decisiones, cada una con su criterio de parada.</h2>
+          <ol class="numbered">
+            <li><strong>Concentrar la retención en el corredor del Eixample</strong> (2.379 pisos).<span class="stop">si el ingreso por piso del bloque cae por debajo de 40.000 en el siguiente snapshot, revisar la tesis.</span></li>
+            <li><strong>Sondear los nichos antes de que suban de precio</strong> (Diagonal Mar, el Camp de l'Arpa).<span class="stop">no comprometer capital en barrios de menos de 50 pisos sin confirmar con datos propios.</span></li>
+            <li><strong>Sacar del plan los barrios que solo lo parecían.</strong><span class="stop">reincorporar solo si un histórico de reservas propio contradice la señal de reseñas.</span></li>
+          </ol>
+        </section>
+
+        <section id="conclusion" aria-labelledby="conclusion-t">
+          <div class="conclusion reveal">
+            <p class="eyebrow" id="conclusion-t">Conclusión</p>
+            <blockquote>El mapa del negocio cambia al cambiar la forma de medirlo.</blockquote>
+            <p>Los 242 M del mercado HUTB legal son los mismos con una métrica y con otra; lo que cambia es a qué barrio se atribuyen.</p>
+            <p><strong>Por qué es fiable:</strong> dos estimaciones con fuentes de error distintas coinciden en el agregado, y los desacuerdos caen donde eran previsibles: en los barrios de pocos pisos.</p>
+          </div>
+          <figure class="figure reveal">
+            <a href="../assets/img/proyectos/alquiler-turistico-bcn/pagina-19.webp"><img src="../assets/img/proyectos/alquiler-turistico-bcn/pagina-19.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Diapositiva de conclusión: «El mapa del negocio cambia al cambiar la forma de medirlo»."></a>
+            <figcaption><b>La conclusión del informe.</b></figcaption>
+          </figure>
+        </section>
+      </article>
+    </div>
+
+    <div class="container">
+      <nav class="case-nav" aria-label="Otros proyectos">
+        <a href="ilusion-descuento.html"><small>← Anterior</small><span>La ilusión del descuento</span></a>
+        <a href="posicionamiento-moda.html"><small>Siguiente →</small><span>Posicionamiento de precio en moda</span></a>
+      </nav>
+    </div>
+
+    <section class="section section--tight" style="padding-top: var(--section)" aria-labelledby="contacto-titulo">
+      <div class="container">
+        <div class="cta reveal">
+          <p class="eyebrow">Contacto</p>
+          <h2 id="contacto-titulo">¿Buscas a alguien para prácticas en análisis de datos?</h2>
+          <p>Disponible de febrero a junio de 2027, en prácticas curriculares vía Ícaro (UGR).</p>
+          <div class="cta__actions">
+            <a class="link-arrow cta__mail" href="mailto:javibenitez039@gmail.com">javibenitez039@gmail.com <span class="arrow" aria-hidden="true">↗</span></a>
+            <a class="link-arrow cta__mail" href="../assets/docs/CV_Javier_Benitez_Escobedo.pdf" download>Descargar CV <span class="arrow" aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__top">
+        <nav class="footer__nav" aria-label="Pie">
+          <ul>
+            <li><a href="../index.html#sobre-mi">Sobre mí</a></li>
+            <li><a href="../index.html#proyectos">Proyectos</a></li>
+            <li><a href="../index.html#trayectoria">Trayectoria</a></li>
+            <li><a href="../assets/docs/CV_Javier_Benitez_Escobedo.pdf" download>CV</a></li>
+          </ul>
+        </nav>
+        <div class="footer__contact">
+          <p>Escríbeme</p>
+          <a href="mailto:javibenitez039@gmail.com">javibenitez039@gmail.com</a>
+        </div>
+        <ul class="footer__social">
+          <li><a class="link-arrow" href="https://www.linkedin.com/in/javierbenitezescobedo" rel="me noopener" target="_blank">LinkedIn <span class="arrow" aria-hidden="true">↗</span></a></li>
+          <li><a class="link-arrow" href="https://github.com/degallo" rel="me noopener" target="_blank">GitHub <span class="arrow" aria-hidden="true">↗</span></a></li>
+        </ul>
+      </div>
+      <div class="footer__bottom">
+        <span>© <span data-year>2026</span> Javier Benítez Escobedo · Granada</span>
+        <span>Fuentes de los proyectos: INE, MITECO, Inside Airbnb y catálogos online.</span>
+      </div>
+    </div>
+    <p class="footer__name" aria-hidden="true">Javier Benítez</p>
+  </footer>
+
+  <script src="../js/main.js" defer></script>
+</body>
+</html>

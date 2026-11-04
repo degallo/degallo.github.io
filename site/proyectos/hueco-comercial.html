@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>El hueco comercial · Caso de estudio · Javier Benítez Escobedo</title>
+  <meta name="description" content="Dónde hay renta disponible que el comercio local no está aprovechando: los 277 municipios de Granada y Málaga, medidos uno a uno con datos del INE.">
+  <link rel="canonical" href="https://degallo.github.io/proyectos/hueco-comercial.html">
+  <meta name="theme-color" content="#F6F1E6">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="Javier Benítez Escobedo">
+  <meta property="og:title" content="El hueco comercial · Caso de estudio">
+  <meta property="og:description" content="Dónde hay renta disponible que el comercio local no está aprovechando: los 277 municipios de Granada y Málaga, medidos uno a uno con datos del INE.">
+  <meta property="og:url" content="https://degallo.github.io/proyectos/hueco-comercial.html">
+  <meta property="og:image" content="https://degallo.github.io/assets/img/proyectos/hueco-comercial/pagina-01.webp">
+  <meta property="og:image:width" content="1600">
+  <meta property="og:image:height" content="900">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="../css/styles.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="../index.html">Javier Benítez <span>Escobedo</span></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav">Menú</button>
+      <nav class="nav" id="nav" aria-label="Principal">
+        <ul>
+          <li><a href="../index.html#sobre-mi">Sobre mí</a></li>
+          <li><a href="../index.html#proyectos" aria-current="true">Proyectos</a></li>
+          <li><a href="../index.html#trayectoria">Trayectoria</a></li>
+          <li><a href="../index.html#contacto">Contacto</a></li>
+        </ul>
+        <a class="link-arrow" href="../assets/docs/CV_Javier_Benitez_Escobedo.pdf" download>Descargar CV <span class="arrow" aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="container case-hero" aria-labelledby="titulo">
+      <a class="back" href="../index.html#proyectos"><span aria-hidden="true">←</span> Todos los proyectos</a>
+      <p><span class="pill">Análisis territorial · Granada y Málaga</span></p>
+      <h1 id="titulo">El hueco comercial</h1>
+      <p class="case-hero__sub">Dónde hay renta disponible que el comercio local no está aprovechando. Los 277 municipios de Granada y Málaga, medidos uno a uno.</p>
+      <figure class="case-cover">
+        <img src="../assets/img/proyectos/hueco-comercial/pagina-01.webp" width="1600" height="900" fetchpriority="high"
+             alt="Portada del informe El hueco comercial, con la silueta de las provincias de Granada y Málaga coloreada municipio a municipio.">
+      </figure>
+    </section>
+
+    <div class="container case-layout">
+      <aside class="ficha" aria-labelledby="ficha-titulo">
+        <h2 id="ficha-titulo">Ficha del proyecto</h2>
+        <dl>
+          <div><dt>Fecha</dt><dd>Agosto 2026</dd></div>
+          <div><dt>Fuentes</dt><dd>INE: Atlas de Distribución de Renta de los Hogares, Padrón municipal, Directorio Central de Empresas (DIRCE) y Encuesta de Presupuestos Familiares 2023 · Instituto Geográfico Nacional (geometría municipal, vía es-atlas) · POTAUG (2013), delimitación del Área Metropolitana de Granada</dd></div>
+          <div><dt>Herramientas</dt><dd>SQL (SQLite, DB Browser) · Looker Studio · mapa coroplético</dd></div>
+          <div><dt>Volumen</dt><dd>277 municipios · 34,5 mil M € de renta anual</dd></div>
+          <div><dt>Código</dt><dd><a href="https://github.com/degallo/huecocomercial" target="_blank" rel="noopener">github.com/degallo/huecocomercial ↗</a><br>279 líneas de SQL en <code>consultas.sql</code></dd></div>
+        </dl>
+        <div class="ficha__actions">
+          <a class="btn" href="../assets/docs/el-hueco-comercial.pdf" download>Descargar informe PDF · 16 págs.</a>
+          <a class="btn btn--ghost" href="https://github.com/degallo/huecocomercial" target="_blank" rel="noopener">Ver el SQL en GitHub ↗</a>
+        </div>
+        <nav class="ficha__toc" aria-label="En esta página" data-spy>
+          <ol>
+            <li><a href="#pregunta">La pregunta</a></li>
+            <li><a href="#metrica">La métrica</a></li>
+            <li><a href="#embudo">El embudo</a></li>
+            <li><a href="#hallazgos">Hallazgos</a></li>
+            <li><a href="#limitaciones">Limitaciones</a></li>
+            <li><a href="#uso">Cómo usarlo</a></li>
+            <li><a href="#conclusion">Conclusión</a></li>
+          </ol>
+        </nav>
+      </aside>
+
+      <article class="case-body">
+        <section id="cifras" aria-label="Cifras clave">
+          <div class="kpis">
+            <div class="kpi reveal"><p class="kpi__num">277</p><p class="kpi__label">municipios en el estudio</p></div>
+            <div class="kpi reveal" style="--d:.06s"><p class="kpi__num">113</p><p class="kpi__label">candidatos con dato utilizable</p></div>
+            <div class="kpi reveal"><p class="kpi__num">103</p><p class="kpi__label">sin cifra por secreto estadístico</p></div>
+            <div class="kpi reveal" style="--d:.06s"><p class="kpi__num">34,5 mil M €</p><p class="kpi__label">de renta anual en las dos provincias</p></div>
+          </div>
+        </section>
+
+        <section id="pregunta" aria-labelledby="pregunta-t">
+          <p class="eyebrow">La pregunta</p>
+          <h2 id="pregunta-t">¿Dónde hay dinero que el comercio local no está recogiendo?</h2>
+          <p class="lead">En cada municipio vive una cantidad de renta anual. Repartida entre los comercios abiertos da los euros disponibles por negocio.</p>
+          <p>Cuando esa cifra se dispara, o hay poca oferta para el dinero que hay, o ese dinero se está gastando en otro sitio. <strong>Para quién:</strong> quien decide dónde abrir un negocio o una franquicia.</p>
+          <figure class="figure reveal">
+            <a href="../assets/img/proyectos/hueco-comercial/pagina-02.webp"><img src="../assets/img/proyectos/hueco-comercial/pagina-02.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Página del informe con la pregunta y las cuatro cifras clave: 277 municipios, 113 candidatos, 103 sin cifra y 34,5 mil millones de euros de renta anual."></a>
+            <figcaption><b>La pregunta y las cifras clave</b>, tal como abren el informe.</figcaption>
+          </figure>
+        </section>
+
+        <section id="metrica" aria-labelledby="metrica-t">
+          <p class="eyebrow">La métrica</p>
+          <h2 id="metrica-t">Renta disponible por negocio.</h2>
+          <p class="formula"><small>Fórmula</small>(renta por persona × población) ÷ comercios</p>
+          <div class="is-isnt">
+            <div>
+              <h3>Qué señala</h3>
+              <p>Poca oferta para el dinero disponible, o dinero que se marcha a gastar fuera. Un ratio alto es una señal de que hay sitio.</p>
+            </div>
+            <div>
+              <h3>Qué no es</h3>
+              <p>No es facturación ni demanda insatisfecha. No todo ese dinero se gasta en comercio local, y el indicador no dice qué ramas faltan.</p>
+            </div>
+          </div>
+          <div class="example">
+            <p><strong>Ejemplo real · Molvízar</strong> (Granada, INE 18133): renta por persona 10.188 €, población 2.752, renta total 28,0 M €, 32 comercios → <strong>876.168 € por comercio</strong>, el ratio más alto de las dos provincias.</p>
+          </div>
+        </section>
+
+        <section id="embudo" aria-labelledby="embudo-t">
+          <p class="eyebrow">El embudo</p>
+          <h2 id="embudo-t">De 277 a 113 municipios.</h2>
+          <ol class="funnel">
+            <li><div class="funnel__bar"><span style="--w:100%"></span><b>277</b></div><div class="funnel__txt"><span>Municipios de Granada y Málaga</span><span>punto de partida</span></div></li>
+            <li><div class="funnel__bar"><span style="--w:62.8%; --d:.1s"></span><b>174</b></div><div class="funnel__txt"><span>Con cifra de comercio publicada</span><span>−103 por secreto estadístico</span></div></li>
+            <li><div class="funnel__bar"><span style="--w:53.4%; --d:.2s"></span><b>148</b></div><div class="funnel__txt"><span>Con al menos 30 comercios</span><span>−26 con muestra demasiado pequeña</span></div></li>
+            <li><div class="funnel__bar"><span style="--w:41.5%; --d:.3s"></span><b>115</b></div><div class="funnel__txt"><span>Fuera del cinturón de Granada</span><span>−33 por efecto dormitorio</span></div></li>
+            <li><div class="funnel__bar"><span style="--w:40.8%; --d:.4s"></span><b>113</b></div><div class="funnel__txt"><span>Excluidas las dos capitales</span><span>−2 (Granada y Málaga)</span></div></li>
+          </ol>
+          <p class="funnel-note">Los 113 restantes son los únicos donde el ratio se puede leer como señal de mercado y no como artefacto del dato.</p>
+          <figure class="figure reveal">
+            <a href="../assets/img/proyectos/hueco-comercial/pagina-05.webp"><img src="../assets/img/proyectos/hueco-comercial/pagina-05.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Embudo de filtrado del informe: de 277 municipios a 113 candidatos, con el motivo de cada descarte."></a>
+            <figcaption><b>El embudo en el informe</b>: cada paso con su motivo.</figcaption>
+          </figure>
+        </section>
+
+        <section id="hallazgos" aria-labelledby="hallazgos-t">
+          <p class="eyebrow">Hallazgos</p>
+          <h2 id="hallazgos-t">Tres grupos con el mismo ratio alto y mecanismos distintos.</h2>
+          <figure class="figure reveal">
+            <a href="../assets/img/proyectos/hueco-comercial/pagina-04.webp"><img src="../assets/img/proyectos/hueco-comercial/pagina-04.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Mapa coroplético de los 277 municipios de Granada y Málaga: cuanto más oscuro, más renta disponible por comercio abierto. Se señalan Antequera, Rincón de la Victoria, Benahavís, Casares, Ojén, Guaro, Molvízar, Gualchos, Albuñol y Valle del Zalabí."></a>
+            <figcaption><b>El mapa.</b> Renta disponible por comercio en los 277 municipios; rayados, los que no tienen dato o quedan fuera por el área metropolitana.</figcaption>
+          </figure>
+
+          <div class="groups">
+            <div class="group reveal">
+              <p class="group__tag">Núcleo fuerte · confirmado por tres métricas</p>
+              <h3>Mercado grande, ratio alto y menos comercio del que les correspondería.</h3>
+              <ul>
+                <li><strong>Rincón de la Victoria</strong> (Málaga): 754.946 € por comercio · ajustada 349.540 € · 51.300 hab. · 1.061 comercios · 20,7 por 1.000 hab. · renta total 801,0 M € · percentiles: ratio P99, escasez P80, volumen P94.</li>
+                <li><strong>Antequera</strong> (Málaga): 594.516 € · ajustada 275.261 € · 41.178 hab. · 875 comercios · 21,2 por 1.000 hab. · 520,2 M € · ratio P92, escasez P75, volumen P91.</li>
+              </ul>
+              <p>Entre los municipios de más de 25.000 habitantes, son los de menor densidad de comercio (20,7 y 21,2 por 1.000 hab., frente a 23–32 en el resto).</p>
+            </div>
+            <div class="group reveal">
+              <p class="group__tag">Oportunidad de pueblo</p>
+              <h3>El ratio se dispara porque casi no hay tiendas: cabe un negocio, no una cadena.</h3>
+              <p>Los cuatro de Granada, entre 2.100 y 7.400 habitantes: <strong>Molvízar</strong> 876.168 € · <strong>Valle del Zalabí</strong> 690.541 € · <strong>Albuñol</strong> 666.623 € · <strong>Gualchos</strong> 587.522 €.</p>
+            </div>
+            <div class="group reveal">
+              <p class="group__tag">Urbanización de lujo · mecanismo distinto</p>
+              <h3>Renta muy alta y poco comercio, porque sus residentes compran en Marbella, a quince minutos.</h3>
+              <p>No es una fuga de gasto recuperable. <strong>Benahavís</strong> 715.807 € · <strong>Casares</strong> 685.568 € · <strong>Ojén</strong> 598.911 €.</p>
+            </div>
+          </div>
+          <figure class="figure reveal">
+            <a href="../assets/img/proyectos/hueco-comercial/pagina-10.webp"><img src="../assets/img/proyectos/hueco-comercial/pagina-10.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Fichas de Benahavís, Casares y Ojén con su renta por comercio, población, número de comercios y percentiles de ratio, escasez y volumen. Titular: alto ratio, mecanismo distinto."></a>
+            <figcaption><b>Urbanización de lujo:</b> alto ratio, mecanismo distinto. Se separan del núcleo fuerte por volumen.</figcaption>
+          </figure>
+
+          <p>Candidato no confirmable: <strong>Guaro</strong> (Málaga), 2.307 habitantes y 24,9 M € de renta, pero el INE oculta su número de comercios.</p>
+
+          <h3>Qué separa a los grupos</h3>
+          <p>Por renta (los pueblos, por debajo de 11.500 € por habitante), por volumen (el núcleo arranca en 520 M € de renta total; el lujo no pasa de 132 M €) y por provincia (los cuatro pueblos son de Granada; núcleo y lujo, de Málaga).</p>
+
+          <figure class="figure reveal">
+            <a href="../assets/img/proyectos/hueco-comercial/pagina-11.webp"><img src="../assets/img/proyectos/hueco-comercial/pagina-11.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Gráfico de burbujas de los 113 candidatos: renta por habitante en el eje horizontal y renta total del municipio en el vertical. Los tres grupos (oportunidad de pueblo, urbanización de lujo y núcleo fuerte) ocupan zonas que no se solapan."></a>
+            <figcaption><b>Tres grupos, tres zonas que no se solapan.</b> El área de cada burbuja es proporcional a los euros por comercio.</figcaption>
+          </figure>
+
+          <div class="callout reveal">
+            <p class="callout__tag">Comprobación</p>
+            <h3>El ajuste del gasto cambia la escala, no el orden.</h3>
+            <p>Según la Encuesta de Presupuestos Familiares del INE (2023), el 46,3 % del gasto medio va a alimentación, vestido, mobiliario, transporte y restauración. Aplicado como factor constante, el ranking no se mueve.</p>
+          </div>
+
+          <div class="table-wrap reveal" tabindex="0" role="region" aria-label="Comparativa Granada y Málaga">
+            <table>
+              <caption>Granada frente a Málaga</caption>
+              <thead><tr><th scope="col">Provincia</th><th scope="col" class="num">Municipios</th><th scope="col" class="num">Habitantes</th><th scope="col" class="num">Renta</th><th scope="col" class="num">Comercios</th><th scope="col" class="num">Mediana €/comercio</th><th scope="col" class="num">Sin cifra</th></tr></thead>
+              <tbody>
+                <tr><td>Granada</td><td class="num">174</td><td class="num">930.181</td><td class="num">11,82 mil M €</td><td class="num">21.990</td><td class="num">485.931 €</td><td class="num">73 (42 %)</td></tr>
+                <tr><td>Málaga</td><td class="num">103</td><td class="num">1.751.600</td><td class="num">22,66 mil M €</td><td class="num">44.527</td><td class="num">456.133 €</td><td class="num">30 (29 %)</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>Dashboard interactivo</h3>
+          <div class="dashboard">
+            <p><span class="pendiente">[PENDIENTE: enlace público de Looker Studio]</span></p>
+            <p>Aquí irá el cuadro de mando de Looker Studio incrustado.</p>
+            <!-- Para activarlo, sustituir por:
+            <iframe class="dashboard__frame" src="https://lookerstudio.google.com/embed/reporting/ID/page/ID" title="Dashboard de El hueco comercial en Looker Studio" loading="lazy" allowfullscreen></iframe>
+            -->
+          </div>
+        </section>
+
+        <section id="limitaciones" aria-labelledby="limitaciones-t">
+          <p class="eyebrow">Limitaciones</p>
+          <h2 id="limitaciones-t">Lo que este análisis no resuelve.</h2>
+          <ol class="numbered">
+            <li>103 municipios no se pueden puntuar por secreto estadístico, justo los más pequeños. La lista dice dónde está el mejor hueco entre los que se pueden medir.</li>
+            <li>El grupo de lujo no se separa por renta (Benahavís 14.248 €/hab. frente a Rincón 15.614 €): lo que los separa es el mecanismo y la geografía, un juicio de contexto.</li>
+            <li>Falta lo que decide el negocio: qué ramas faltan, cuánto cuesta un local, cómo se mueve la gente entre municipios.</li>
+          </ol>
+        </section>
+
+        <section id="uso" aria-labelledby="uso-t">
+          <p class="eyebrow">Cómo usarlo</p>
+          <h2 id="uso-t">Un ratio alto señala dónde mirar, no qué abrir.</h2>
+          <ol class="numbered">
+            <li><strong>Rincón de la Victoria y Antequera:</strong> bajar al detalle por rama de actividad.</li>
+            <li><strong>Los cuatro pueblos de Granada:</strong> comprobar desplazamientos a la cabecera comarcal antes de decidir.</li>
+          </ol>
+        </section>
+
+        <section id="conclusion" aria-labelledby="conclusion-t">
+          <div class="conclusion reveal">
+            <p class="eyebrow" id="conclusion-t">Conclusión</p>
+            <blockquote>277 municipios medidos. Dos confirmados tres veces. Cero basados en intuición.</blockquote>
+            <p><strong>Rincón de la Victoria y Antequera</strong> son los únicos, de 277 municipios, donde el mercado es grande, la renta es alta y el comercio es insuficiente a la vez, confirmado por tres medidas independientes.</p>
+          </div>
+          <figure class="figure reveal">
+            <a href="../assets/img/proyectos/hueco-comercial/pagina-16.webp"><img src="../assets/img/proyectos/hueco-comercial/pagina-16.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Página de conclusión del informe: dos candidatos verificados, no intuidos."></a>
+            <figcaption><b>La conclusión del informe</b>: dos candidatos verificados, no intuidos.</figcaption>
+          </figure>
+        </section>
+      </article>
+    </div>
+
+    <div class="container">
+      <nav class="case-nav" aria-label="Otros proyectos">
+        <a href="posicionamiento-moda.html"><small>← Anterior</small><span>Posicionamiento de precio en moda</span></a>
+        <a href="ilusion-descuento.html"><small>Siguiente →</small><span>La ilusión del descuento</span></a>
+      </nav>
+    </div>
+
+    <section class="section section--tight" style="padding-top: var(--section)" aria-labelledby="contacto-titulo">
+      <div class="container">
+        <div class="cta reveal">
+          <p class="eyebrow">Contacto</p>
+          <h2 id="contacto-titulo">¿Buscas a alguien para prácticas en análisis de datos?</h2>
+          <p>Disponible de febrero a junio de 2027, en prácticas curriculares vía Ícaro (UGR).</p>
+          <div class="cta__actions">
+            <a class="link-arrow cta__mail" href="mailto:javibenitez039@gmail.com">javibenitez039@gmail.com <span class="arrow" aria-hidden="true">↗</span></a>
+            <a class="link-arrow cta__mail" href="../assets/docs/CV_Javier_Benitez_Escobedo.pdf" download>Descargar CV <span class="arrow" aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__top">
+        <nav class="footer__nav" aria-label="Pie">
+          <ul>
+            <li><a href="../index.html#sobre-mi">Sobre mí</a></li>
+            <li><a href="../index.html#proyectos">Proyectos</a></li>
+            <li><a href="../index.html#trayectoria">Trayectoria</a></li>
+            <li><a href="../assets/docs/CV_Javier_Benitez_Escobedo.pdf" download>CV</a></li>
+          </ul>
+        </nav>
+        <div class="footer__contact">
+          <p>Escríbeme</p>
+          <a href="mailto:javibenitez039@gmail.com">javibenitez039@gmail.com</a>
+        </div>
+        <ul class="footer__social">
+          <li><a class="link-arrow" href="https://www.linkedin.com/in/javierbenitezescobedo" rel="me noopener" target="_blank">LinkedIn <span class="arrow" aria-hidden="true">↗</span></a></li>
+          <li><a class="link-arrow" href="https://github.com/degallo" rel="me noopener" target="_blank">GitHub <span class="arrow" aria-hidden="true">↗</span></a></li>
+        </ul>
+      </div>
+      <div class="footer__bottom">
+        <span>© <span data-year>2026</span> Javier Benítez Escobedo · Granada</span>
+        <span>Fuentes de los proyectos: INE, MITECO, Inside Airbnb y catálogos online.</span>
+      </div>
+    </div>
+    <p class="footer__name" aria-hidden="true">Javier Benítez</p>
+  </footer>
+
+  <script src="../js/main.js" defer></script>
+</body>
+</html>

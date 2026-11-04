@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>La ilusión del descuento · Caso de estudio · Javier Benítez Escobedo</title>
+  <meta name="description" content="¿Compensa de verdad la tarjeta de descuento de tu gasolinera? 11.237 estaciones y 84 planes oficiales del MITECO frente al precio de las low-cost.">
+  <link rel="canonical" href="https://degallo.github.io/proyectos/ilusion-descuento.html">
+  <meta name="theme-color" content="#F6F1E6">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="Javier Benítez Escobedo">
+  <meta property="og:title" content="La ilusión del descuento · Caso de estudio">
+  <meta property="og:description" content="¿Compensa de verdad la tarjeta de descuento de tu gasolinera? 11.237 estaciones y 84 planes oficiales del MITECO frente al precio de las low-cost.">
+  <meta property="og:url" content="https://degallo.github.io/proyectos/ilusion-descuento.html">
+  <meta property="og:image" content="https://degallo.github.io/assets/img/proyectos/ilusion-descuento/pagina-01.webp">
+  <meta property="og:image:width" content="1600">
+  <meta property="og:image:height" content="900">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="../css/styles.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="../index.html">Javier Benítez <span>Escobedo</span></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav">Menú</button>
+      <nav class="nav" id="nav" aria-label="Principal">
+        <ul>
+          <li><a href="../index.html#sobre-mi">Sobre mí</a></li>
+          <li><a href="../index.html#proyectos" aria-current="true">Proyectos</a></li>
+          <li><a href="../index.html#trayectoria">Trayectoria</a></li>
+          <li><a href="../index.html#contacto">Contacto</a></li>
+        </ul>
+        <a class="link-arrow" href="../assets/docs/CV_Javier_Benitez_Escobedo.pdf" download>Descargar CV <span class="arrow" aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="container case-hero" aria-labelledby="titulo">
+      <a class="back" href="../index.html#proyectos"><span aria-hidden="true">←</span> Todos los proyectos</a>
+      <p><span class="pill">Análisis de datos · Estaciones de servicio de España</span></p>
+      <h1 id="titulo">La ilusión del descuento</h1>
+      <p class="case-hero__sub">Millones de conductores y miles de empresas con flota dan por hecho que su tarjeta de descuento les ahorra dinero. Nadie lo había comprobado con datos oficiales.</p>
+      <figure class="case-cover">
+        <img src="../assets/img/proyectos/ilusion-descuento/pagina-01.webp" width="1600" height="900" fetchpriority="high"
+             alt="Portada del informe La ilusión del descuento, con un mapa de puntos de las 11.237 estaciones de servicio analizadas en España.">
+      </figure>
+    </section>
+
+    <div class="container case-layout">
+      <aside class="ficha" aria-labelledby="ficha-titulo">
+        <h2 id="ficha-titulo">Ficha del proyecto</h2>
+        <dl>
+          <div><dt>Fecha</dt><dd>Agosto 2026 · datos descargados el 13/08/2026</dd></div>
+          <div><dt>Fuentes</dt><dd>Registro oficial del Ministerio para la Transición Ecológica (MITECO): 11.501 estaciones y 84 planes de descuento declarados · Verificación externa: páginas de cada compañía y prensa especializada (agosto 2026)</dd></div>
+          <div><dt>Herramientas</dt><dd>SQL (SQLite) · Looker Studio</dd></div>
+          <div><dt>Volumen</dt><dd>11.501 estaciones (11.237 analizadas) · 84 planes de 23 operadores · 49 provincias</dd></div>
+          <div><dt>Código</dt><dd><a href="https://github.com/degallo/la-ilusion-del-descuento" target="_blank" rel="noopener">github.com/degallo/la-ilusion-del-descuento ↗</a><br><code>GASOLINERASSQL.sql</code>, 1.014 líneas</dd></div>
+        </dl>
+        <div class="ficha__actions">
+          <a class="btn" href="../assets/docs/la-ilusion-del-descuento.pdf" download>Descargar informe PDF · 18 págs.</a>
+          <a class="btn btn--ghost" href="https://github.com/degallo/la-ilusion-del-descuento" target="_blank" rel="noopener">Ver el SQL en GitHub ↗</a>
+        </div>
+        <nav class="ficha__toc" aria-label="En esta página" data-spy>
+          <ol>
+            <li><a href="#pregunta">La pregunta</a></li>
+            <li><a href="#metrica">La métrica</a></li>
+            <li><a href="#giro">El primer giro</a></li>
+            <li><a href="#embudo">El embudo</a></li>
+            <li><a href="#hallazgos">Hallazgos</a></li>
+            <li><a href="#limitaciones">Limitaciones</a></li>
+            <li><a href="#uso">Cómo usarlo</a></li>
+            <li><a href="#conclusion">Conclusión</a></li>
+          </ol>
+        </nav>
+      </aside>
+
+      <article class="case-body">
+        <section id="cifras" aria-label="Cifras clave">
+          <div class="kpis">
+            <div class="kpi reveal"><p class="kpi__num">11.501</p><p class="kpi__label">estaciones en el registro oficial</p></div>
+            <div class="kpi reveal" style="--d:.06s"><p class="kpi__num">11.237</p><p class="kpi__label">analizadas (se excluyen 264 de Canarias, Ceuta y Melilla)</p></div>
+            <div class="kpi reveal"><p class="kpi__num">84</p><p class="kpi__label">planes declarados por 23 operadores</p></div>
+            <div class="kpi reveal" style="--d:.06s"><p class="kpi__num">47</p><p class="kpi__label">evaluables en gasolina 95 tras descartar los no comparables</p></div>
+          </div>
+        </section>
+
+        <section id="pregunta" aria-labelledby="pregunta-t">
+          <p class="eyebrow">La pregunta</p>
+          <h2 id="pregunta-t">¿El descuento de tu tarjeta es real, o solo compensa un precio de partida más alto?</h2>
+          <p class="lead">La pregunta no es si el descuento existe, sino si basta para llegar a lo que ya paga, sin tarjeta, quien reposta en una low-cost.</p>
+          <p><strong>Para quién:</strong> un responsable de flota. 15 furgonetas gastan 50.000–80.000 € al año en combustible; una desviación del 3 % son ~2.000 € anuales.</p>
+          <figure class="figure reveal">
+            <a href="../assets/img/proyectos/ilusion-descuento/pagina-02.webp"><img src="../assets/img/proyectos/ilusion-descuento/pagina-02.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Página del informe con la pregunta y las cifras clave: 11.501 estaciones en el registro, 11.237 analizadas, 84 planes declarados y 47 evaluables en gasolina 95."></a>
+            <figcaption><b>La pregunta y las cifras clave</b>, tal como abren el informe.</figcaption>
+          </figure>
+        </section>
+
+        <section id="metrica" aria-labelledby="metrica-t">
+          <p class="eyebrow">La métrica</p>
+          <h2 id="metrica-t">Precio efectivo frente al umbral low-cost.</h2>
+          <p class="formula"><small>Fórmula</small>precio efectivo = precio base medio del operador − descuento<br>compensa solo si precio efectivo &lt; precio medio low-cost</p>
+          <div class="is-isnt">
+            <div>
+              <h3>Qué señala</h3>
+              <p>Si con la tarjeta acabas pagando menos que quien reposta sin tarjeta en la low-cost.</p>
+            </div>
+            <div>
+              <h3>Qué no es</h3>
+              <p>No es el ahorro frente a no tener tarjeta (ese siempre es positivo, y es el que anuncian las compañías). No mide el descuento; mide si el descuento basta.</p>
+            </div>
+          </div>
+          <div class="example">
+            <p><strong>Ejemplo · Repsol, gasolina 95:</strong> base 1,771 € − 0,030 € (Repsol Más Visa) = 1,741 €, frente a un umbral low-cost de 1,614 €. Se queda a <strong>12,7 cts</strong> (15,9 cts en gasóleo A).</p>
+          </div>
+
+          <h3>El punto de partida</h3>
+          <p>Antes de descuentos, las petroleras parten <strong>15,0 cts</strong> por encima de las low-cost en gasolina 95 y <strong>17,7 cts</strong> en gasóleo A.</p>
+          <div class="table-wrap reveal" tabindex="0" role="region" aria-label="Precio medio por tipo de operador">
+            <table>
+              <caption>Precio medio por tipo de operador</caption>
+              <thead><tr><th scope="col">Tipo</th><th scope="col" class="num">Gasolina 95</th><th scope="col" class="num">Estaciones</th><th scope="col" class="num">Gasóleo A</th></tr></thead>
+              <tbody>
+                <tr><td>Petrolera</td><td class="num">1,764 €</td><td class="num">5.305</td><td class="num">1,892 €</td></tr>
+                <tr><td>Independiente</td><td class="num">1,665 €</td><td class="num">4.514</td><td class="num">1,781 €</td></tr>
+                <tr><td>Supermercado</td><td class="num">1,619 €</td><td class="num">395</td><td class="num">1,749 €</td></tr>
+                <tr><td>Low-cost</td><td class="num">1,614 €</td><td class="num">1.023</td><td class="num">1,715 €</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section id="giro" aria-labelledby="giro-t">
+          <div class="callout reveal">
+            <p class="callout__tag">Giro 1 · desconfiar del dato llamativo</p>
+            <h3 id="giro-t">El hallazgo que resultó ser un sistema fiscal distinto.</h3>
+            <p>Una filial canaria de DISA aparecía como la única petrolera cuyo descuento compensaba. La causa: Canarias aplica <strong>IGIC del 7 %</strong> frente al IVA del 21 %. La gasolina 95 está a 1,492 € de media en Canarias, 12,2 cts por debajo del umbral peninsular antes de cualquier descuento.</p>
+            <p>Decisión: se excluyen 264 estaciones y 16 planes. No era una ventaja comercial; era otra fiscalidad.</p>
+          </div>
+        </section>
+
+        <section id="embudo" aria-labelledby="embudo-t">
+          <p class="eyebrow">El embudo</p>
+          <h2 id="embudo-t">De 84 planes a 3.</h2>
+          <ol class="funnel">
+            <li><div class="funnel__bar"><span style="--w:100%"></span><b>84</b></div><div class="funnel__txt"><span>Declarados en el registro oficial</span><span>23 operadores</span></div></li>
+            <li><div class="funnel__bar"><span style="--w:81%; --d:.1s"></span><b>68</b></div><div class="funnel__txt"><span>Sin las redes canarias de DISA</span><span>−16, fiscalidad no comparable</span></div></li>
+            <li><div class="funnel__bar"><span style="--w:63.1%; --d:.2s"></span><b>53</b></div><div class="funnel__txt"><span>Con rótulo enlazable</span><span>−15 (Adelfas, Saras, Albera, Beta, Luvirr, Andamur, Champion)</span></div></li>
+            <li><div class="funnel__bar"><span style="--w:56%; --d:.3s"></span><b>47</b></div><div class="funnel__txt"><span>Con cifra o tipo de descuento</span><span>−6 (Tamoil, Solred Más, Internacionales, IDS)</span></div></li>
+            <li><div class="funnel__bar"><span style="--w:8%; --d:.4s"></span><b>3</b></div><div class="funnel__txt"><span>Bajan del umbral low-cost en gasolina 95</span><span>Carrefour y Esclatoil (Bon Preu)</span></div></li>
+          </ol>
+          <p class="funnel-note">Cada descarte con su motivo a la vista. Ningún filtro silencioso.</p>
+          <figure class="figure reveal">
+            <a href="../assets/img/proyectos/ilusion-descuento/pagina-07.webp"><img src="../assets/img/proyectos/ilusion-descuento/pagina-07.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Embudo de barras horizontales: 84 planes declarados, 68 sin las redes canarias de DISA, 53 con rótulo enlazable, 47 con cifra de descuento y 3 que bajan del umbral low-cost en gasolina 95."></a>
+            <figcaption><b>El embudo en el informe.</b> Los 3 planes finales pertenecen a 2 operadores, los dos de supermercado.</figcaption>
+          </figure>
+        </section>
+
+        <section id="hallazgos" aria-labelledby="hallazgos-t">
+          <p class="eyebrow">Hallazgos</p>
+          <h2 id="hallazgos-t">Ninguna petrolera compensa. Los que compensan no ganan por el descuento.</h2>
+          <figure class="figure reveal">
+            <a href="../assets/img/proyectos/ilusion-descuento/pagina-06.webp"><img src="../assets/img/proyectos/ilusion-descuento/pagina-06.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Gráfico de puntos con cada plan oficial colocado en su precio efectivo, en gasolina 95 y en gasóleo A. A la izquierda del umbral low-cost (1,614 € y 1,715 €) solo quedan Esclatoil y Carrefour; Repsol, BP y Cepsa son las tres más caras."></a>
+            <figcaption><b>El resultado central.</b> Un punto por plan oficial; a la izquierda de la línea verde, el descuento compensa.</figcaption>
+          </figure>
+
+          <div class="groups">
+            <div class="group reveal">
+              <p class="group__tag">A · Compensan, pero no por el descuento</p>
+              <h3>Carrefour y Esclatoil bajan del umbral en los dos carburantes. Ninguno es petrolera.</h3>
+              <ul>
+                <li><strong>Carrefour:</strong> el mayor descuento del registro (8 %, 13,8 cts en gasolina 95). Parte de 1,719 € → 1,581 € con descuento: 3,3 cts por debajo (1,9 cts en gasóleo A). 146 estaciones en 41 provincias.</li>
+                <li><strong>Esclatoil:</strong> descuento de solo 3 cts, pero ya vende a 1,567 €, 4,7 cts por debajo del umbral antes de la tarjeta. Gana por precio de partida. 71 estaciones, solo en Cataluña (Barcelona 36 · Girona 18 · Tarragona 11 · Lleida 6).</li>
+              </ul>
+            </div>
+            <div class="group reveal">
+              <p class="group__tag">B · No compensan</p>
+              <h3>Los 39 planes evaluables de petrolera quedan por encima del umbral.</h3>
+              <p>Techo de los programas propios: 6,0 cts (Galp Flota Business), que se queda 6,1 cts corto.</p>
+            </div>
+          </div>
+
+          <div class="table-wrap reveal" tabindex="0" role="region" aria-label="Planes de petrolera frente al umbral">
+            <table>
+              <caption>Petroleras · gasolina 95 · umbral 1,614 €</caption>
+              <thead><tr><th scope="col">Plan</th><th scope="col" class="num">Descuento</th><th scope="col" class="num">Precio efectivo</th><th scope="col" class="num">Le faltan</th></tr></thead>
+              <tbody>
+                <tr><td>Galp con Abanca</td><td class="num">5 %</td><td class="num">1,648 €</td><td class="num">3,4 cts</td></tr>
+                <tr><td>Galp Flota Business</td><td class="num">6 cts</td><td class="num">1,675 €</td><td class="num">6,1 cts</td></tr>
+                <tr><td>Euroshell</td><td class="num">2 cts</td><td class="num">1,716 €</td><td class="num">10,2 cts</td></tr>
+                <tr><td>Repsol Más Visa</td><td class="num">3 cts</td><td class="num">1,741 €</td><td class="num">12,7 cts</td></tr>
+                <tr><td>miBP</td><td class="num">3 cts</td><td class="num">1,743 €</td><td class="num">12,9 cts</td></tr>
+                <tr><td>Cepsa Star</td><td class="num">1 cts</td><td class="num">1,768 €</td><td class="num">15,4 cts</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <figure class="figure reveal">
+            <a href="../assets/img/proyectos/ilusion-descuento/pagina-12.webp"><img src="../assets/img/proyectos/ilusion-descuento/pagina-12.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Gráfico de dispersión: descuento declarado en el eje horizontal y precio de partida sobre el umbral en el vertical. Las petroleras se agrupan arriba a la izquierda; Carrefour queda bajo la diagonal por su descuento y Esclatoil por partir por debajo del umbral."></a>
+            <figcaption><b>No ganan por tener mejor descuento: ganan por precio de partida.</b> Por debajo de la diagonal, el descuento basta.</figcaption>
+          </figure>
+
+          <div class="callout reveal">
+            <p class="callout__tag">Giros 2 y 3 · fuera del registro y triangulación</p>
+            <h3>Con los descuentos reales de las apps, la conclusión aguanta.</h3>
+            <p>Waylet (Repsol) no aparece en el fichero del MITECO; Cepsa Gow declara 0,5 cts/l pero su app da 5–6 cts/l; miBP declara 3 cts/l y coincide con la app.</p>
+            <p>Con los descuentos de las apps: Waylet 1,721 €, Gow 1,723 €, miBP 1,743 €. Ninguno compensa. El techo teórico de Waylet (20 cts/l) sí cruza, pero exige contratar luz, gas, solar y seguro con Repsol.</p>
+          </div>
+
+          <h3>Por provincia</h3>
+          <p>Las 49 provincias de península y Baleares tienen al menos una low-cost. Brecha mínima Baleares 9,6 cts, máxima Girona 26,5 cts, media 15,4 cts. Ni en la más favorable el mejor descuento propio de petrolera cierra la distancia (faltarían 3,6 cts).</p>
+
+          <h3>Dashboard interactivo</h3>
+          <div class="dashboard">
+            <p><span class="pendiente">[PENDIENTE: enlace público de Looker Studio]</span></p>
+            <p>Aquí irá el cuadro de mando de Looker Studio incrustado.</p>
+            <!-- Para activarlo, sustituir por:
+            <iframe class="dashboard__frame" src="https://lookerstudio.google.com/embed/reporting/ID/page/ID" title="Dashboard de La ilusión del descuento en Looker Studio" loading="lazy" allowfullscreen></iframe>
+            -->
+          </div>
+        </section>
+
+        <section id="limitaciones" aria-labelledby="limitaciones-t">
+          <p class="eyebrow">Limitaciones</p>
+          <h2 id="limitaciones-t">Lo que este análisis no resuelve.</h2>
+          <ol class="numbered">
+            <li>Es una foto fija del 13/08/2026, no una serie.</li>
+            <li>El descuento se aplica sobre la media del operador, no estación a estación.</li>
+            <li>No incluye acuerdos privados de flota.</li>
+            <li>No incluye el coste del desvío ni los servicios (red en ruta, lavado, cafetería).</li>
+          </ol>
+        </section>
+
+        <section id="uso" aria-labelledby="uso-t">
+          <p class="eyebrow">Cómo usarlo</p>
+          <h2 id="uso-t">El listón: 1,614 € en gasolina 95 y 1,715 € en gasóleo A.</h2>
+          <ol class="numbered">
+            <li><strong>Flotas:</strong> pedir el descuento en céntimos por litro, no en porcentaje; usar la brecha de la propia provincia (9,6–26,5 cts); el listón a batir es 6,0 cts.</li>
+            <li><strong>Particulares:</strong> con Carrefour o Esclatoil cerca, la tarjeta sí compensa; con tarjeta de petrolera y sin necesidad de red, la low-cost sin tarjeta sale más barata.</li>
+          </ol>
+        </section>
+
+        <section id="conclusion" aria-labelledby="conclusion-t">
+          <div class="conclusion reveal">
+            <p class="eyebrow" id="conclusion-t">Conclusión</p>
+            <blockquote>El descuento es real. La ventaja, no.</blockquote>
+            <p>De 47 planes oficiales evaluables, 3 bajan del precio que ya paga, sin tarjeta, quien reposta en una low-cost. Ninguno es de una petrolera, y los dos operadores que lo consiguen no ganan por tener mejor descuento: <strong>ganan por partir más baratos</strong>.</p>
+            <p><strong>Por qué es fiable:</strong> 11.237 estaciones (el registro completo, no una muestra) · dos carburantes con el mismo resultado · las 49 provincias · una fuente independiente (las apps) apunta igual.</p>
+          </div>
+          <figure class="figure reveal">
+            <a href="../assets/img/proyectos/ilusion-descuento/pagina-18.webp"><img src="../assets/img/proyectos/ilusion-descuento/pagina-18.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Página de conclusión del informe: «El descuento es real. La ventaja, no.», con cuatro motivos de fiabilidad: 11.237 estaciones, los dos carburantes, las 49 provincias y una fuente independiente."></a>
+            <figcaption><b>La conclusión del informe</b> y por qué es fiable.</figcaption>
+          </figure>
+        </section>
+      </article>
+    </div>
+
+    <div class="container">
+      <nav class="case-nav" aria-label="Otros proyectos">
+        <a href="hueco-comercial.html"><small>← Anterior</small><span>El hueco comercial</span></a>
+        <a href="alquiler-turistico-barcelona.html"><small>Siguiente →</small><span>Alquiler turístico legal en Barcelona</span></a>
+      </nav>
+    </div>
+
+    <section class="section section--tight" style="padding-top: var(--section)" aria-labelledby="contacto-titulo">
+      <div class="container">
+        <div class="cta reveal">
+          <p class="eyebrow">Contacto</p>
+          <h2 id="contacto-titulo">¿Buscas a alguien para prácticas en análisis de datos?</h2>
+          <p>Disponible de febrero a junio de 2027, en prácticas curriculares vía Ícaro (UGR).</p>
+          <div class="cta__actions">
+            <a class="link-arrow cta__mail" href="mailto:javibenitez039@gmail.com">javibenitez039@gmail.com <span class="arrow" aria-hidden="true">↗</span></a>
+            <a class="link-arrow cta__mail" href="../assets/docs/CV_Javier_Benitez_Escobedo.pdf" download>Descargar CV <span class="arrow" aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__top">
+        <nav class="footer__nav" aria-label="Pie">
+          <ul>
+            <li><a href="../index.html#sobre-mi">Sobre mí</a></li>
+            <li><a href="../index.html#proyectos">Proyectos</a></li>
+            <li><a href="../index.html#trayectoria">Trayectoria</a></li>
+            <li><a href="../assets/docs/CV_Javier_Benitez_Escobedo.pdf" download>CV</a></li>
+          </ul>
+        </nav>
+        <div class="footer__contact">
+          <p>Escríbeme</p>
+          <a href="mailto:javibenitez039@gmail.com">javibenitez039@gmail.com</a>
+        </div>
+        <ul class="footer__social">
+          <li><a class="link-arrow" href="https://www.linkedin.com/in/javierbenitezescobedo" rel="me noopener" target="_blank">LinkedIn <span class="arrow" aria-hidden="true">↗</span></a></li>
+          <li><a class="link-arrow" href="https://github.com/degallo" rel="me noopener" target="_blank">GitHub <span class="arrow" aria-hidden="true">↗</span></a></li>
+        </ul>
+      </div>
+      <div class="footer__bottom">
+        <span>© <span data-year>2026</span> Javier Benítez Escobedo · Granada</span>
+        <span>Fuentes de los proyectos: INE, MITECO, Inside Airbnb y catálogos online.</span>
+      </div>
+    </div>
+    <p class="footer__name" aria-hidden="true">Javier Benítez</p>
+  </footer>
+
+  <script src="../js/main.js" defer></script>
+</body>
+</html>
