@@ -17,6 +17,38 @@
   var root = document.documentElement;
   root.classList.add('js');
 
+  // ---- Portada: el nombre entra letra a letra ----
+  // Cada letra es un <span class="ch"> con su índice (--i) para escalonar la
+  // animación en CSS. El h1 conserva su texto en aria-label y las letras se
+  // ocultan a lectores de pantalla. Con movimiento reducido no se divide nada.
+  var heroName = document.querySelector('.hero__name');
+  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (heroName && !reduceMotion) {
+    var n = 0;
+    heroName.setAttribute('aria-label', Array.prototype.map.call(heroName.children, function (l) {
+      return l.textContent.trim();
+    }).join(' '));
+    Array.prototype.forEach.call(heroName.children, function (line) {
+      var words = line.textContent.trim().split(/\s+/);
+      line.textContent = '';
+      line.setAttribute('aria-hidden', 'true');
+      words.forEach(function (word, wi) {
+        var w = document.createElement('span');
+        w.className = 'w';
+        Array.prototype.forEach.call(word, function (chr) {
+          var c = document.createElement('span');
+          c.className = 'ch';
+          c.textContent = chr;
+          c.style.setProperty('--i', n++);
+          w.appendChild(c);
+        });
+        line.appendChild(w);
+        if (wi < words.length - 1) line.appendChild(document.createTextNode(' '));
+      });
+    });
+    heroName.classList.add('is-split');
+  }
+
   // ---- Cabecera: borde al hacer scroll ----
   var header = document.querySelector('.site-header');
   function onScroll() {
