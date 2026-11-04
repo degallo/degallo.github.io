@@ -7,7 +7,7 @@ El encargo concreto de la primera sesión está en `PROMPT_INICIAL.md`.
 
 Portfolio web personal de **Javier Benítez Escobedo (Javi)**, estudiante de último curso del
 Grado en Marketing e Investigación de Mercados (Universidad de Granada) que busca **prácticas
-curriculares en análisis de datos** para el segundo semestre (febrero–junio 2027, vía Ícaro).
+curriculares en análisis de datos** a partir de febrero de 2027 (vía Ícaro, sin fecha de fin).
 
 Todavía no tiene experiencia laboral como analista. Lo que tiene son **cuatro proyectos de
 análisis hechos por su cuenta** con datos públicos reales, y eso es lo que el portfolio vende.
@@ -20,7 +20,7 @@ que mira el portfolio entre 30 segundos y 3 minutos. **No es un cliente.** Por t
 - Nada de "servicios", "precios", "contrátame", "Book a call" ni "consulta gratuita".
 - Las llamadas a la acción son: **Ver proyectos · Descargar CV · Escribirme por email · LinkedIn · GitHub**.
 - En los primeros 5 segundos tiene que quedar claro: quién es, qué busca (prácticas en análisis
-  de datos, feb–jun 2027) y por qué merece la pena seguir leyendo (proyectos con datos reales).
+  de datos, a partir de febrero de 2027) y por qué merece la pena seguir leyendo (proyectos con datos reales).
 - Cada proyecto se presenta como un **caso de estudio**: pregunta de negocio → datos → método →
   hallazgo → qué haría una empresa con ello → limitaciones. Los reclutadores de datos valoran
   sobre todo el **criterio**: saber qué preguntar, desconfiar de un dato llamativo y decir

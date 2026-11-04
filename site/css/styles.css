@@ -7,7 +7,7 @@
 /* ---------- Tokens ---------- */
 :root {
   /* Color: monocromo con un acento terracota mínimo (el del CV) */
-  --bg: #F1F1EF;
+  --bg: #EBEBE8;
   --surface: #FFFFFF;
   --surface-2: #E6E6E3;
   --hero-bg: #E2E2DF;
@@ -608,4 +608,48 @@ tbody td:first-child { color: var(--ink); }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+}
+
+/* ==========================================================================
+   Ronda 3 · Separación de bloques y texto justificado
+   ========================================================================== */
+
+/* Bandas alternas a todo el ancho: Sobre mí (gris) · Proyectos (blanco)
+   · Trayectoria (gris) · Contacto (blanco) */
+.band { background: var(--surface); }
+.band .project__media { background: var(--bg); }
+.band .ghost { color: rgba(17, 17, 17, .05); }
+#proyectos.section { padding-top: var(--section); }
+
+/* Cabecera de cada bloque: línea gruesa, nombre y número */
+.section__index {
+  display: flex; justify-content: space-between; align-items: center;
+  border-top: 2px solid var(--ink);
+  padding-top: 14px;
+  margin-bottom: clamp(36px, 5vw, 64px);
+}
+.section__index .eyebrow { margin: 0; color: var(--ink); font-size: 1rem; }
+.section__num { font-family: var(--font-display); font-size: 1rem; color: var(--ink-2); font-variant-numeric: tabular-nums; }
+.section__head .section__index { margin-bottom: clamp(24px, 3vw, 40px); }
+
+/* En los casos de estudio, cada apartado separado por una línea */
+.case-body > section + section { border-top: 1px solid var(--line); padding-top: clamp(40px, 5vw, 64px); }
+
+/* Texto justificado en toda la web (con guiones para evitar huecos grandes) */
+p, li, dd, figcaption, blockquote, .statement {
+  text-align: justify;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+/* Excepciones: etiquetas, cifras, nombres y piezas centradas */
+.eyebrow, .label, .ghost, .pill, .tags li, .hero__role, .kpi__num,
+.nav li, .hero__links li, .footer__nav li, .footer__social li, .tools__list li,
+.funnel li, .funnel-note, .footer__name, .section__num {
+  text-align: left; -webkit-hyphens: manual; hyphens: manual;
+}
+.cta p, .footer__contact p { text-align: justify; text-align-last: center; }
+.footer__name { text-align: center; }
+.case-nav span { text-align: inherit; }
+@media (max-width: 600px) {
+  .statement { font-size: 1.42rem; line-height: 1.22; }
 }

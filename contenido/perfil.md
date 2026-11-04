@@ -29,7 +29,7 @@ una empresa, BI en equipo) y propónsela a Javi.
 ## Qué busca
 
 - **Prácticas curriculares en análisis de datos** (orientadas a marketing / investigación de mercados / negocio)
-- **Periodo:** segundo semestre, **febrero–junio 2027**
+- **Periodo:** **a partir de febrero de 2027** (sin fecha de fin; decisión de Javi)
 - **Vía:** plataforma Ícaro (prácticas curriculares de la UGR)
 - Objetivo a medio plazo: Máster en Big Data y Business Analytics (ESIC) [PENDIENTE: decidir si se menciona en la web]
 

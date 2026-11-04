@@ -74,6 +74,12 @@ Notas de la primera versión:
       en gris y a color al pasar el ratón.
 - [x] Nueva llamada a la acción orientada a aprender y quedarse.
 
+## Ronda 3
+
+- [x] Disponibilidad: "a partir de febrero de 2027", sin fecha de fin (decisión de Javi).
+- [x] Texto justificado en toda la web, con guiones automáticos.
+- [x] Bloques más separados: bandas gris/blanco alternas y cabecera numerada (01–04) en cada bloque.
+
 ## Después del lanzamiento
 
 - [ ] Dominio propio (opcional, ~10 €/año) o mantener `degallo.github.io`.
