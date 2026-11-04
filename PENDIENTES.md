@@ -46,7 +46,7 @@ que deje en la web.
 - [ ] Fechas de la formación (año de inicio del grado, años del ciclo superior). Aplazado por
       decisión de Javi: de momento la web muestra solo la duración, sin marcador.
 - [x] Reescribir la frase del perfil — aprobada y publicada en "Sobre mí".
-- [ ] ¿Versión en inglés? Recomendable a medio plazo (el CV dice inglés profesional).
+- [~] **Versión en inglés:** portada hecha en `site/en/index.html` (selector ES/EN en la cabecera). **Falta:** traducir las 4 páginas de caso (ahora enlazan a la versión en castellano, marcadas "Case study (ES)") y, si se quiere, un CV en inglés.
 - [x] Uso de IA: decidido no mencionarlo en la web.
 
 ## Marcadores [PENDIENTE] visibles en la web
