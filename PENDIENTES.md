@@ -66,6 +66,14 @@ Notas de la primera versión:
 - Foto del hero: `site/assets/img/javier-benitez-640.webp` y `-1000.webp`, en B/N, a partir de la
   foto de estudio nueva. `foto-perfil.webp` se conserva pero ya no se usa.
 
+## Ronda 2 (rediseño)
+
+- [x] Hero con el nombre completo; "Sobre mí" abre con la frase de estudiante de la UGR.
+- [x] Eliminada la sección "Cómo trabajo".
+- [x] Trayectoria con logos (UGR, IES Ángel Ganivet, Cafetería Bar El Gallo, MODE Foundation),
+      en gris y a color al pasar el ratón.
+- [x] Nueva llamada a la acción orientada a aprender y quedarse.
+
 ## Después del lanzamiento
 
 - [ ] Dominio propio (opcional, ~10 €/año) o mantener `degallo.github.io`.

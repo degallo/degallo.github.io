@@ -1,5 +1,18 @@
 # Dirección de diseño
 
+> **Actualización (ronda 2, noviembre 2026) — manda sobre lo de abajo.**
+> Javi pidió una portada más profesional y menos "storytelling", con estas referencias:
+> portfolios de *daniel stoopendaal* y *Alex Graham* (nombre gigante en Helvetica cruzando un
+> retrato en blanco y negro sobre fondo gris, navegación mínima en píldora).
+> - **Paleta:** monocroma (gris claro `#F1F1EF`, blanco, tinta `#111`). El terracota `#A4472B`
+>   queda solo como acento mínimo (puntos de etiqueta, hover).
+> - **Tipografía:** principal **Helvetica** (titulares y nombre); secundaria y terciaria
+>   **Montserrat** (texto y etiquetas en mayúsculas espaciadas). Sin otras familias.
+> - **Hero:** el nombre completo en grande con `mix-blend-mode: difference` sobre el retrato
+>   recortado (`javier-benitez-recorte-*.webp`).
+> - **Contenido:** sin la sección "Cómo trabajo" ni titulares eslogan. Trayectoria en dos
+>   columnas (Formación / Experiencia) con los logos de cada institución en `assets/img/logos/`.
+
 ## Referencia: plantilla Finox (Webflow)
 
 Capturas en `referencias/capturas/`:
