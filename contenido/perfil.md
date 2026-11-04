@@ -11,7 +11,7 @@ Fuente: CV (`BENITEZ_JAVIER_CV.pdf`). Todo lo que hay aquí está confirmado por
 
 ## Perfil (texto del CV, base para "Sobre mí")
 
-> Estudiante de último curso del Grado en Marketing e Investigación de Mercados (UGR),
+> Estudiante del Grado en Marketing e Investigación de Mercados (UGR),
 > especializándome en análisis de datos aplicado a negocio. Construyo por iniciativa propia
 > proyectos de análisis con fuentes públicas españolas (INE, MITECO): limpieza y modelado en
 > SQL, dashboards en Looker Studio, y conclusiones accionables para una decisión real.
