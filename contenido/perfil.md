@@ -54,6 +54,8 @@ una empresa, BI en equipo) y propónsela a Javi.
 
 Idiomas: **Español** (nativo) · **Inglés** (profesional)
 
+Movilidad: carnet de conducir y vehículo propio (publicado en la web).
+
 Competencias que se ven en los proyectos (útiles para "Cómo trabajo"):
 definir la pregunta de negocio antes de tocar datos; diseñar una métrica y explicar qué
 señala y qué no; embudos de filtrado con el motivo de cada descarte; validar con métricas
