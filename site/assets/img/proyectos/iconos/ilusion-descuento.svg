@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="t"><title id="t">Surtidor de gasolinera con la etiqueta «diésel» y un sello de descuento con el símbolo de porcentaje</title>
+<g fill="none" stroke="#111111" stroke-width="3" opacity=".18"><path d="M120 790 H1480"/></g>
+<!-- surtidor -->
+<rect x="500" y="770" width="400" height="30" rx="8" fill="#111111"/>
+<rect x="540" y="150" width="320" height="630" rx="34" fill="#111111"/>
+<rect x="584" y="196" width="232" height="150" rx="16" fill="#ECECE9"/>
+<text x="700" y="262" text-anchor="middle" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="52" font-weight="700" letter-spacing="3" fill="#111111">DIESEL</text>
+<rect x="628" y="290" width="144" height="10" rx="5" fill="#A4472B"/>
+<rect x="584" y="388" width="232" height="14" rx="7" fill="#ECECE9" opacity=".35"/>
+<rect x="584" y="426" width="232" height="14" rx="7" fill="#ECECE9" opacity=".2"/>
+<circle cx="700" cy="560" r="54" fill="none" stroke="#ECECE9" stroke-width="10" opacity=".5"/>
+<rect x="584" y="660" width="232" height="60" rx="14" fill="#A4472B"/>
+<!-- manguera y pistola -->
+<path d="M860 470 C 1010 470 1010 640 960 700 C 940 724 900 730 900 770" fill="none" stroke="#111111" stroke-width="20" stroke-linecap="round"/>
+<path d="M860 440 h 70 a22 22 0 0 1 22 22 v 70 h-36 v-30 h-56 z" fill="#111111"/>
+<!-- gota -->
+<g fill="#A4472B"><path transform="translate(1010 780) scale(0.62)" d="M0 -60 C 30 -20 44 4 44 24 A44 44 0 0 1 -44 24 C -44 4 -30 -20 0 -60 Z"/></g>
+<!-- sello de descuento -->
+<g transform="rotate(-10 1090 300)"><polygon points="1090.0,150.0 1117.6,179.1 1155.1,164.9 1167.3,203.1 1207.3,206.5 1201.7,246.2 1236.2,266.6 1214.0,300.0 1236.2,333.4 1201.7,353.8 1207.3,393.5 1167.3,396.9 1155.1,435.1 1117.6,420.9 1090.0,450.0 1062.4,420.9 1024.9,435.1 1012.7,396.9 972.7,393.5 978.3,353.8 943.8,333.4 966.0,300.0 943.8,266.6 978.3,246.2 972.7,206.5 1012.7,203.1 1024.9,164.9 1062.4,179.1" fill="#A4472B"/>
+<circle cx="1090" cy="300" r="104" fill="none" stroke="#ECECE9" stroke-width="3" opacity=".55"/>
+<text x="1090" y="344" text-anchor="middle" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="140" font-weight="500" fill="#ECECE9">%</text></g>
+</svg>

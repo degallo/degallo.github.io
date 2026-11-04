@@ -38,7 +38,7 @@ una empresa, BI en equipo) y propónsela a Javi.
 - **Email:** javibenitez039@gmail.com
 - **LinkedIn:** https://www.linkedin.com/in/javierbenitezescobedo
 - **GitHub:** https://github.com/degallo
-- **Teléfono:** 625 79 05 41 — [PENDIENTE: Javi decide si se publica. Por defecto NO]
+- **Teléfono:** 625 79 05 41 — publicado en la web por decisión de Javi (confirmado 2026-11-04).
 - **Dirección postal:** NO publicar.
 
 ## Habilidades (del CV)

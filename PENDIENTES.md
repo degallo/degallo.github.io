@@ -17,7 +17,7 @@ que deje en la web.
 - [ ] **Añadir al CV el proyecto de moda** (16 cadenas, octubre 2026). Ahora mismo la web
       tendría cuatro proyectos y el CV tres.
 - [x] **Moneda del proyecto de Barcelona:** confirmado por Javi, son dólares. La web usa "$".
-- [x] **Teléfono en la web:** no (por defecto). Tampoco va en el CV descargable.
+- [x] **Teléfono en la web:** sí, 625 79 05 41 (Javi lo confirmó el 4-nov-2026). Está en Contacto y en el pie. **Falta añadirlo al CV descargable** (`CV_Javier_Benitez_Escobedo.pdf` no lo lleva todavía).
 
 ## Repositorios de los proyectos (los va a abrir el reclutador)
 
