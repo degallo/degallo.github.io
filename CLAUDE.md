@@ -31,8 +31,9 @@ que mira el portfolio entre 30 segundos y 3 minutos. **No es un cliente.** Por t
 1. **Todo en español** (una versión en inglés puede venir después; deja el código preparado
    para ello, por ejemplo con los textos agrupados y fáciles de duplicar).
 2. **No inventes nada.** Ni cifras, ni experiencia, ni testimonios, ni empresas, ni
-   porcentajes tipo "320 % de mejora". Todo dato sale de `contenido/`. Si algo falta, deja un
-   marcador visible `[PENDIENTE: …]` y apúntalo en `PENDIENTES.md`.
+   porcentajes tipo "320 % de mejora". Todo dato sale de `contenido/`. Si algo falta, **no lo muestres en la web**:
+   deja un comentario HTML `<!-- PENDIENTE: … -->` en su sitio y apúntalo en `PENDIENTES.md`
+   (decisión de Javi, nov. 2026: un reclutador no debe ver huecos a medias).
 3. Las cifras se copian **exactamente** como están en `contenido/proyectos/*.md` (con formato
    español: punto de miles, coma decimal, `€` detrás con espacio fino o normal).
 4. Tono: directo, concreto, sin adjetivos vacíos ("apasionado", "proactivo", "orientado a

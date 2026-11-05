@@ -88,3 +88,12 @@ Notas de la primera versión:
 - [ ] Poner la URL del portfolio en el CV, en LinkedIn (sección destacados) y en Ícaro.
 - [ ] Un quinto proyecto con **Python/pandas** cuando se domine un poco más (ahora todo es SQL),
       idealmente sobre datos de marketing (campañas, encuestas, segmentación de clientes).
+
+
+## Ocultos en la web hasta tenerlos (nov. 2026)
+
+Están como comentario HTML en su página; al tener el dato, descomentar y rellenar.
+
+- [ ] Enlaces públicos de Looker Studio: hueco comercial, ilusión del descuento y alquiler turístico (bloque "Dashboard interactivo").
+- [ ] Repositorio público con el SQL del alquiler turístico en Barcelona (fila "Código" de la ficha).
+- [ ] Repositorio limpio y con README del posicionamiento de moda (fila "Código" de la ficha).
