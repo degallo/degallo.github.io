@@ -1,0 +1,10 @@
+# Netlify: copia este archivo a la RAÍZ del repositorio (junto a README.md).
+# No hay paso de compilación: se publica la carpeta site/ tal cual.
+# Las cabeceras están en _headers (cópialo dentro de site/).
+
+[build]
+  publish = "site"
+  command = ""
+
+# Si cambias de dominio y quieres que la dirección antigua de Netlify redirija a la nueva,
+# configúralo en Netlify > Domain management (no hace falta tocar este archivo).
