@@ -49,7 +49,7 @@ que deje en la web.
 - [x] **Versión en inglés:** portada y las 4 páginas de caso en `site/en/` (selector ES/EN en cada página, hreflang en ambos idiomas). **Falta:** informes PDF y CV en inglés (los botones indican "(ES)"). En inglés no se muestran los marcadores de dashboard ni de repositorio pendientes; siguen en la versión en castellano.
 - [x] Uso de IA: decidido no mencionarlo en la web.
 
-## Marcadores [PENDIENTE] visibles en la web
+## Marcadores pendientes (desde nov. 2026, ocultos como comentario HTML; ya no se ven en la web)
 
 | Página | Marcador | Se resuelve con |
 |---|---|---|
@@ -63,8 +63,8 @@ Notas de la primera versión:
 - En el embudo de moda, el paso 890 → 873 se ha etiquetado con el criterio "marcas con 5 modelos
   o más por prenda", que es el que figura en el `.md` para las métricas. Comprobar que es el motivo.
 - Uso de IA: decidido **no** mencionarlo en la web.
-- Foto del hero: `site/assets/img/javier-benitez-640.webp` y `-1000.webp`, en B/N, a partir de la
-  foto de estudio nueva. `foto-perfil.webp` se conserva pero ya no se usa.
+- Foto del hero: recorte en B/N `javier-benitez-recorte-700/900/1200.webp`. `javier-benitez-1000.webp`
+  se usa en los datos estructurados de la portada. `foto-perfil.webp` se conserva pero ya no se usa.
 
 ## Ronda 2 (rediseño)
 
@@ -79,6 +79,27 @@ Notas de la primera versión:
 - [x] Disponibilidad: "a partir de febrero de 2027", sin fecha de fin (decisión de Javi).
 - [x] Texto justificado en toda la web, con guiones automáticos.
 - [x] Bloques más separados: bandas gris/blanco alternas y cabecera numerada (01–04) en cada bloque.
+
+## Ronda 5 · Auditoría final (5-nov-2026)
+
+Detalle completo en `documentacion/AUDITORIA.md`. Hecho:
+
+- [x] Montserrat autoalojada (fuera Google Fonts), imágenes a medida (800/1200 px), SVG optimizados.
+- [x] Resumen (pregunta, resultado, herramientas) al principio de cada caso, ES y EN.
+- [x] Visor de gráficos, botón «Copiar email», hoja de impresión, «Volver arriba».
+- [x] robots.txt, sitemap.xml bilingüe, datos estructurados por caso, imagen para redes en JPG.
+- [x] Accesibilidad 100 en todas las páginas; rendimiento móvil 97–100.
+- [x] Guía de migración, guía de mantenimiento, plantillas de alojamiento y herramientas.
+
+Nuevo por decidir o hacer (además de lo ya listado arriba):
+
+- [ ] **Perfil de GitHub:** archivar o hacer privados los repositorios antiguos sin descripción
+      (CC, ALJIBE, MARK-SECT, DISC1, MarkInter): es lo primero que ve quien pulsa «GitHub».
+- [ ] **Fecha de fin del grado** (p. ej. «Finalización prevista: junio de 2027»): es un filtro
+      habitual de los reclutadores de prácticas.
+- [ ] **¿Helvetica también en Windows/Android?** Hoy se ve Arial; opciones en
+      `documentacion/MANTENIMIENTO.md` (licencia o clon libre TeX Gyre Heros).
+- [ ] Tras cambiar de dominio (si se hace): Google Search Console + sitemap y LinkedIn Post Inspector.
 
 ## Después del lanzamiento
 

@@ -64,8 +64,12 @@ que mira el portfolio entre 30 segundos y 3 minutos. **No es un cliente.** Por t
   ├── 404.html
   └── favicon.svg
   ```
-- Fuentes: Google Fonts (máximo 2 familias). Sin jQuery. Animaciones con CSS e
-  `IntersectionObserver`; nada de librerías pesadas. Respeta `prefers-reduced-motion`.
+- Fuentes: máximo 2 familias. **Montserrat autoalojada** en `site/assets/fonts/` (no se carga
+  nada de Google ni de otros servidores); Helvetica es la del sistema. Sin jQuery. Animaciones con
+  CSS e `IntersectionObserver`; nada de librerías pesadas. Respeta `prefers-reduced-motion`.
+- La web existe en castellano (`site/`) y en inglés (`site/en/`): todo cambio de texto va en las dos.
+- Antes de publicar: `python3 herramientas/comprobar-web.py`. Si cambias CSS o JS:
+  `python3 herramientas/subir-version.py`. Más en `documentacion/MANTENIMIENTO.md`.
 - Rendimiento: imágenes `webp` con `width`/`height` y `loading="lazy"` (salvo la del hero).
   Objetivo Lighthouse ≥ 90 en las cuatro categorías.
 - Accesibilidad: HTML semántico, un solo `h1` por página, contraste AA, foco visible, `alt`
@@ -80,6 +84,9 @@ Lee `referencias/DISENO.md` y mira las capturas de `referencias/capturas/`.
 Resumen: estructura y aire de la plantilla **Finox** (minimalista, monocromo, tipografía
 enorme, tarjetas redondeadas, etiquetas en píldora, pie oscuro con el nombre gigante),
 **con el acento terracota de su CV** para que CV y web parezcan de la misma persona.
+La dirección **vigente** (monocromo, Helvetica + Montserrat, nombre gigante sobre el retrato
+recortado) está al principio de `referencias/DISENO.md` y manda sobre este resumen.
+El estado de la web y lo que queda por hacer están en `documentacion/AUDITORIA.md`.
 
 **Finox es una plantilla comercial de Webflow: úsala solo como inspiración.** No copies su
 HTML, su CSS, sus imágenes ni sus SVG. Escribe todo desde cero.

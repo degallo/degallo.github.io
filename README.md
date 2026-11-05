@@ -1,33 +1,51 @@
 # Portfolio — Javier Benítez Escobedo
 
-Portfolio web de análisis de datos orientado a reclutadores. Se publica en GitHub Pages:
-**https://degallo.github.io/**
+Portfolio web de análisis de datos orientado a reclutadores, en castellano e inglés.
+Se publica en GitHub Pages: **https://degallo.github.io/**
 
 ## Cómo está organizado
 
 ```
 ├── CLAUDE.md              ← contexto permanente para Claude Code (léelo primero)
-├── PROMPT_INICIAL.md      ← el prompt para arrancar la sesión que construye la web
 ├── PENDIENTES.md          ← decisiones y material que faltan
+├── PROMPT_INICIAL.md      ← el encargo de la primera sesión (histórico)
+├── documentacion/
+│   ├── AUDITORIA.md       ← análisis completo de la web (reclutador + técnico), antes/después
+│   ├── GUIA-MIGRACION.md  ← cómo llevar la web a otro dominio o alojamiento
+│   ├── MANTENIMIENTO.md   ← cómo cambiar textos, el CV, añadir un dashboard o un proyecto
+│   └── plantillas/        ← configuración lista para Netlify, Cloudflare, Vercel, Apache, Nginx
+├── herramientas/          ← scripts de Python (sin dependencias, salvo el de imágenes)
 ├── contenido/
 │   ├── perfil.md          ← datos del CV: perfil, experiencia, formación, contacto
 │   └── proyectos/         ← un .md por proyecto con todas las cifras verificadas
 ├── referencias/
-│   ├── DISENO.md          ← dirección visual y adaptación de la plantilla de referencia
+│   ├── DISENO.md          ← dirección visual (la vigente está al principio)
 │   └── capturas/          ← capturas de la plantilla Finox (solo inspiración)
 ├── site/                  ← LA WEB (lo único que se publica)
-│   └── assets/
-│       ├── img/           ← foto de perfil e imágenes de cada proyecto (.webp)
-│       └── docs/          ← informes PDF de los proyectos
+│   ├── index.html · proyectos/      ← castellano
+│   ├── en/                          ← inglés
+│   ├── css/ · js/
+│   └── assets/ (fonts/, img/, docs/)
 └── .github/workflows/pages.yml  ← publica site/ en GitHub Pages en cada push a main
 ```
 
-## Cómo empezar
+## Ver la web en local
 
-1. Abre Claude Code en la web (claude.ai/code) y elige este repositorio.
-2. Copia el bloque de `PROMPT_INICIAL.md` y pégalo como primer mensaje.
-3. Revisa `PENDIENTES.md` en paralelo: algunas cosas (CV sin dirección, moneda de Barcelona)
-   conviene resolverlas antes de publicar.
+```bash
+python3 -m http.server 8000 --directory site
+```
+
+Y abre http://localhost:8000.
+
+## Herramientas
+
+| Comando | Para qué |
+|---|---|
+| `python3 herramientas/comprobar-web.py` | Antes de publicar: enlaces, imágenes, anclas, metadatos y que no quede ningún `[PENDIENTE]` visible |
+| `python3 herramientas/subir-version.py` | Después de tocar el CSS o el JS: evita que los navegadores muestren la versión en caché |
+| `python3 herramientas/preparar-imagenes.py <carpeta> <slug>` | Proyecto nuevo: versiones de 800/1200 px e imagen para redes (necesita Pillow) |
+| `python3 herramientas/cambiar-dominio.py <url> [--aplicar]` | Migrar a otro dominio: cambia todas las URL absolutas de una vez |
+| `python3 herramientas/huella-csp.py` | Recalcula la huella del script para la política de seguridad de `_headers` |
 
 ## Publicación
 
