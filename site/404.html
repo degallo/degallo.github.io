@@ -6,23 +6,29 @@
   <title>Página no encontrada · Javier Benítez Escobedo</title>
   <meta name="description" content="Esta página no existe. Vuelve al portfolio de análisis de datos de Javier Benítez Escobedo.">
   <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#EBEBE8">
+  <meta name="color-scheme" content="light only">
   <!-- GitHub Pages sirve esta página para cualquier ruta que no exista, también en subcarpetas.
-       Por eso el CSS va incrustado y los enlaces apuntan a la raíz del sitio. -->
+       Por eso el CSS va incrustado y los enlaces apuntan a la raíz del sitio (/).
+       Si la web se muda a una subcarpeta (p. ej. dominio.com/portfolio/), cambia esos «/». -->
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <style>
-    :root { --bg:#F1F1EF; --ink:#111111; --ink-2:#555555; --accent:#A4472B; }
+    :root { --bg:#EBEBE8; --ink:#111111; --ink-2:#555555; --accent:#A4472B; }
     * { box-sizing: border-box; }
     body { margin:0; min-height:100vh; display:grid; place-items:center; padding:24px 16px;
            background:var(--bg); color:var(--ink);
            font:400 1.0625rem/1.6 "Helvetica Neue", Helvetica, Arial, sans-serif; }
     main { max-width: 640px; }
-    .eyebrow { font:500 .75rem/1 "Helvetica Neue", Helvetica, Arial, sans-serif; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-2); display:flex; gap:.55em; align-items:center; }
-    .eyebrow::before { content:""; width:8px; height:8px; border-radius:50%; background:var(--accent); }
+    .eyebrow { font-size:.86rem; font-weight:500; color:var(--ink-2); display:flex; gap:.6em; align-items:center; margin:0; }
+    .eyebrow::before { content:""; width:7px; height:7px; border-radius:50%; background:var(--accent); }
     h1 { font-size: clamp(3rem, 12vw, 7rem); font-weight:400; letter-spacing:-.055em; line-height:.95; margin:24px 0; }
     p { color:var(--ink-2); margin: 0 0 28px; }
+    .en { font-size:.92rem; margin-top:-16px; }
     a { display:inline-block; color:var(--ink); font-weight:500; font-size:.9rem; text-decoration:none; border:1px solid var(--ink); border-radius:999px; padding:.75em 1.3em; margin:0 10px 10px 0; transition:background .25s, color .25s; }
     a:hover { background:var(--ink); color:#fff; }
-    a:focus-visible { outline:2px solid var(--accent); outline-offset:3px; border-radius:4px; }
+    a:focus-visible { outline:2px solid var(--accent); outline-offset:3px; }
+    @media (prefers-reduced-motion: reduce) { a { transition: none; } }
   </style>
 </head>
 <body>
@@ -30,8 +36,10 @@
     <p class="eyebrow">Error 404</p>
     <h1>Este dato no está en la muestra.</h1>
     <p>La página que buscas no existe o ha cambiado de dirección.</p>
+    <p class="en" lang="en">This page does not exist or has moved.</p>
     <a href="/">Volver a la portada ↗</a>
     <a href="/#proyectos">Ver proyectos ↗</a>
+    <a href="/en/" lang="en" hreflang="en">English version ↗</a>
   </main>
 </body>
 </html>

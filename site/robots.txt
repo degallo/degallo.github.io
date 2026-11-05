@@ -1,0 +1,5 @@
+# Portfolio de Javier Benítez Escobedo
+User-agent: *
+Allow: /
+
+Sitemap: https://degallo.github.io/sitemap.xml
