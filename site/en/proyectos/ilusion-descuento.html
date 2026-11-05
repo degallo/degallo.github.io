@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The discount illusion · Case study · Javier Benítez Escobedo</title>
+  <meta name="description" content="Does your fuel station discount card really pay off? 11,237 stations and 84 official MITECO plans against low-cost prices.">
+  <link rel="canonical" href="https://degallo.github.io/en/proyectos/ilusion-descuento.html">
+  <link rel="alternate" hreflang="es" href="https://degallo.github.io/proyectos/ilusion-descuento.html">
+  <link rel="alternate" hreflang="en" href="https://degallo.github.io/en/proyectos/ilusion-descuento.html">
+  <meta name="theme-color" content="#EBEBE8">
+  <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:site_name" content="Javier Benítez Escobedo">
+  <meta property="og:title" content="The discount illusion · Case study">
+  <meta property="og:description" content="Does your fuel station discount card really pay off? 11,237 stations and 84 official MITECO plans against low-cost prices.">
+  <meta property="og:url" content="https://degallo.github.io/en/proyectos/ilusion-descuento.html">
+  <meta property="og:image" content="https://degallo.github.io/assets/img/proyectos/ilusion-descuento/pagina-01.webp">
+  <meta property="og:image:width" content="1600">
+  <meta property="og:image:height" content="900">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="../../css/styles.css?v=9">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+      <a class="brand" href="../index.html">Javier Benítez<span class="brand__2"> Escobedo</span></a>
+      <nav class="nav" id="nav" aria-label="Main">
+        <ul>
+          <li><a href="../index.html#sobre-mi">About</a></li>
+          <li><a href="../index.html#proyectos" aria-current="true">Projects</a></li>
+          <li><a href="../index.html#trayectoria">Background</a></li>
+          <li><a href="../index.html#contacto">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header__end">
+        <a class="lang" href="../../proyectos/ilusion-descuento.html" hreflang="es" lang="es" aria-label="Versión en español">ES</a>
+        <a class="btn btn--sm nav__cv" href="../../assets/docs/CV_Javier_Benitez_Escobedo.pdf" download><span class="nav__cv-long">Download&nbsp;</span>CV</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="container case-hero" aria-labelledby="titulo">
+      <a class="back" href="../index.html#proyectos"><span aria-hidden="true">←</span> All projects</a>
+      <p><span class="pill">Data analysis · Fuel stations in Spain</span></p>
+      <h1 id="titulo">The discount illusion</h1>
+      <p class="case-hero__sub">Millions of drivers and thousands of companies with vehicle fleets take it for granted that their discount card saves them money. Nobody had checked it against official data.</p>
+      <figure class="case-cover">
+        <img src="../../assets/img/proyectos/ilusion-descuento/pagina-01.webp" width="1600" height="900" fetchpriority="high"
+             alt="Cover of the report La ilusión del descuento (in Spanish), with a dot map of the 11,237 fuel stations analysed in Spain.">
+        <figcaption class="case-cover__note">Report pages are shown in their original Spanish.</figcaption>
+      </figure>
+    </section>
+
+    <div class="container case-layout">
+      <aside class="ficha" aria-labelledby="ficha-titulo">
+        <h2 id="ficha-titulo">Project sheet</h2>
+        <dl>
+          <div><dt>Date</dt><dd>August 2026 · data downloaded on 13/08/2026</dd></div>
+          <div><dt>Sources</dt><dd>Official register of Spain's Ministry for the Ecological Transition (MITECO): 11,501 stations and 84 declared discount plans · External check: each company's website and specialist press (August 2026)</dd></div>
+          <div><dt>Tools</dt><dd>SQL (SQLite) · Looker Studio</dd></div>
+          <div><dt>Volume</dt><dd>11,501 stations (11,237 analysed) · 84 plans from 23 operators · 49 provinces</dd></div>
+          <div><dt>Code</dt><dd><a href="https://github.com/degallo/la-ilusion-del-descuento" target="_blank" rel="noopener">github.com/degallo/la-ilusion-del-descuento ↗</a><br><code>GASOLINERASSQL.sql</code>, 1,014 lines</dd></div>
+        </dl>
+        <div class="ficha__actions">
+          <a class="btn" href="../../assets/docs/la-ilusion-del-descuento.pdf" download hreflang="es">Download PDF report (ES) · 18 pp.</a>
+          <a class="btn btn--ghost" href="https://github.com/degallo/la-ilusion-del-descuento" target="_blank" rel="noopener">See the SQL on GitHub</a>
+        </div>
+        <nav class="ficha__toc" aria-label="On this page" data-spy>
+          <ol>
+            <li><a href="#pregunta">The question</a></li>
+            <li><a href="#metrica">The metric</a></li>
+            <li><a href="#giro">The first twist</a></li>
+            <li><a href="#embudo">The funnel</a></li>
+            <li><a href="#hallazgos">Findings</a></li>
+            <li><a href="#limitaciones">Limitations</a></li>
+            <li><a href="#uso">How to use it</a></li>
+            <li><a href="#conclusion">Conclusion</a></li>
+          </ol>
+        </nav>
+      </aside>
+
+      <article class="case-body">
+        <section id="cifras" aria-label="Key figures">
+          <div class="kpis">
+            <div class="kpi reveal"><p class="kpi__num">11,501</p><p class="kpi__label">stations in the official register</p></div>
+            <div class="kpi reveal" style="--d:.06s"><p class="kpi__num">11,237</p><p class="kpi__label">analysed (264 in the Canary Islands, Ceuta and Melilla excluded)</p></div>
+            <div class="kpi reveal"><p class="kpi__num">84</p><p class="kpi__label">plans declared by 23 operators</p></div>
+            <div class="kpi reveal" style="--d:.06s"><p class="kpi__num">47</p><p class="kpi__label">assessable for 95 petrol after removing non-comparable ones</p></div>
+          </div>
+        </section>
+
+        <section id="pregunta" aria-labelledby="pregunta-t">
+          <p class="eyebrow">The question</p>
+          <h2 id="pregunta-t">Is your card discount real, or does it only offset a higher starting price?</h2>
+          <p class="lead">The question is not whether the discount exists, but whether it is enough to reach what a driver already pays, without a card, at a low-cost station.</p>
+          <p><strong>Who it is for:</strong> a fleet manager. 15 vans spend €50,000–80,000 a year on fuel; a 3% deviation is about €2,000 a year.</p>
+          <figure class="figure reveal">
+            <a href="../../assets/img/proyectos/ilusion-descuento/pagina-02.webp"><img src="../../assets/img/proyectos/ilusion-descuento/pagina-02.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Report page with the question and the key figures: 11,501 stations in the register, 11,237 analysed, 84 declared plans and 47 assessable for 95 petrol."></a>
+            <figcaption><b>The question and the key figures</b>, as they open the report.</figcaption>
+          </figure>
+        </section>
+
+        <section id="metrica" aria-labelledby="metrica-t">
+          <p class="eyebrow">The metric</p>
+          <h2 id="metrica-t">Effective price against the low-cost threshold.</h2>
+          <p class="formula"><small>Formula</small>effective price = operator's average base price − discount<br>worth it only if effective price &lt; average low-cost price</p>
+          <div class="is-isnt">
+            <div>
+              <h3>What it signals</h3>
+              <p>Whether, with the card, you end up paying less than someone filling up without a card at a low-cost station.</p>
+            </div>
+            <div>
+              <h3>What it is not</h3>
+              <p>It is not the saving compared with having no card (that is always positive, and it is the one companies advertise). It does not measure the discount; it measures whether the discount is enough.</p>
+            </div>
+          </div>
+          <div class="example">
+            <p><strong>Example · Repsol, 95 petrol:</strong> base €1.771 − €0.030 (Repsol Más Visa) = €1.741, against a low-cost threshold of €1.614. It falls short by <strong>12.7 cents</strong> (15.9 cents for diesel).</p>
+          </div>
+
+          <h3>The starting point</h3>
+          <p>Before discounts, oil companies start <strong>15.0 cents</strong> above low-cost stations for 95 petrol and <strong>17.7 cents</strong> for diesel.</p>
+          <div class="table-wrap reveal" tabindex="0" role="region" aria-label="Average price by operator type">
+            <table>
+              <caption>Average price by operator type</caption>
+              <thead><tr><th scope="col">Type</th><th scope="col" class="num">95 petrol</th><th scope="col" class="num">Stations</th><th scope="col" class="num">Diesel</th></tr></thead>
+              <tbody>
+                <tr><td>Oil company</td><td class="num">€1.764</td><td class="num">5,305</td><td class="num">€1.892</td></tr>
+                <tr><td>Independent</td><td class="num">€1.665</td><td class="num">4,514</td><td class="num">€1.781</td></tr>
+                <tr><td>Supermarket</td><td class="num">€1.619</td><td class="num">395</td><td class="num">€1.749</td></tr>
+                <tr><td>Low-cost</td><td class="num">€1.614</td><td class="num">1,023</td><td class="num">€1.715</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section id="giro" aria-labelledby="giro-t">
+          <div class="callout reveal">
+            <p class="callout__tag">Twist 1 · distrust the striking figure</p>
+            <h3 id="giro-t">The finding that turned out to be a different tax system.</h3>
+            <p>A Canary Islands subsidiary of DISA appeared as the only oil company whose discount paid off. The reason: the Canary Islands apply a <strong>7% IGIC</strong> instead of 21% VAT. 95 petrol averages €1.492 there, 12.2 cents below the mainland threshold before any discount.</p>
+            <p>Decision: 264 stations and 16 plans are excluded. It was not a commercial advantage; it was a different tax regime.</p>
+          </div>
+        </section>
+
+        <section id="embudo" aria-labelledby="embudo-t">
+          <p class="eyebrow">The funnel</p>
+          <h2 id="embudo-t">From 84 plans to 3.</h2>
+          <ol class="funnel">
+            <li><div class="funnel__bar"><span style="--w:100%"></span><b>84</b></div><div class="funnel__txt"><span>Declared in the official register</span><span>23 operators</span></div></li>
+            <li><div class="funnel__bar"><span style="--w:81%; --d:.1s"></span><b>68</b></div><div class="funnel__txt"><span>Without DISA's Canary Islands networks</span><span>−16, non-comparable taxation</span></div></li>
+            <li><div class="funnel__bar"><span style="--w:63.1%; --d:.2s"></span><b>53</b></div><div class="funnel__txt"><span>With a brand that can be matched to stations</span><span>−15 (Adelfas, Saras, Albera, Beta, Luvirr, Andamur, Champion)</span></div></li>
+            <li><div class="funnel__bar"><span style="--w:56%; --d:.3s"></span><b>47</b></div><div class="funnel__txt"><span>With a discount amount or rate</span><span>−6 (Tamoil, Solred Más, Internacionales, IDS)</span></div></li>
+            <li><div class="funnel__bar"><span style="--w:8%; --d:.4s"></span><b>3</b></div><div class="funnel__txt"><span>Below the low-cost threshold for 95 petrol</span><span>Carrefour and Esclatoil (Bon Preu)</span></div></li>
+          </ol>
+          <p class="funnel-note">Every exclusion with its reason in plain sight. No silent filters.</p>
+          <figure class="figure reveal">
+            <a href="../../assets/img/proyectos/ilusion-descuento/pagina-07.webp"><img src="../../assets/img/proyectos/ilusion-descuento/pagina-07.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Horizontal bar funnel: 84 declared plans, 68 without DISA's Canary Islands networks, 53 with a matchable brand, 47 with a discount figure and 3 below the low-cost threshold for 95 petrol."></a>
+            <figcaption><b>The funnel in the report.</b> The final 3 plans belong to 2 operators, both supermarkets.</figcaption>
+          </figure>
+        </section>
+
+        <section id="hallazgos" aria-labelledby="hallazgos-t">
+          <p class="eyebrow">Findings</p>
+          <h2 id="hallazgos-t">No oil company pays off. Those that do don't win because of the discount.</h2>
+          <figure class="figure reveal">
+            <a href="../../assets/img/proyectos/ilusion-descuento/pagina-06.webp"><img src="../../assets/img/proyectos/ilusion-descuento/pagina-06.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Dot plot with each official plan placed at its effective price, for 95 petrol and diesel. Only Esclatoil and Carrefour are left of the low-cost threshold (€1.614 and €1.715); Repsol, BP and Cepsa are the three most expensive."></a>
+            <figcaption><b>The central result.</b> One dot per official plan; left of the green line, the discount pays off.</figcaption>
+          </figure>
+
+          <div class="groups">
+            <div class="group reveal">
+              <p class="group__tag">A · They pay off, but not because of the discount</p>
+              <h3>Carrefour and Esclatoil go below the threshold for both fuels. Neither is an oil company.</h3>
+              <ul>
+                <li><strong>Carrefour:</strong> the largest discount in the register (8%, 13.8 cents for 95 petrol). It starts at €1.719 → €1.581 with the discount: 3.3 cents below (1.9 cents for diesel). 146 stations in 41 provinces.</li>
+                <li><strong>Esclatoil:</strong> a discount of only 3 cents, but it already sells at €1.567, 4.7 cents below the threshold before the card. It wins on starting price. 71 stations, all in Catalonia (Barcelona 36 · Girona 18 · Tarragona 11 · Lleida 6).</li>
+              </ul>
+            </div>
+            <div class="group reveal">
+              <p class="group__tag">B · They don't pay off</p>
+              <h3>All 39 assessable oil company plans stay above the threshold.</h3>
+              <p>The best in-house programme: 6.0 cents (Galp Flota Business), which still falls 6.1 cents short.</p>
+            </div>
+          </div>
+
+          <div class="table-wrap reveal" tabindex="0" role="region" aria-label="Oil company plans against the threshold">
+            <table>
+              <caption>Oil companies · 95 petrol · threshold €1.614</caption>
+              <thead><tr><th scope="col">Plan</th><th scope="col" class="num">Discount</th><th scope="col" class="num">Effective price</th><th scope="col" class="num">Short by</th></tr></thead>
+              <tbody>
+                <tr><td>Galp con Abanca</td><td class="num">5%</td><td class="num">€1.648</td><td class="num">3.4 cents</td></tr>
+                <tr><td>Galp Flota Business</td><td class="num">6 cents</td><td class="num">€1.675</td><td class="num">6.1 cents</td></tr>
+                <tr><td>Euroshell</td><td class="num">2 cents</td><td class="num">€1.716</td><td class="num">10.2 cents</td></tr>
+                <tr><td>Repsol Más Visa</td><td class="num">3 cents</td><td class="num">€1.741</td><td class="num">12.7 cents</td></tr>
+                <tr><td>miBP</td><td class="num">3 cents</td><td class="num">€1.743</td><td class="num">12.9 cents</td></tr>
+                <tr><td>Cepsa Star</td><td class="num">1 cent</td><td class="num">€1.768</td><td class="num">15.4 cents</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <figure class="figure reveal">
+            <a href="../../assets/img/proyectos/ilusion-descuento/pagina-12.webp"><img src="../../assets/img/proyectos/ilusion-descuento/pagina-12.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Scatter plot: declared discount on the horizontal axis and starting price above the threshold on the vertical axis. Oil companies cluster top left; Carrefour falls below the diagonal thanks to its discount and Esclatoil because it starts below the threshold."></a>
+            <figcaption><b>They don't win with a better discount: they win on starting price.</b> Below the diagonal, the discount is enough.</figcaption>
+          </figure>
+
+          <div class="callout reveal">
+            <p class="callout__tag">Twists 2 and 3 · outside the register and triangulation</p>
+            <h3>With the apps' real discounts, the conclusion holds.</h3>
+            <p>Waylet (Repsol) does not appear in the MITECO file; Cepsa Gow declares 0.5 cents/litre but its app gives 5–6 cents/litre; miBP declares 3 cents/litre and matches the app.</p>
+            <p>With the app discounts: Waylet €1.721, Gow €1.723, miBP €1.743. None pays off. Waylet's theoretical maximum (20 cents/litre) does cross the line, but it requires signing up for electricity, gas, solar and insurance with Repsol.</p>
+          </div>
+
+          <h3>By province</h3>
+          <p>All 49 provinces on the mainland and the Balearic Islands have at least one low-cost station. Smallest gap: Balearic Islands, 9.6 cents; largest: Girona, 26.5 cents; average 15.4 cents. Not even in the most favourable province does the best in-house oil company discount close the gap (it would still be 3.6 cents short).</p>
+        </section>
+
+        <section id="limitaciones" aria-labelledby="limitaciones-t">
+          <p class="eyebrow">Limitations</p>
+          <h2 id="limitaciones-t">What this analysis does not answer.</h2>
+          <ol class="numbered">
+            <li>It is a snapshot from 13/08/2026, not a time series.</li>
+            <li>The discount is applied to the operator's average, not station by station.</li>
+            <li>Private fleet agreements are not included.</li>
+            <li>The cost of a detour and services (on-route network, car wash, café) are not included.</li>
+          </ol>
+        </section>
+
+        <section id="uso" aria-labelledby="uso-t">
+          <p class="eyebrow">How to use it</p>
+          <h2 id="uso-t">The bar to beat: €1.614 for 95 petrol and €1.715 for diesel.</h2>
+          <ol class="numbered">
+            <li><strong>Fleets:</strong> ask for the discount in cents per litre, not as a percentage; use the gap in your own province (9.6–26.5 cents); the benchmark to beat is 6.0 cents.</li>
+            <li><strong>Private drivers:</strong> with Carrefour or Esclatoil nearby, the card does pay off; with an oil company card and no need for its network, the low-cost station without a card is cheaper.</li>
+          </ol>
+        </section>
+
+        <section id="conclusion" aria-labelledby="conclusion-t">
+          <div class="conclusion reveal">
+            <p class="eyebrow" id="conclusion-t">Conclusion</p>
+            <blockquote>The discount is real. The advantage is not.</blockquote>
+            <p>Of 47 assessable official plans, 3 go below the price a driver already pays, without a card, at a low-cost station. None belongs to an oil company, and the two operators that manage it do not win with a better discount: <strong>they win by starting cheaper</strong>.</p>
+            <p><strong>Why it is reliable:</strong> 11,237 stations (the full register, not a sample) · two fuels with the same result · all 49 provinces · an independent source (the apps) points the same way.</p>
+          </div>
+          <figure class="figure reveal">
+            <a href="../../assets/img/proyectos/ilusion-descuento/pagina-18.webp"><img src="../../assets/img/proyectos/ilusion-descuento/pagina-18.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Conclusion page of the report: “The discount is real. The advantage is not.”, with four reasons for reliability: 11,237 stations, both fuels, all 49 provinces and an independent source."></a>
+            <figcaption><b>The report's conclusion</b> and why it is reliable.</figcaption>
+          </figure>
+        </section>
+      </article>
+    </div>
+
+    <div class="container">
+      <nav class="case-nav" aria-label="Other projects">
+        <a href="hueco-comercial.html"><small>← Previous</small><span>The retail gap</span></a>
+        <a href="alquiler-turistico-barcelona.html"><small>Next →</small><span>Legal holiday rentals in Barcelona</span></a>
+      </nav>
+    </div>
+
+    <section class="section section--tight" style="padding-top: var(--section)" aria-labelledby="contacto-titulo">
+      <div class="container">
+        <div class="cta reveal">
+          <p class="eyebrow">Contact</p>
+          <h2 id="contacto-titulo">I want to learn with your team and earn my place in it.</h2>
+          <p>I am looking for an internship from February 2027 to learn with real data and contribute from day one.</p>
+          <div class="cta__actions">
+            <a class="btn btn--light" href="mailto:javibenitez039@gmail.com">javibenitez039@gmail.com</a>
+            <a class="btn btn--light" href="tel:+34625790541">+34 625 79 05 41</a>
+            <a class="btn btn--light" href="../../assets/docs/CV_Javier_Benitez_Escobedo.pdf" download>Download CV</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__top">
+        <nav class="footer__nav" aria-label="Footer">
+          <ul>
+            <li><a href="../index.html#sobre-mi">About</a></li>
+            <li><a href="../index.html#proyectos">Projects</a></li>
+            <li><a href="../index.html#trayectoria">Background</a></li>
+            <li><a href="../../assets/docs/CV_Javier_Benitez_Escobedo.pdf" download>CV</a></li>
+          </ul>
+        </nav>
+        <div class="footer__contact">
+          <p class="label">Get in touch</p>
+          <a href="mailto:javibenitez039@gmail.com">javibenitez039@gmail.com</a>
+          <a href="tel:+34625790541">+34 625 79 05 41</a>
+        </div>
+        <ul class="footer__social">
+          <li><a class="link-arrow" href="https://www.linkedin.com/in/javierbenitezescobedo" rel="me noopener" target="_blank">LinkedIn <span class="arrow" aria-hidden="true">↗</span></a></li>
+          <li><a class="link-arrow" href="https://github.com/degallo" rel="me noopener" target="_blank">GitHub <span class="arrow" aria-hidden="true">↗</span></a></li>
+        </ul>
+      </div>
+      <div class="footer__bottom">
+        <span>© <span data-year>2026</span> Javier Benítez Escobedo · Granada, Spain</span>
+        <span>Project sources: INE, MITECO, Inside Airbnb and online catalogues.</span>
+      </div>
+    </div>
+    <p class="footer__name" aria-hidden="true">Javier Benítez</p>
+  </footer>
+
+  <script src="../../js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The retail gap · Case study · Javier Benítez Escobedo</title>
+  <meta name="description" content="Where there is disposable income that local retail is not capturing: all 277 municipalities of Granada and Málaga, measured one by one with INE data.">
+  <link rel="canonical" href="https://degallo.github.io/en/proyectos/hueco-comercial.html">
+  <link rel="alternate" hreflang="es" href="https://degallo.github.io/proyectos/hueco-comercial.html">
+  <link rel="alternate" hreflang="en" href="https://degallo.github.io/en/proyectos/hueco-comercial.html">
+  <meta name="theme-color" content="#EBEBE8">
+  <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:site_name" content="Javier Benítez Escobedo">
+  <meta property="og:title" content="The retail gap · Case study">
+  <meta property="og:description" content="Where there is disposable income that local retail is not capturing: all 277 municipalities of Granada and Málaga, measured one by one with INE data.">
+  <meta property="og:url" content="https://degallo.github.io/en/proyectos/hueco-comercial.html">
+  <meta property="og:image" content="https://degallo.github.io/assets/img/proyectos/hueco-comercial/pagina-01.webp">
+  <meta property="og:image:width" content="1600">
+  <meta property="og:image:height" content="900">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="../../css/styles.css?v=9">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+      <a class="brand" href="../index.html">Javier Benítez<span class="brand__2"> Escobedo</span></a>
+      <nav class="nav" id="nav" aria-label="Main">
+        <ul>
+          <li><a href="../index.html#sobre-mi">About</a></li>
+          <li><a href="../index.html#proyectos" aria-current="true">Projects</a></li>
+          <li><a href="../index.html#trayectoria">Background</a></li>
+          <li><a href="../index.html#contacto">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header__end">
+        <a class="lang" href="../../proyectos/hueco-comercial.html" hreflang="es" lang="es" aria-label="Versión en español">ES</a>
+        <a class="btn btn--sm nav__cv" href="../../assets/docs/CV_Javier_Benitez_Escobedo.pdf" download><span class="nav__cv-long">Download&nbsp;</span>CV</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="container case-hero" aria-labelledby="titulo">
+      <a class="back" href="../index.html#proyectos"><span aria-hidden="true">←</span> All projects</a>
+      <p><span class="pill">Territorial analysis · Granada and Málaga</span></p>
+      <h1 id="titulo">The retail gap</h1>
+      <p class="case-hero__sub">Where there is disposable income that local retail is not capturing. All 277 municipalities of Granada and Málaga, measured one by one.</p>
+      <figure class="case-cover">
+        <img src="../../assets/img/proyectos/hueco-comercial/pagina-01.webp" width="1600" height="900" fetchpriority="high"
+             alt="Cover of the report El hueco comercial (in Spanish), with the outline of the provinces of Granada and Málaga coloured municipality by municipality.">
+        <figcaption class="case-cover__note">Report pages are shown in their original Spanish.</figcaption>
+      </figure>
+    </section>
+
+    <div class="container case-layout">
+      <aside class="ficha" aria-labelledby="ficha-titulo">
+        <h2 id="ficha-titulo">Project sheet</h2>
+        <dl>
+          <div><dt>Date</dt><dd>August 2026</dd></div>
+          <div><dt>Sources</dt><dd>INE (Spanish Statistics Institute): Household Income Distribution Atlas, Municipal Register, Central Business Directory (DIRCE) and 2023 Household Budget Survey · National Geographic Institute (municipal boundaries, via es-atlas) · POTAUG (2013), boundary of the Granada Metropolitan Area</dd></div>
+          <div><dt>Tools</dt><dd>SQL (SQLite, DB Browser) · Looker Studio · choropleth map</dd></div>
+          <div><dt>Volume</dt><dd>277 municipalities · €34.5bn of annual income</dd></div>
+          <div><dt>Code</dt><dd><a href="https://github.com/degallo/huecocomercial" target="_blank" rel="noopener">github.com/degallo/huecocomercial ↗</a><br>279 lines of SQL in <code>consultas.sql</code></dd></div>
+        </dl>
+        <div class="ficha__actions">
+          <a class="btn" href="../../assets/docs/el-hueco-comercial.pdf" download hreflang="es">Download PDF report (ES) · 16 pp.</a>
+          <a class="btn btn--ghost" href="https://github.com/degallo/huecocomercial" target="_blank" rel="noopener">See the SQL on GitHub</a>
+        </div>
+        <nav class="ficha__toc" aria-label="On this page" data-spy>
+          <ol>
+            <li><a href="#pregunta">The question</a></li>
+            <li><a href="#metrica">The metric</a></li>
+            <li><a href="#embudo">The funnel</a></li>
+            <li><a href="#hallazgos">Findings</a></li>
+            <li><a href="#limitaciones">Limitations</a></li>
+            <li><a href="#uso">How to use it</a></li>
+            <li><a href="#conclusion">Conclusion</a></li>
+          </ol>
+        </nav>
+      </aside>
+
+      <article class="case-body">
+        <section id="cifras" aria-label="Key figures">
+          <div class="kpis">
+            <div class="kpi reveal"><p class="kpi__num">277</p><p class="kpi__label">municipalities in the study</p></div>
+            <div class="kpi reveal" style="--d:.06s"><p class="kpi__num">113</p><p class="kpi__label">candidates with usable data</p></div>
+            <div class="kpi reveal"><p class="kpi__num">103</p><p class="kpi__label">without figures due to statistical confidentiality</p></div>
+            <div class="kpi reveal" style="--d:.06s"><p class="kpi__num">€34.5bn</p><p class="kpi__label">of annual income across both provinces</p></div>
+          </div>
+        </section>
+
+        <section id="pregunta" aria-labelledby="pregunta-t">
+          <p class="eyebrow">The question</p>
+          <h2 id="pregunta-t">Where is there money that local retail is not capturing?</h2>
+          <p class="lead">Every municipality holds a certain amount of annual income. Divided by the number of open shops, it gives the euros available per business.</p>
+          <p>When that figure shoots up, either there is little supply for the money available, or that money is being spent somewhere else. <strong>Who it is for:</strong> whoever decides where to open a shop or a franchise.</p>
+          <figure class="figure reveal">
+            <a href="../../assets/img/proyectos/hueco-comercial/pagina-02.webp"><img src="../../assets/img/proyectos/hueco-comercial/pagina-02.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Report page with the question and the four key figures: 277 municipalities, 113 candidates, 103 without figures and €34.5bn of annual income."></a>
+            <figcaption><b>The question and the key figures</b>, as they open the report.</figcaption>
+          </figure>
+        </section>
+
+        <section id="metrica" aria-labelledby="metrica-t">
+          <p class="eyebrow">The metric</p>
+          <h2 id="metrica-t">Disposable income per business.</h2>
+          <p class="formula"><small>Formula</small>(income per person × population) ÷ shops</p>
+          <div class="is-isnt">
+            <div>
+              <h3>What it signals</h3>
+              <p>Little supply for the money available, or money that leaves to be spent elsewhere. A high ratio is a sign that there is room.</p>
+            </div>
+            <div>
+              <h3>What it is not</h3>
+              <p>It is not turnover or unmet demand. Not all that money is spent in local shops, and the indicator does not say which sectors are missing.</p>
+            </div>
+          </div>
+          <div class="example">
+            <p><strong>Real example · Molvízar</strong> (Granada, INE 18133): income per person €10,188, population 2,752, total income €28.0M, 32 shops → <strong>€876,168 per shop</strong>, the highest ratio in either province.</p>
+          </div>
+        </section>
+
+        <section id="embudo" aria-labelledby="embudo-t">
+          <p class="eyebrow">The funnel</p>
+          <h2 id="embudo-t">From 277 to 113 municipalities.</h2>
+          <ol class="funnel">
+            <li><div class="funnel__bar"><span style="--w:100%"></span><b>277</b></div><div class="funnel__txt"><span>Municipalities of Granada and Málaga</span><span>starting point</span></div></li>
+            <li><div class="funnel__bar"><span style="--w:62.8%; --d:.1s"></span><b>174</b></div><div class="funnel__txt"><span>With a published shop count</span><span>−103 due to statistical confidentiality</span></div></li>
+            <li><div class="funnel__bar"><span style="--w:53.4%; --d:.2s"></span><b>148</b></div><div class="funnel__txt"><span>With at least 30 shops</span><span>−26 with too small a sample</span></div></li>
+            <li><div class="funnel__bar"><span style="--w:41.5%; --d:.3s"></span><b>115</b></div><div class="funnel__txt"><span>Outside the Granada commuter belt</span><span>−33 due to the dormitory-town effect</span></div></li>
+            <li><div class="funnel__bar"><span style="--w:40.8%; --d:.4s"></span><b>113</b></div><div class="funnel__txt"><span>Excluding both provincial capitals</span><span>−2 (Granada and Málaga)</span></div></li>
+          </ol>
+          <p class="funnel-note">The remaining 113 are the only ones where the ratio can be read as a market signal rather than a data artefact.</p>
+          <figure class="figure reveal">
+            <a href="../../assets/img/proyectos/hueco-comercial/pagina-05.webp"><img src="../../assets/img/proyectos/hueco-comercial/pagina-05.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Filtering funnel from the report: from 277 municipalities to 113 candidates, with the reason for each exclusion."></a>
+            <figcaption><b>The funnel in the report</b>: each step with its reason.</figcaption>
+          </figure>
+        </section>
+
+        <section id="hallazgos" aria-labelledby="hallazgos-t">
+          <p class="eyebrow">Findings</p>
+          <h2 id="hallazgos-t">Three groups with the same high ratio and different mechanisms.</h2>
+          <figure class="figure reveal">
+            <a href="../../assets/img/proyectos/hueco-comercial/pagina-04.webp"><img src="../../assets/img/proyectos/hueco-comercial/pagina-04.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Choropleth map of the 277 municipalities of Granada and Málaga: the darker, the more disposable income per open shop. Antequera, Rincón de la Victoria, Benahavís, Casares, Ojén, Guaro, Molvízar, Gualchos, Albuñol and Valle del Zalabí are highlighted."></a>
+            <figcaption><b>The map.</b> Disposable income per shop in the 277 municipalities; hatched areas have no data or fall outside because of the metropolitan area.</figcaption>
+          </figure>
+
+          <div class="groups">
+            <div class="group reveal">
+              <p class="group__tag">Strong core · confirmed by three metrics</p>
+              <h3>A large market, a high ratio and fewer shops than they should have.</h3>
+              <ul>
+                <li><strong>Rincón de la Victoria</strong> (Málaga): €754,946 per shop · adjusted €349,540 · 51,300 inhabitants · 1,061 shops · 20.7 per 1,000 inhabitants · total income €801.0M · percentiles: ratio P99, scarcity P80, volume P94.</li>
+                <li><strong>Antequera</strong> (Málaga): €594,516 · adjusted €275,261 · 41,178 inhabitants · 875 shops · 21.2 per 1,000 inhabitants · €520.2M · ratio P92, scarcity P75, volume P91.</li>
+              </ul>
+              <p>Among municipalities with more than 25,000 inhabitants, they have the lowest shop density (20.7 and 21.2 per 1,000 inhabitants, against 23–32 for the rest).</p>
+            </div>
+            <div class="group reveal">
+              <p class="group__tag">Village opportunity</p>
+              <h3>The ratio shoots up because there are hardly any shops: there is room for one business, not a chain.</h3>
+              <p>All four in Granada, between 2,100 and 7,400 inhabitants: <strong>Molvízar</strong> €876,168 · <strong>Valle del Zalabí</strong> €690,541 · <strong>Albuñol</strong> €666,623 · <strong>Gualchos</strong> €587,522.</p>
+            </div>
+            <div class="group reveal">
+              <p class="group__tag">Luxury developments · different mechanism</p>
+              <h3>Very high income and few shops, because residents shop in Marbella, fifteen minutes away.</h3>
+              <p>This is not recoverable spending leakage. <strong>Benahavís</strong> €715,807 · <strong>Casares</strong> €685,568 · <strong>Ojén</strong> €598,911.</p>
+            </div>
+          </div>
+          <figure class="figure reveal">
+            <a href="../../assets/img/proyectos/hueco-comercial/pagina-10.webp"><img src="../../assets/img/proyectos/hueco-comercial/pagina-10.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Profiles of Benahavís, Casares and Ojén with their income per shop, population, number of shops and ratio, scarcity and volume percentiles. Headline: high ratio, different mechanism."></a>
+            <figcaption><b>Luxury developments:</b> high ratio, different mechanism. They separate from the strong core by volume.</figcaption>
+          </figure>
+
+          <p>Candidate that cannot be confirmed: <strong>Guaro</strong> (Málaga), 2,307 inhabitants and €24.9M of income, but INE withholds its number of shops.</p>
+
+          <h3>What separates the groups</h3>
+          <p>Income (the villages are below €11,500 per inhabitant), volume (the core starts at €520M of total income; the luxury group does not exceed €132M) and province (the four villages are in Granada; the core and the luxury group, in Málaga).</p>
+
+          <figure class="figure reveal">
+            <a href="../../assets/img/proyectos/hueco-comercial/pagina-11.webp"><img src="../../assets/img/proyectos/hueco-comercial/pagina-11.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Bubble chart of the 113 candidates: income per inhabitant on the horizontal axis and total municipal income on the vertical axis. The three groups (village opportunity, luxury developments and strong core) occupy areas that do not overlap."></a>
+            <figcaption><b>Three groups, three areas that do not overlap.</b> The area of each bubble is proportional to euros per shop.</figcaption>
+          </figure>
+
+          <div class="callout reveal">
+            <p class="callout__tag">Check</p>
+            <h3>Adjusting for spending changes the scale, not the order.</h3>
+            <p>According to INE's Household Budget Survey (2023), 46.3% of average spending goes on food, clothing, furniture, transport and restaurants. Applied as a constant factor, the ranking does not move.</p>
+          </div>
+
+          <div class="table-wrap reveal" tabindex="0" role="region" aria-label="Granada and Málaga compared">
+            <table>
+              <caption>Granada compared with Málaga</caption>
+              <thead><tr><th scope="col">Province</th><th scope="col" class="num">Municipalities</th><th scope="col" class="num">Inhabitants</th><th scope="col" class="num">Income</th><th scope="col" class="num">Shops</th><th scope="col" class="num">Median €/shop</th><th scope="col" class="num">No figure</th></tr></thead>
+              <tbody>
+                <tr><td>Granada</td><td class="num">174</td><td class="num">930,181</td><td class="num">€11.82bn</td><td class="num">21,990</td><td class="num">€485,931</td><td class="num">73 (42%)</td></tr>
+                <tr><td>Málaga</td><td class="num">103</td><td class="num">1,751,600</td><td class="num">€22.66bn</td><td class="num">44,527</td><td class="num">€456,133</td><td class="num">30 (29%)</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section id="limitaciones" aria-labelledby="limitaciones-t">
+          <p class="eyebrow">Limitations</p>
+          <h2 id="limitaciones-t">What this analysis does not answer.</h2>
+          <ol class="numbered">
+            <li>103 municipalities cannot be scored because of statistical confidentiality, precisely the smallest ones. The list shows where the best gap is among those that can be measured.</li>
+            <li>The luxury group does not separate by income (Benahavís €14,248 per inhabitant against Rincón's €15,614): what separates them is the mechanism and the geography, a judgement based on context.</li>
+            <li>What actually decides the business is missing: which sectors are lacking, what a shop unit costs, how people move between municipalities.</li>
+          </ol>
+        </section>
+
+        <section id="uso" aria-labelledby="uso-t">
+          <p class="eyebrow">How to use it</p>
+          <h2 id="uso-t">A high ratio shows where to look, not what to open.</h2>
+          <ol class="numbered">
+            <li><strong>Rincón de la Victoria and Antequera:</strong> drill down by business sector.</li>
+            <li><strong>The four villages in Granada:</strong> check trips to the main town of the district before deciding.</li>
+          </ol>
+        </section>
+
+        <section id="conclusion" aria-labelledby="conclusion-t">
+          <div class="conclusion reveal">
+            <p class="eyebrow" id="conclusion-t">Conclusion</p>
+            <blockquote>277 municipalities measured. Two confirmed three times. None based on gut feeling.</blockquote>
+            <p><strong>Rincón de la Victoria and Antequera</strong> are the only ones, out of 277 municipalities, where the market is large, income is high and retail is insufficient at the same time, confirmed by three independent measures.</p>
+          </div>
+          <figure class="figure reveal">
+            <a href="../../assets/img/proyectos/hueco-comercial/pagina-16.webp"><img src="../../assets/img/proyectos/hueco-comercial/pagina-16.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Conclusion page of the report: two candidates verified, not guessed."></a>
+            <figcaption><b>The report's conclusion</b>: two candidates verified, not guessed.</figcaption>
+          </figure>
+        </section>
+      </article>
+    </div>
+
+    <div class="container">
+      <nav class="case-nav" aria-label="Other projects">
+        <a href="posicionamiento-moda.html"><small>← Previous</small><span>Price positioning in fashion</span></a>
+        <a href="ilusion-descuento.html"><small>Next →</small><span>The discount illusion</span></a>
+      </nav>
+    </div>
+
+    <section class="section section--tight" style="padding-top: var(--section)" aria-labelledby="contacto-titulo">
+      <div class="container">
+        <div class="cta reveal">
+          <p class="eyebrow">Contact</p>
+          <h2 id="contacto-titulo">I want to learn with your team and earn my place in it.</h2>
+          <p>I am looking for an internship from February 2027 to learn with real data and contribute from day one.</p>
+          <div class="cta__actions">
+            <a class="btn btn--light" href="mailto:javibenitez039@gmail.com">javibenitez039@gmail.com</a>
+            <a class="btn btn--light" href="tel:+34625790541">+34 625 79 05 41</a>
+            <a class="btn btn--light" href="../../assets/docs/CV_Javier_Benitez_Escobedo.pdf" download>Download CV</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__top">
+        <nav class="footer__nav" aria-label="Footer">
+          <ul>
+            <li><a href="../index.html#sobre-mi">About</a></li>
+            <li><a href="../index.html#proyectos">Projects</a></li>
+            <li><a href="../index.html#trayectoria">Background</a></li>
+            <li><a href="../../assets/docs/CV_Javier_Benitez_Escobedo.pdf" download>CV</a></li>
+          </ul>
+        </nav>
+        <div class="footer__contact">
+          <p class="label">Get in touch</p>
+          <a href="mailto:javibenitez039@gmail.com">javibenitez039@gmail.com</a>
+          <a href="tel:+34625790541">+34 625 79 05 41</a>
+        </div>
+        <ul class="footer__social">
+          <li><a class="link-arrow" href="https://www.linkedin.com/in/javierbenitezescobedo" rel="me noopener" target="_blank">LinkedIn <span class="arrow" aria-hidden="true">↗</span></a></li>
+          <li><a class="link-arrow" href="https://github.com/degallo" rel="me noopener" target="_blank">GitHub <span class="arrow" aria-hidden="true">↗</span></a></li>
+        </ul>
+      </div>
+      <div class="footer__bottom">
+        <span>© <span data-year>2026</span> Javier Benítez Escobedo · Granada, Spain</span>
+        <span>Project sources: INE, MITECO, Inside Airbnb and online catalogues.</span>
+      </div>
+    </div>
+    <p class="footer__name" aria-hidden="true">Javier Benítez</p>
+  </footer>
+
+  <script src="../../js/main.js" defer></script>
+</body>
+</html>

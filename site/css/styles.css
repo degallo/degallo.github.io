@@ -432,6 +432,7 @@ code { font-size: .9em; }
 .case-hero .pill { margin-bottom: 22px; }
 .case-hero h1 { font-size: clamp(2.6rem, 6.4vw, 6rem); letter-spacing: -0.055em; max-width: 16ch; }
 .case-hero__sub { font-size: var(--fs-lead); color: var(--ink-2); max-width: 56ch; margin: 24px 0 0; line-height: 1.6; }
+.case-cover__note { padding: 10px 4px 0; font-size: var(--fs-small); color: var(--ink-2); }
 .case-cover { margin: clamp(32px, 5vw, 64px) 0 0; border-radius: var(--r-lg); overflow: hidden; background: var(--surface); }
 
 .case-layout {

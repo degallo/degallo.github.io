@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Legal holiday rentals in Barcelona · Case study · Javier Benítez Escobedo</title>
+  <meta name="description" content="Before HUTB licences expire in 2028: in which Barcelona neighbourhoods a legal holiday flat really pays, and in which it only seemed to. 15,293 Inside Airbnb listings.">
+  <link rel="canonical" href="https://degallo.github.io/en/proyectos/alquiler-turistico-barcelona.html">
+  <link rel="alternate" hreflang="es" href="https://degallo.github.io/proyectos/alquiler-turistico-barcelona.html">
+  <link rel="alternate" hreflang="en" href="https://degallo.github.io/en/proyectos/alquiler-turistico-barcelona.html">
+  <meta name="theme-color" content="#EBEBE8">
+  <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:site_name" content="Javier Benítez Escobedo">
+  <meta property="og:title" content="Legal holiday rentals in Barcelona · Case study">
+  <meta property="og:description" content="Before HUTB licences expire in 2028: in which Barcelona neighbourhoods a legal holiday flat really pays, and in which it only seemed to. 15,293 Inside Airbnb listings.">
+  <meta property="og:url" content="https://degallo.github.io/en/proyectos/alquiler-turistico-barcelona.html">
+  <meta property="og:image" content="https://degallo.github.io/assets/img/proyectos/alquiler-turistico-bcn/pagina-01.webp">
+  <meta property="og:image:width" content="1600">
+  <meta property="og:image:height" content="900">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="../../css/styles.css?v=9">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+      <a class="brand" href="../index.html">Javier Benítez<span class="brand__2"> Escobedo</span></a>
+      <nav class="nav" id="nav" aria-label="Main">
+        <ul>
+          <li><a href="../index.html#sobre-mi">About</a></li>
+          <li><a href="../index.html#proyectos" aria-current="true">Projects</a></li>
+          <li><a href="../index.html#trayectoria">Background</a></li>
+          <li><a href="../index.html#contacto">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header__end">
+        <a class="lang" href="../../proyectos/alquiler-turistico-barcelona.html" hreflang="es" lang="es" aria-label="Versión en español">ES</a>
+        <a class="btn btn--sm nav__cv" href="../../assets/docs/CV_Javier_Benitez_Escobedo.pdf" download><span class="nav__cv-long">Download&nbsp;</span>CV</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="container case-hero" aria-labelledby="titulo">
+      <a class="back" href="../index.html#proyectos"><span aria-hidden="true">←</span> All projects</a>
+      <p><span class="pill">Market analysis · Inside Airbnb</span></p>
+      <h1 id="titulo">Legal holiday rentals in Barcelona</h1>
+      <p class="case-hero__sub">29 months of HUTB licences left (as of the snapshot, June 2026). In which neighbourhoods does a legal holiday flat really pay, and in which did it only seem to?</p>
+      <figure class="case-cover">
+        <img src="../../assets/img/proyectos/alquiler-turistico-bcn/pagina-01.webp" width="1600" height="900" fetchpriority="high"
+             alt="Cover of the report on the profitability of legal holiday rentals in Barcelona (in Spanish), asking in which neighbourhoods a legal holiday flat really pays.">
+        <figcaption class="case-cover__note">Report slides are shown in their original Spanish.</figcaption>
+      </figure>
+    </section>
+
+    <div class="container case-layout">
+      <aside class="ficha" aria-labelledby="ficha-titulo">
+        <h2 id="ficha-titulo">Project sheet</h2>
+        <dl>
+          <div><dt>Date</dt><dd>August 2026 · snapshot of 25/06/2026</dd></div>
+          <div><dt>Sources</dt><dd>Inside Airbnb, Barcelona snapshot of 25/06/2026 (15,293 listings) · Neighbourhood and district boundaries: Barcelona City Council via bcn-geodata</dd></div>
+          <div><dt>Tools</dt><dd>SQL (SQLite) · Looker Studio · choropleth maps</dd></div>
+          <div><dt>Volume</dt><dd>15,293 listings → 6,520 comparable HUTB flats · 48 neighbourhoods</dd></div>
+          <div><dt>Currency</dt><dd>US dollars ($), as Inside Airbnb publishes prices.</dd></div>
+          <div><dt>Licence</dt><dd>HUTB: Barcelona's licence for tourist-use homes, which expires in November 2028.</dd></div>
+        </dl>
+        <div class="ficha__actions">
+          <a class="btn" href="../../assets/docs/alquiler-turistico-barcelona.pdf" download hreflang="es">Download PDF report (ES) · 19 slides</a>
+        </div>
+        <nav class="ficha__toc" aria-label="On this page" data-spy>
+          <ol>
+            <li><a href="#pregunta">The question</a></li>
+            <li><a href="#mercado">The market today</a></li>
+            <li><a href="#metrica">The metric</a></li>
+            <li><a href="#embudo">The funnel</a></li>
+            <li><a href="#hallazgos">Findings</a></li>
+            <li><a href="#limitaciones">Limitations</a></li>
+            <li><a href="#uso">How to use it</a></li>
+            <li><a href="#conclusion">Conclusion</a></li>
+          </ol>
+        </nav>
+      </aside>
+
+      <article class="case-body">
+        <section id="cifras" aria-label="Key figures">
+          <div class="kpis">
+            <div class="kpi reveal"><p class="kpi__num">15,293</p><p class="kpi__label">active listings in Barcelona</p></div>
+            <div class="kpi reveal" style="--d:.06s"><p class="kpi__num">6,520</p><p class="kpi__label">HUTB flats with usable data</p></div>
+            <div class="kpi reveal"><p class="kpi__num">57%</p><p class="kpi__label">of the universe excluded for price, licence or type of accommodation</p></div>
+            <div class="kpi reveal" style="--d:.06s"><p class="kpi__num">$242M</p><p class="kpi__label">estimated annual revenue of the legal HUTB market</p></div>
+          </div>
+        </section>
+
+        <section id="pregunta" aria-labelledby="pregunta-t">
+          <p class="eyebrow">The business question</p>
+          <h2 id="pregunta-t">Where should the remaining licences be concentrated before November 2028?</h2>
+          <p class="lead">On 24 November 2028 every HUTB licence in Barcelona expires: the city's Special Plan does not renew them and Spain's Constitutional Court upheld the measure.</p>
+          <p><strong>Who it is for:</strong> a holiday rental management company that has to decide today which flats to invest refurbishment, acquisition and staff in, and which to exit first.</p>
+          <figure class="figure reveal">
+            <a href="../../assets/img/proyectos/alquiler-turistico-bcn/pagina-02.webp"><img src="../../assets/img/proyectos/alquiler-turistico-bcn/pagina-02.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Slide with the business question and key figures: 15,293 active listings, 6,520 HUTB flats with usable data, 57% of the universe excluded and $242M of estimated annual revenue."></a>
+            <figcaption><b>The business question and the key figures.</b> Figures in dollars, the currency Inside Airbnb uses for prices.</figcaption>
+          </figure>
+        </section>
+
+        <section id="mercado" aria-labelledby="mercado-t">
+          <p class="eyebrow">The market today</p>
+          <h2 id="mercado-t">Fewer than half of the listings with a price have an HUTB licence.</h2>
+          <p>Of 13,355 listings with a price, only <strong>48.7%</strong> have an HUTB licence (7,195 listings, the ones that disappear in 2028). <strong>25.4%</strong> are already seasonal rentals, a category that 2028 does not affect. 19.9% do not declare any information (not necessarily irregular).</p>
+        </section>
+
+        <section id="metrica" aria-labelledby="metrica-t">
+          <p class="eyebrow">The metric and its adjustment</p>
+          <h2 id="metrica-t">Estimated annual revenue per flat.</h2>
+          <p class="formula"><small>Dataset formula</small>price per night × (365 − available nights)</p>
+          <div class="is-isnt">
+            <div>
+              <h3>What it signals</h3>
+              <p>The ceiling of gross revenue if every blocked night were a night sold.</p>
+            </div>
+            <div>
+              <h3>What it is not</h3>
+              <p>It is not profit (it does not deduct management, cleaning, commissions or taxes), nor actual occupancy.</p>
+            </div>
+          </div>
+          <div class="example">
+            <p><strong>Real case · a penthouse in Sarrià:</strong> $451 a night, 31 available nights, 0 reviews in 12 months, last review in April 2024 → <strong>$150,634 a year</strong> according to the formula. That one flat, on its own, made Sarrià look like the most profitable neighbourhood.</p>
+          </div>
+
+          <div class="callout reveal">
+            <p class="callout__tag">The adjustment · distrust the calendar</p>
+            <h3>The calendar is replaced by occupancy estimated from the pace of reviews.</h3>
+            <p>395 HUTB flats (6.0%) have their calendar closed for more than 200 nights and almost no reviews; 129 have none in 12 months. They contribute $29.5M a year with the dataset formula (12.1% of the market) and $1.3M with the review model.</p>
+            <p>Correlation between the two estimates of occupied nights: <strong>0.15</strong>. In total they almost match ($244.0M vs $241.5M, 1%), but neighbourhood by neighbourhood they do not: rank correlation <strong>0.31</strong>.</p>
+          </div>
+        </section>
+
+        <section id="embudo" aria-labelledby="embudo-t">
+          <p class="eyebrow">The funnel</p>
+          <h2 id="embudo-t">From 15,293 listings to 6,520 comparable flats.</h2>
+          <ol class="funnel">
+            <li><div class="funnel__bar"><span style="--w:100%"></span><b>15,293</b></div><div class="funnel__txt"><span>Active listings in Barcelona</span><span>June 2026 snapshot</span></div></li>
+            <li><div class="funnel__bar"><span style="--w:87.3%; --d:.1s"></span><b>13,355</b></div><div class="funnel__txt"><span>With a published price per night</span><span>−1,938</span></div></li>
+            <li><div class="funnel__bar"><span style="--w:47%; --d:.2s"></span><b>7,195</b></div><div class="funnel__txt"><span>With an HUTB licence</span><span>−6,160</span></div></li>
+            <li><div class="funnel__bar"><span style="--w:42.8%; --d:.3s"></span><b>6,548</b></div><div class="funnel__txt"><span>Entire home</span><span>−647</span></div></li>
+            <li><div class="funnel__bar"><span style="--w:42.6%; --d:.4s"></span><b>6,520</b></div><div class="funnel__txt"><span>In neighbourhoods with 5 or more HUTB flats</span><span>−28 (13 neighbourhoods)</span></div></li>
+          </ol>
+          <p class="funnel-note">The 13 excluded neighbourhoods add up to 28 listings.</p>
+          <figure class="figure reveal">
+            <a href="../../assets/img/proyectos/alquiler-turistico-bcn/pagina-08.webp"><img src="../../assets/img/proyectos/alquiler-turistico-bcn/pagina-08.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Bar funnel: 15,293 active listings, 13,355 with a price, 7,195 with an HUTB licence, 6,548 entire homes and 6,520 in neighbourhoods with 5 or more HUTB flats, with the reason for each exclusion."></a>
+            <figcaption><b>The funnel in the report</b>, with the reason for each exclusion alongside.</figcaption>
+          </figure>
+        </section>
+
+        <section id="hallazgos" aria-labelledby="hallazgos-t">
+          <p class="eyebrow">Findings</p>
+          <h2 id="hallazgos-t">Three groups, three mechanisms.</h2>
+          <figure class="figure reveal">
+            <a href="../../assets/img/proyectos/alquiler-turistico-bcn/pagina-07.webp"><img src="../../assets/img/proyectos/alquiler-turistico-bcn/pagina-07.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Map of Barcelona by neighbourhood showing estimated annual revenue per HUTB flat, darker for higher values, next to a table of the top ten neighbourhoods, led by Diagonal Mar."></a>
+            <figcaption><b>The map.</b> Annual revenue per HUTB flat, corrected with the review model, in the 48 neighbourhoods with 5 or more flats.</figcaption>
+          </figure>
+
+          <div class="table-wrap reveal" tabindex="0" role="region" aria-label="Top ten neighbourhoods">
+            <table>
+              <caption>Top 10 · annual revenue per flat (corrected)</caption>
+              <thead><tr><th scope="col">#</th><th scope="col">Neighbourhood</th><th scope="col" class="num">Revenue per flat ($)</th><th scope="col" class="num">Flats</th></tr></thead>
+              <tbody>
+                <tr><td>1</td><td>Diagonal Mar</td><td class="num">47,739</td><td class="num">73</td></tr>
+                <tr><td>2</td><td>Sant Martí de Provençals</td><td class="num">45,970</td><td class="num">11</td></tr>
+                <tr><td>3</td><td>la Dreta de l'Eixample</td><td class="num">45,505</td><td class="num">1,081</td></tr>
+                <tr><td>4</td><td>el Fort Pienc</td><td class="num">45,311</td><td class="num">238</td></tr>
+                <tr><td>5</td><td>l'Antiga Esquerra</td><td class="num">44,671</td><td class="num">378</td></tr>
+                <tr><td>6</td><td>la Sagrada Família</td><td class="num">43,350</td><td class="num">559</td></tr>
+                <tr><td>7</td><td>el Camp d'en Grassot</td><td class="num">42,777</td><td class="num">123</td></tr>
+                <tr><td>8</td><td>la Vila Olímpica</td><td class="num">41,672</td><td class="num">65</td></tr>
+                <tr><td>9</td><td>la Vila de Gràcia</td><td class="num">39,744</td><td class="num">461</td></tr>
+                <tr><td>10</td><td>el Parc i la Llacuna</td><td class="num">39,699</td><td class="num">85</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Median of the 48 neighbourhoods: $31,967. Between the first and the last, a 23-fold difference.</p>
+
+          <div class="groups">
+            <div class="group reveal">
+              <p class="group__tag">Eixample engine · confirmed by both metrics</p>
+              <h3>5 adjacent neighbourhoods, 2,379 HUTB flats and an average of $44,700 a year per flat.</h3>
+              <p>Dreta de l'Eixample, Fort Pienc, Antiga Esquerra, Sagrada Família and Camp d'en Grassot. None falls below $42,700.</p>
+            </div>
+            <div class="group reveal">
+              <p class="group__tag">Rising niches</p>
+              <h3>Neighbourhoods the dataset undervalued: they climb between 8 and 26 places after the correction.</h3>
+              <p>Diagonal Mar, Sant Martí de Provençals, Hostafrancs, el Camp de l'Arpa and la Salut. Diagonal Mar, with 73 flats, is the most solid and ranks first in the city.</p>
+            </div>
+            <div class="group reveal">
+              <p class="group__tag">Calendar traps</p>
+              <h3>The ones that fall most after the correction.</h3>
+              <p>El Besòs i el Maresme, Sarrià, el Clot, les Corts and la Verneda. Sarrià drops from $67,870 to $26,100 per flat; without the penthouse, $51,317.</p>
+            </div>
+          </div>
+
+          <figure class="figure reveal">
+            <a href="../../assets/img/proyectos/alquiler-turistico-bcn/pagina-13.webp"><img src="../../assets/img/proyectos/alquiler-turistico-bcn/pagina-13.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Two scatter plots by neighbourhood, number of HUTB flats against revenue per flat: with the calendar proxy the cloud is scattered (rank correlation 0.16); with the review model it lines up (0.48) and the Eixample engine, the rising niches and the calendar traps separate."></a>
+            <figcaption><b>The metric created the inconsistency, not the market.</b> With the review model, the correlation between number of flats and revenue per flat rises from 0.16 to 0.48.</figcaption>
+          </figure>
+
+          <div class="callout reveal">
+            <p class="callout__tag">Triangulation</p>
+            <h3>A private host with a single flat earns more per unit than a large portfolio.</h3>
+            <p>A private host with one flat earns $47,021 a year; a portfolio of more than 20 flats, $31,077 (34% less per unit). The nightly price is flat ($285–298); what falls is occupancy, reviews and the superhost badge (from 55% to 15%).</p>
+          </div>
+
+          <h3>By district</h3>
+          <p>Eixample holds 3,073 of the 6,520 flats (47%) and the highest revenue per flat ($41,600). Ciutat Vella earns less than assumed ($31,116). Les Corts is where the calendar deviates most ($41,073 vs $26,460).</p>
+        </section>
+
+        <section id="limitaciones" aria-labelledby="limitaciones-t">
+          <p class="eyebrow">Limitations</p>
+          <h2 id="limitaciones-t">What this analysis does not answer.</h2>
+          <ol class="numbered">
+            <li>It is gross revenue, not profit.</li>
+            <li>The review model caps occupancy at 70% of the year: it underestimates the best performers.</li>
+            <li>It is a snapshot from June 2026, not a time series.</li>
+            <li>Averages for small neighbourhoods remain fragile (Sarrià and la Verneda: 6 flats).</li>
+            <li>It is market intelligence: it does not replace a portfolio's internal data.</li>
+          </ol>
+        </section>
+
+        <section id="uso" aria-labelledby="uso-t">
+          <p class="eyebrow">How to use it</p>
+          <h2 id="uso-t">Three decisions, each with its stopping rule.</h2>
+          <ol class="numbered">
+            <li><strong>Focus retention on the Eixample corridor</strong> (2,379 flats).<span class="stop">if the block's revenue per flat falls below $40,000 in the next snapshot, revisit the thesis.</span></li>
+            <li><strong>Test the niches before prices rise</strong> (Diagonal Mar, el Camp de l'Arpa).<span class="stop">do not commit capital in neighbourhoods with fewer than 50 flats without confirming with your own data.</span></li>
+            <li><strong>Drop the neighbourhoods that only looked profitable from the plan.</strong><span class="stop">bring them back only if your own booking history contradicts the review signal.</span></li>
+          </ol>
+        </section>
+
+        <section id="conclusion" aria-labelledby="conclusion-t">
+          <div class="conclusion reveal">
+            <p class="eyebrow" id="conclusion-t">Conclusion</p>
+            <blockquote>The map of the business changes when you change how you measure it.</blockquote>
+            <p>The $242M of the legal HUTB market is the same with either metric; what changes is which neighbourhood it is attributed to.</p>
+            <p><strong>Why it is reliable:</strong> two estimates with different sources of error match in aggregate, and the disagreements fall where they were expected: in neighbourhoods with few flats.</p>
+          </div>
+          <figure class="figure reveal">
+            <a href="../../assets/img/proyectos/alquiler-turistico-bcn/pagina-19.webp"><img src="../../assets/img/proyectos/alquiler-turistico-bcn/pagina-19.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Conclusion slide: “The map of the business changes when you change how you measure it”."></a>
+            <figcaption><b>The report's conclusion.</b></figcaption>
+          </figure>
+        </section>
+      </article>
+    </div>
+
+    <div class="container">
+      <nav class="case-nav" aria-label="Other projects">
+        <a href="ilusion-descuento.html"><small>← Previous</small><span>The discount illusion</span></a>
+        <a href="posicionamiento-moda.html"><small>Next →</small><span>Price positioning in fashion</span></a>
+      </nav>
+    </div>
+
+    <section class="section section--tight" style="padding-top: var(--section)" aria-labelledby="contacto-titulo">
+      <div class="container">
+        <div class="cta reveal">
+          <p class="eyebrow">Contact</p>
+          <h2 id="contacto-titulo">I want to learn with your team and earn my place in it.</h2>
+          <p>I am looking for an internship from February 2027 to learn with real data and contribute from day one.</p>
+          <div class="cta__actions">
+            <a class="btn btn--light" href="mailto:javibenitez039@gmail.com">javibenitez039@gmail.com</a>
+            <a class="btn btn--light" href="tel:+34625790541">+34 625 79 05 41</a>
+            <a class="btn btn--light" href="../../assets/docs/CV_Javier_Benitez_Escobedo.pdf" download>Download CV</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__top">
+        <nav class="footer__nav" aria-label="Footer">
+          <ul>
+            <li><a href="../index.html#sobre-mi">About</a></li>
+            <li><a href="../index.html#proyectos">Projects</a></li>
+            <li><a href="../index.html#trayectoria">Background</a></li>
+            <li><a href="../../assets/docs/CV_Javier_Benitez_Escobedo.pdf" download>CV</a></li>
+          </ul>
+        </nav>
+        <div class="footer__contact">
+          <p class="label">Get in touch</p>
+          <a href="mailto:javibenitez039@gmail.com">javibenitez039@gmail.com</a>
+          <a href="tel:+34625790541">+34 625 79 05 41</a>
+        </div>
+        <ul class="footer__social">
+          <li><a class="link-arrow" href="https://www.linkedin.com/in/javierbenitezescobedo" rel="me noopener" target="_blank">LinkedIn <span class="arrow" aria-hidden="true">↗</span></a></li>
+          <li><a class="link-arrow" href="https://github.com/degallo" rel="me noopener" target="_blank">GitHub <span class="arrow" aria-hidden="true">↗</span></a></li>
+        </ul>
+      </div>
+      <div class="footer__bottom">
+        <span>© <span data-year>2026</span> Javier Benítez Escobedo · Granada, Spain</span>
+        <span>Project sources: INE, MITECO, Inside Airbnb and online catalogues.</span>
+      </div>
+    </div>
+    <p class="footer__name" aria-hidden="true">Javier Benítez</p>
+  </footer>
+
+  <script src="../../js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Do Spain's big fashion chains really compete on price? · Case study · Javier Benítez Escobedo</title>
+  <meta name="description" content="Price positioning of 16 fashion chains in Spain based on their online catalogues: where each one sits and who it overlaps with. 1,697 items analysed.">
+  <link rel="canonical" href="https://degallo.github.io/en/proyectos/posicionamiento-moda.html">
+  <link rel="alternate" hreflang="es" href="https://degallo.github.io/proyectos/posicionamiento-moda.html">
+  <link rel="alternate" hreflang="en" href="https://degallo.github.io/en/proyectos/posicionamiento-moda.html">
+  <meta name="theme-color" content="#EBEBE8">
+  <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:site_name" content="Javier Benítez Escobedo">
+  <meta property="og:title" content="Do Spain's big fashion chains really compete on price? · Case study">
+  <meta property="og:description" content="Price positioning of 16 fashion chains in Spain based on their online catalogues: where each one sits and who it overlaps with. 1,697 items analysed.">
+  <meta property="og:url" content="https://degallo.github.io/en/proyectos/posicionamiento-moda.html">
+  <meta property="og:image" content="https://degallo.github.io/assets/img/proyectos/posicionamiento-moda/pagina-01.webp">
+  <meta property="og:image:width" content="1600">
+  <meta property="og:image:height" content="900">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="../../css/styles.css?v=9">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+      <a class="brand" href="../index.html">Javier Benítez<span class="brand__2"> Escobedo</span></a>
+      <nav class="nav" id="nav" aria-label="Main">
+        <ul>
+          <li><a href="../index.html#sobre-mi">About</a></li>
+          <li><a href="../index.html#proyectos" aria-current="true">Projects</a></li>
+          <li><a href="../index.html#trayectoria">Background</a></li>
+          <li><a href="../index.html#contacto">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header__end">
+        <a class="lang" href="../../proyectos/posicionamiento-moda.html" hreflang="es" lang="es" aria-label="Versión en español">ES</a>
+        <a class="btn btn--sm nav__cv" href="../../assets/docs/CV_Javier_Benitez_Escobedo.pdf" download><span class="nav__cv-long">Download&nbsp;</span>CV</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="container case-hero" aria-labelledby="titulo">
+      <a class="back" href="../index.html#proyectos"><span aria-hidden="true">←</span> All projects</a>
+      <p><span class="pill">Pricing · Fashion · Online catalogues</span></p>
+      <h1 id="titulo">Do Spain's big fashion chains really compete on price?</h1>
+      <p class="case-hero__sub">Price positioning of 16 chains based on their online catalogues.</p>
+      <figure class="case-cover">
+        <img src="../../assets/img/proyectos/posicionamiento-moda/pagina-01.webp" width="1600" height="900" fetchpriority="high"
+             alt="Report cover (in Spanish): price ladder of the median basic jeans by brand, from Primark (€18.00) to Cortefiel (€59.99), with Inditex brands in blue and Tendam brands in orange.">
+        <figcaption class="case-cover__note">Report pages are shown in their original Spanish.</figcaption>
+      </figure>
+    </section>
+
+    <div class="container case-layout">
+      <aside class="ficha" aria-labelledby="ficha-titulo">
+        <h2 id="ficha-titulo">Project sheet</h2>
+        <dl>
+          <div><dt>Date</dt><dd>October 2026 · data collected on 10/10/2026</dd></div>
+          <div><dt>Sources</dt><dd>Each brand's online catalogue in Spain (women's section), 10/10/2026. Full price and sale price.</dd></div>
+          <div><dt>Tools</dt><dd>SQL (SQLite: 7 scripts, from table creation to overlap) · Python (merging the raw catalogues) · quartiles with NTILE(4)</dd></div>
+          <div><dt>Volume</dt><dd>1,697 items from 16 chains → 890 basic garments (873 in the metrics)</dd></div>
+        </dl>
+        <div class="ficha__actions">
+          <a class="btn" href="../../assets/docs/posicionamiento-precio-moda.pdf" download hreflang="es">Download PDF report (ES) · 18 pp.</a>
+        </div>
+        <nav class="ficha__toc" aria-label="On this page" data-spy>
+          <ol>
+            <li><a href="#pregunta">The question</a></li>
+            <li><a href="#que-se-compara">What is compared</a></li>
+            <li><a href="#embudo">The funnel</a></li>
+            <li><a href="#hallazgos">Findings</a></li>
+            <li><a href="#tramos">How to position a brand</a></li>
+            <li><a href="#limitaciones">Limitations</a></li>
+            <li><a href="#conclusion">Conclusion</a></li>
+          </ol>
+        </nav>
+      </aside>
+
+      <article class="case-body">
+        <section id="cifras" aria-label="Key figures">
+          <div class="kpis">
+            <div class="kpi reveal"><p class="kpi__num">×2</p><p class="kpi__label">each step on Inditex's ladder costs roughly twice as much (×1.7 to ×2.0). Tendam repeats the pattern one rung higher.</p></div>
+            <div class="kpi reveal" style="--d:.06s"><p class="kpi__num">97%</p><p class="kpi__label">price overlap between Lefties and Primark in jeans: the clash at the low end.</p></div>
+            <div class="kpi reveal"><p class="kpi__num">78%</p><p class="kpi__label">between Mango and Zara in jeans: the mid-market is a three-way clash with H&amp;M (87% with Zara).</p></div>
+            <div class="kpi reveal" style="--d:.06s"><p class="kpi__num">16</p><p class="kpi__label">chains compared using 1,697 items from their online catalogues.</p></div>
+          </div>
+        </section>
+
+        <section id="pregunta" aria-labelledby="pregunta-t">
+          <p class="eyebrow">The question</p>
+          <h2 id="pregunta-t">Where does each major chain sit on price, and who does it overlap with?</h2>
+          <p class="lead">Does Inditex stagger its brands without them stepping on each other, and where do they clash with their rivals?</p>
+          <p><strong>Who it is for:</strong> a marketing team or an agency that has to set a brand's entry price and decide who to benchmark against.</p>
+          <figure class="figure reveal">
+            <a href="../../assets/img/proyectos/posicionamiento-moda/pagina-02.webp"><img src="../../assets/img/proyectos/posicionamiento-moda/pagina-02.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Summary page with three figures: ×2 between Inditex steps, 97% overlap between Lefties and Primark in jeans and 78% between Mango and Zara."></a>
+            <figcaption><b>The summary:</b> Inditex and Tendam stagger their brands; the price clashes are at the low end and in the mid-market.</figcaption>
+          </figure>
+        </section>
+
+        <section id="que-se-compara" aria-labelledby="compara-t">
+          <p class="eyebrow">What is compared</p>
+          <h2 id="compara-t">Two basic garments, the same criteria for every brand.</h2>
+          <ul>
+            <li>Long-sleeved T-shirt and full-length jeans, women's section. Each item counts once (colour variants are not new rows).</li>
+            <li><strong>Basic garment:</strong> plain or ribbed T-shirt, no print; jeans of any cut, without rips, studs or prints.</li>
+            <li>Metrics on full catalogue price; brands with 5 or more items per garment.</li>
+            <li><strong>Brands:</strong> Inditex (Lefties, Zara, Massimo Dutti) · Tendam (Springfield, Cortefiel, Pedro del Hierro; Women'secret excluded) · Mango · H&amp;M · Primark · Spanish premium brands (Desigual, Adolfo Domínguez, Bimba y Lola, Scalpers, El Ganso, Silbon).</li>
+          </ul>
+        </section>
+
+        <section id="embudo" aria-labelledby="embudo-t">
+          <p class="eyebrow">The funnel</p>
+          <h2 id="embudo-t">From 1,697 items to 873 comparable garments.</h2>
+          <ol class="funnel">
+            <li><div class="funnel__bar"><span style="--w:100%"></span><b>1,697</b></div><div class="funnel__txt"><span>Items from the 16 chains</span><span>T-shirts and jeans, women's section</span></div></li>
+            <li><div class="funnel__bar"><span style="--w:52.4%; --d:.1s"></span><b>890</b></div><div class="funnel__txt"><span>Basic garments</span><span>no prints, rips or studs</span></div></li>
+            <li><div class="funnel__bar"><span style="--w:51.4%; --d:.2s"></span><b>873</b></div><div class="funnel__txt"><span>In the metrics</span><span>brands with 5 or more items per garment</span></div></li>
+          </ol>
+        </section>
+
+        <section id="hallazgos" aria-labelledby="hallazgos-t">
+          <p class="eyebrow">Findings</p>
+          <h2 id="hallazgos-t">Ladders within each group, clashes between groups.</h2>
+
+          <div class="table-wrap reveal" tabindex="0" role="region" aria-label="Median price of basic jeans">
+            <table>
+              <caption>Median price of basic jeans</caption>
+              <thead><tr><th scope="col">Brand</th><th scope="col" class="num">Median</th></tr></thead>
+              <tbody>
+                <tr><td>Primark</td><td class="num">€18.00</td></tr>
+                <tr><td>Lefties</td><td class="num">€19.99</td></tr>
+                <tr><td>Mango</td><td class="num">€29.99</td></tr>
+                <tr><td>H&amp;M</td><td class="num">€34.99</td></tr>
+                <tr><td>Zara</td><td class="num">€35.95</td></tr>
+                <tr><td>Springfield</td><td class="num">€35.99</td></tr>
+                <tr><td>Massimo Dutti</td><td class="num">€59.95</td></tr>
+                <tr><td>Cortefiel</td><td class="num">€59.99</td></tr>
+                <tr><td>… up to Adolfo Domínguez</td><td class="num">€130.00</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <figure class="figure reveal">
+            <a href="../../assets/img/proyectos/posicionamiento-moda/pagina-04.webp"><img src="../../assets/img/proyectos/posicionamiento-moda/pagina-04.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Price range by chain for long-sleeved T-shirts and jeans, on a logarithmic scale: median jeans go from €18.00 at Primark to €130.00 at Adolfo Domínguez."></a>
+            <figcaption><b>Each chain occupies its own band.</b> Price range by brand for T-shirts and jeans.</figcaption>
+          </figure>
+
+          <div class="groups">
+            <div class="group reveal">
+              <p class="group__tag">Inditex's ladder</p>
+              <h3>Lefties → Zara → Massimo Dutti, almost double at each rung.</h3>
+              <p>Lefties → Zara ×2.0 for T-shirts (15.95/7.99) and ×1.8 for jeans (35.95/19.99); Zara → Massimo Dutti ×1.9 and ×1.7. Tendam: Springfield → Cortefiel ×1.7; Cortefiel → Pedro del Hierro ×2.0.</p>
+            </div>
+            <div class="group reveal">
+              <p class="group__tag">The mirage of the mean</p>
+              <h3>H&amp;M surrounds Zara in T-shirts and clashes head-on in jeans.</h3>
+              <p>H&amp;M looks more expensive than Zara by the mean (jeans €36.38 vs €34.41) but not by the median (€34.99 vs €35.95): its expensive tail pushes the mean up.</p>
+            </div>
+            <div class="group reveal">
+              <p class="group__tag">Same at full price, apart on sale</p>
+              <h3>Cortefiel matches Massimo Dutti.</h3>
+              <p>At full catalogue price, a 91% overlap in jeans; with the sale price they separate (56%).</p>
+            </div>
+          </div>
+
+          <figure class="figure reveal">
+            <a href="../../assets/img/proyectos/posicionamiento-moda/pagina-06.webp"><img src="../../assets/img/proyectos/posicionamiento-moda/pagina-06.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Bars showing price overlap between pairs of brands, for T-shirts (€5 bands) and jeans (€10 bands). In black, the head-on clashes; the largest, Lefties–Primark in jeans at 97%."></a>
+            <figcaption><b>Five head-on price clashes</b>, and at the low end there is still only one: Lefties–Primark.</figcaption>
+          </figure>
+
+          <ul>
+            <li><strong>Above €60, two levels:</strong> Scalpers around €60–80; Desigual, Pedro del Hierro and Adolfo Domínguez at €90–135. Control anchor: 0% overlap between this band and Primark or Lefties (the method separates well).</li>
+            <li><strong>Price psychology:</strong> in 10 of 20 brand–garment combinations, 3 price points or fewer cover the whole basics catalogue. The .95 ending belongs to Zara and Massimo Dutti; .99 to H&amp;M, Lefties, Mango, Cortefiel and Springfield.</li>
+            <li><strong>The gap:</strong> between Zara and Massimo Dutti (T-shirts €17.95–29.95, jeans €39.95–49.95) lies the least occupied zone.</li>
+          </ul>
+
+          <div class="callout reveal">
+            <p class="callout__tag">Robustness</p>
+            <h3>A clash only counts if it holds when the band width changes and with the sale price.</h3>
+            <p>4 of the 11 overlaps above 50% dropped by 20 points or more. When 11 brands were added to the original analysis, five conclusions held and two changed (“only two clashes” → five; “Massimo Dutti on its own” → Cortefiel matches it).</p>
+          </div>
+        </section>
+
+        <section id="tramos" aria-labelledby="tramos-t">
+          <p class="eyebrow">How to use it</p>
+          <h2 id="tramos-t">To position a brand: first the price band, then who to benchmark against.</h2>
+          <ol class="numbered">
+            <li><strong>Low end:</strong> jeans €18.00–19.99, T-shirt €7.00–7.99 → benchmark Lefties and Primark.</li>
+            <li><strong>Mid-market:</strong> jeans €29.99–35.95, T-shirt €14.99–15.95 → compare with Zara, H&amp;M and Mango at the same time.</li>
+            <li><strong>Upper mid-market:</strong> jeans €59.95, T-shirt €29.95 → Massimo Dutti and Cortefiel (check their sale prices).</li>
+            <li><strong>Zone to investigate:</strong> T-shirt €17.95–29.95, jeans €39.95–49.95 → validate demand before deciding.</li>
+          </ol>
+          <figure class="figure reveal">
+            <a href="../../assets/img/proyectos/posicionamiento-moda/pagina-13.webp"><img src="../../assets/img/proyectos/posicionamiento-moda/pagina-13.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Four cards with the price bands for positioning a brand: low end, mid-market, upper mid-market and zone to investigate, each with its jeans and T-shirt prices and the benchmark brands."></a>
+            <figcaption><b>The four price bands</b>, with the brands to benchmark against in each.</figcaption>
+          </figure>
+        </section>
+
+        <section id="limitaciones" aria-labelledby="limitaciones-t">
+          <p class="eyebrow">Limitations</p>
+          <h2 id="limitaciones-t">What this analysis does not answer.</h2>
+          <ol class="numbered">
+            <li>It is positioning, not strategy.</li>
+            <li>It is a single-day snapshot: Springfield had 90% of items on sale and Cortefiel 41%.</li>
+            <li>Samples for the premium brands are small.</li>
+            <li>Basics are classified by keywords.</li>
+            <li>Shein is excluded (anti-bot protection), as is Women'secret (no jeans).</li>
+            <li>Quartiles are approximated with NTILE(4).</li>
+          </ol>
+        </section>
+
+        <section id="conclusion" aria-labelledby="conclusion-t">
+          <div class="conclusion reveal">
+            <p class="eyebrow" id="conclusion-t">Conclusion</p>
+            <blockquote>A price map for deciding where to enter and who to measure yourself against.</blockquote>
+            <p>A map of the catalogue prices of 16 chains, checked with two metrics, two band widths and the sale price, showing which band each one sits in and who it shares prices with.</p>
+            <p><strong>It does not measure sales or demand:</strong> it is the starting point for asking about them.</p>
+          </div>
+          <figure class="figure reveal">
+            <a href="../../assets/img/proyectos/posicionamiento-moda/pagina-16.webp"><img src="../../assets/img/proyectos/posicionamiento-moda/pagina-16.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Conclusion page setting out what a fashion brand and what an agency could do with this price map."></a>
+            <figcaption><b>The report's conclusion:</b> what a brand could do and what an agency could do.</figcaption>
+          </figure>
+        </section>
+      </article>
+    </div>
+
+    <div class="container">
+      <nav class="case-nav" aria-label="Other projects">
+        <a href="alquiler-turistico-barcelona.html"><small>← Previous</small><span>Legal holiday rentals in Barcelona</span></a>
+        <a href="hueco-comercial.html"><small>Next →</small><span>The retail gap</span></a>
+      </nav>
+    </div>
+
+    <section class="section section--tight" style="padding-top: var(--section)" aria-labelledby="contacto-titulo">
+      <div class="container">
+        <div class="cta reveal">
+          <p class="eyebrow">Contact</p>
+          <h2 id="contacto-titulo">I want to learn with your team and earn my place in it.</h2>
+          <p>I am looking for an internship from February 2027 to learn with real data and contribute from day one.</p>
+          <div class="cta__actions">
+            <a class="btn btn--light" href="mailto:javibenitez039@gmail.com">javibenitez039@gmail.com</a>
+            <a class="btn btn--light" href="tel:+34625790541">+34 625 79 05 41</a>
+            <a class="btn btn--light" href="../../assets/docs/CV_Javier_Benitez_Escobedo.pdf" download>Download CV</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__top">
+        <nav class="footer__nav" aria-label="Footer">
+          <ul>
+            <li><a href="../index.html#sobre-mi">About</a></li>
+            <li><a href="../index.html#proyectos">Projects</a></li>
+            <li><a href="../index.html#trayectoria">Background</a></li>
+            <li><a href="../../assets/docs/CV_Javier_Benitez_Escobedo.pdf" download>CV</a></li>
+          </ul>
+        </nav>
+        <div class="footer__contact">
+          <p class="label">Get in touch</p>
+          <a href="mailto:javibenitez039@gmail.com">javibenitez039@gmail.com</a>
+          <a href="tel:+34625790541">+34 625 79 05 41</a>
+        </div>
+        <ul class="footer__social">
+          <li><a class="link-arrow" href="https://www.linkedin.com/in/javierbenitezescobedo" rel="me noopener" target="_blank">LinkedIn <span class="arrow" aria-hidden="true">↗</span></a></li>
+          <li><a class="link-arrow" href="https://github.com/degallo" rel="me noopener" target="_blank">GitHub <span class="arrow" aria-hidden="true">↗</span></a></li>
+        </ul>
+      </div>
+      <div class="footer__bottom">
+        <span>© <span data-year>2026</span> Javier Benítez Escobedo · Granada, Spain</span>
+        <span>Project sources: INE, MITECO, Inside Airbnb and online catalogues.</span>
+      </div>
+    </div>
+    <p class="footer__name" aria-hidden="true">Javier Benítez</p>
+  </footer>
+
+  <script src="../../js/main.js" defer></script>
+</body>
+</html>
