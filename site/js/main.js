@@ -6,10 +6,16 @@
 (function () {
   'use strict';
 
-  // Textos de la interfaz agrupados aquí para una futura versión en inglés.
+  // Señal para el <script> del <head>: si main.js no llegara a ejecutarse, allí se
+  // retira la clase .js y todo el contenido queda visible sin animaciones.
+  window.__jbReady = true;
+
+  // Textos de la interfaz, en los dos idiomas.
   var UI = {
-    es: { menu: 'Menú', close: 'Cerrar' },
-    en: { menu: 'Menu', close: 'Close' }
+    es: { menu: 'Menú', close: 'Cerrar', viewer: 'Gráfico ampliado', full: 'Abrir a tamaño completo',
+          copy: 'Copiar email', copied: 'Email copiado', copyFail: 'Cópialo a mano:' },
+    en: { menu: 'Menu', close: 'Close', viewer: 'Enlarged chart', full: 'Open full size',
+          copy: 'Copy email', copied: 'Email copied', copyFail: 'Copy it manually:' }
   };
   var lang = (document.documentElement.lang || 'es').slice(0, 2);
   var t = UI[lang] || UI.es;
@@ -81,6 +87,79 @@
   // ---- Año del pie ----
   var year = document.querySelector('[data-year]');
   if (year) year.textContent = new Date().getFullYear();
+
+  // ---- Visor de gráficos (casos de estudio) ----
+  // Sin JS, el enlace abre la imagen grande como siempre. Con JS, se abre encima de
+  // la página en un <dialog>: Esc o clic fuera para cerrar, y el foco vuelve al gráfico.
+  var figLinks = document.querySelectorAll('.figure a[href$=".webp"]');
+  if (figLinks.length && typeof HTMLDialogElement === 'function') {
+    var dlg, lbImg, lbCap, lbOpen, lastLink = null;
+    // El visor se construye la primera vez que se abre (así no hay nada vacío en la página)
+    var buildViewer = function () {
+      dlg = document.createElement('dialog');
+      dlg.className = 'lightbox';
+      dlg.setAttribute('aria-label', t.viewer);
+      dlg.innerHTML =
+        '<div class="lightbox__bar">' +
+          '<a class="btn btn--sm lightbox__open" target="_blank" rel="noopener"></a>' +
+          '<button type="button" class="btn btn--sm lightbox__close" autofocus></button>' +   // al abrir, el foco va a «Cerrar»
+        '</div>' +
+        '<figure class="lightbox__fig"><img alt=""><figcaption class="lightbox__cap"></figcaption></figure>';
+      document.body.appendChild(dlg);
+      lbImg = dlg.querySelector('img');
+      lbCap = dlg.querySelector('figcaption');
+      lbOpen = dlg.querySelector('.lightbox__open');
+      var lbClose = dlg.querySelector('.lightbox__close');
+      lbOpen.textContent = t.full;
+      lbClose.textContent = t.close;
+      lbClose.addEventListener('click', function () { dlg.close(); });
+      dlg.addEventListener('click', function (e) {
+        if (e.target === dlg || e.target.classList.contains('lightbox__fig')) dlg.close();
+      });
+      dlg.addEventListener('close', function () {
+        lbImg.removeAttribute('src');
+        if (lastLink) lastLink.focus();
+      });
+    };
+    Array.prototype.forEach.call(figLinks, function (a) {
+      a.addEventListener('click', function (e) {
+        if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return; // abrir en pestaña nueva sigue funcionando
+        e.preventDefault();
+        if (!dlg) buildViewer();
+        lastLink = a;
+        var thumb = a.querySelector('img');
+        var fc = a.closest('figure') && a.closest('figure').querySelector('figcaption');
+        lbImg.src = a.href;
+        lbImg.alt = thumb ? thumb.alt : '';
+        lbCap.innerHTML = fc ? fc.innerHTML : '';
+        lbOpen.href = a.href;
+        dlg.showModal();
+      });
+    });
+  }
+
+  // ---- Copiar el email (bloque de contacto) ----
+  var mail = document.querySelector('.cta__actions a[href^="mailto:"]');
+  if (mail && navigator.clipboard && window.isSecureContext) {
+    var address = mail.getAttribute('href').replace('mailto:', '');
+    var row = document.createElement('div');
+    row.className = 'copy-email-row';
+    row.innerHTML = '<button type="button" class="copy-email"></button><span class="copy-email__status" role="status" aria-live="polite"></span>';
+    var copyBtn = row.querySelector('button');
+    var copyStatus = row.querySelector('span');
+    copyBtn.textContent = t.copy;
+    mail.parentNode.insertAdjacentElement('afterend', row);
+    var copyTimer;
+    copyBtn.addEventListener('click', function () {
+      navigator.clipboard.writeText(address).then(function () {
+        copyStatus.textContent = t.copied;
+      }, function () {
+        copyStatus.textContent = t.copyFail + ' ' + address;
+      });
+      clearTimeout(copyTimer);
+      copyTimer = setTimeout(function () { copyStatus.textContent = ''; }, 3000);
+    });
+  }
 
   if (!('IntersectionObserver' in window)) {
     document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('is-in'); });
