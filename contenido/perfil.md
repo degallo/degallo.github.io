@@ -63,7 +63,7 @@ Modelos con los que trabaja: ChatGPT y Claude.
 - Integración de IA con herramientas MCP.
 - Desarrollo asistido por IA (Claude Code).
 - Verificación de resultados: contraste de las respuestas de la IA con fuentes y datos reales para detectar errores y alucinaciones.
-- Uso responsable de la IA: criterio en privacidad y protección de datos (RGPD) al trabajar con información sensible.
+- Uso responsable de la IA: criterio en privacidad y protección de datos (RGPD).
 
 Movilidad: carnet de conducir y vehículo propio (publicado en la web).
 
