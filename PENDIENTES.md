@@ -47,7 +47,7 @@ que deje en la web.
       decisión de Javi: de momento la web muestra solo la duración, sin marcador.
 - [x] Reescribir la frase del perfil — aprobada y publicada en "Sobre mí".
 - [x] **Versión en inglés:** portada y las 4 páginas de caso en `site/en/` (selector ES/EN en cada página, hreflang en ambos idiomas). **Falta:** informes PDF y CV en inglés (los botones indican "(ES)"). En inglés no se muestran los marcadores de dashboard ni de repositorio pendientes; siguen en la versión en castellano.
-- [x] Uso de IA: decidido no mencionarlo en la web.
+- [x] Uso de IA: desde el 6-nov-2026 hay un apartado «Habilidades con IA» en Sobre mí (decisión de Javi; sustituye a la anterior de no mencionarlo).
 
 ## Marcadores pendientes (desde nov. 2026, ocultos como comentario HTML; ya no se ven en la web)
 
@@ -62,7 +62,7 @@ Notas de la primera versión:
 - `la-ilusion-del-descuento` sí se enlaza (ya aparece en el CV), aunque sigue sin README.
 - En el embudo de moda, el paso 890 → 873 se ha etiquetado con el criterio "marcas con 5 modelos
   o más por prenda", que es el que figura en el `.md` para las métricas. Comprobar que es el motivo.
-- Uso de IA: decidido **no** mencionarlo en la web.
+- [x] Uso de IA: desde el 6-nov-2026 hay un apartado «Habilidades con IA» en Sobre mí (decisión de Javi; sustituye a la anterior de no mencionarlo).
 - Foto del hero: recorte en B/N `javier-benitez-recorte-700/900/1200.webp`. `javier-benitez-1000.webp`
   se usa en los datos estructurados de la portada. `foto-perfil.webp` se conserva pero ya no se usa.
 
@@ -118,3 +118,5 @@ Están como comentario HTML en su página; al tener el dato, descomentar y relle
 - [ ] Enlaces públicos de Looker Studio: hueco comercial, ilusión del descuento y alquiler turístico (bloque "Dashboard interactivo").
 - [ ] Repositorio público con el SQL del alquiler turístico en Barcelona (fila "Código" de la ficha).
 - [ ] Repositorio limpio y con README del posicionamiento de moda (fila "Código" de la ficha).
+
+- [ ] **CV:** añadir también el apartado «Habilidades con IA» (ya está en la web).

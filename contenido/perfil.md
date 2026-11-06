@@ -54,6 +54,17 @@ una empresa, BI en equipo) y propónsela a Javi.
 
 Idiomas: **Español** (nativo) · **Inglés** (profesional)
 
+## Habilidades con IA (añadido por Javi, 6-nov-2026; publicado en «Sobre mí»)
+
+Modelos con los que trabaja: ChatGPT y Claude.
+
+- Ingeniería de prompts.
+- Optimización de contexto y tokens.
+- Integración de IA con herramientas MCP.
+- Desarrollo asistido por IA (Claude Code).
+- Verificación de resultados: contraste de las respuestas de la IA con fuentes y datos reales para detectar errores y alucinaciones.
+- Uso responsable de la IA: criterio en privacidad y protección de datos (RGPD) al trabajar con información sensible.
+
 Movilidad: carnet de conducir y vehículo propio (publicado en la web).
 
 Competencias que se ven en los proyectos (útiles para "Cómo trabajo"):

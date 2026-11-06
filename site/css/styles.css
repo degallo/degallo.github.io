@@ -978,3 +978,30 @@ a[href^="tel:"] { white-space: nowrap; }
   h2, h3 { break-after: avoid; }
   a[href^="http"]:not(.btn)::after { content: " (" attr(href) ")"; font-size: 8pt; color: #555; }
 }
+
+/* ==========================================================================
+   Sobre mí · Habilidades con IA (con los modelos con los que trabaja)
+   ========================================================================== */
+.ai-skills { margin-top: clamp(48px, 6vw, 88px); padding-top: 18px; border-top: 1px solid var(--ink); }
+.ai-skills__head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 14px 24px; margin-bottom: 18px; }
+.ai-skills__title { font-size: var(--fs-h3); letter-spacing: -0.025em; }
+.ai-skills__models { display: flex; gap: 10px; list-style: none; margin: 0; padding: 0; }
+.ai-skills__models li {
+  display: inline-flex; align-items: center; gap: .55em;
+  padding: .4em .95em .4em .5em; border-radius: 999px;
+  border: 0.6px solid color-mix(in srgb, var(--ink) 72%, transparent);
+  font-family: var(--font-display); font-size: var(--fs-small); font-weight: 500;
+}
+.ai-skills__models img { width: 22px; height: 22px; }
+.ai-skills__list {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: clamp(32px, 6vw, 96px);
+}
+.ai-skills__list li {
+  position: relative; padding: 12px 0 12px 22px; border-top: 1px solid var(--line);
+  color: var(--ink-2); line-height: 1.55;
+}
+.ai-skills__list li::before { content: ""; position: absolute; left: 2px; top: 1.3em; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+@media (max-width: 760px) {
+  .ai-skills__list { grid-template-columns: minmax(0, 1fr); }
+}
