@@ -54,6 +54,15 @@ una empresa, BI en equipo) y propónsela a Javi.
 
 Idiomas: **Español** (nativo) · **Inglés** (profesional)
 
+## Habilidades personales (en el CV desde 11-nov-2026; propuestas a partir de la experiencia y los proyectos, Javi debe confirmarlas)
+
+- Gestión de equipos: seis años dirigiendo el equipo del negocio familiar.
+- Trato con clientes y proveedores.
+- Comunicación clara de resultados, pensada para quien decide.
+- Pensamiento crítico: desconfiar del dato llamativo y comprobarlo.
+- Iniciativa y autonomía: proyectos de análisis por cuenta propia.
+- Adaptación a entornos internacionales (Breslavia, Polonia).
+
 ## Habilidades con IA (añadido por Javi, 6-nov-2026; publicado en «Sobre mí»)
 
 Modelos con los que trabaja: ChatGPT y Claude.

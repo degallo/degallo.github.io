@@ -18,7 +18,7 @@
 
   /* Columna lateral */
   aside { background: var(--ink); color: #EDE8DD; display: flex; flex-direction: column; }
-  .photo { width: 100%; height: 55mm; object-fit: cover; object-position: 50% 18%; display: block; }
+  .photo { width: 100%; height: 72mm; object-fit: cover; object-position: 50% 18%; display: block; }
   .side { padding: 5mm 7mm 6mm; display: flex; flex-direction: column; gap: 4.2mm; }
   .side h2 { font-size: 7.6pt; letter-spacing: .22em; text-transform: uppercase; font-weight: 600; margin: 0 0 2.4mm; padding-bottom: 1.6mm; border-bottom: 1.4px solid var(--accent); color: #fff; }
   .contact div { margin-bottom: 1.4mm; }
@@ -36,7 +36,7 @@
   .langs .extra { padding-top: 1.2mm; color: #DAD4C8; text-align: left; }
 
   /* Columna principal */
-  main { background: var(--cream); padding: 13mm 12mm 10mm 11mm; display: flex; flex-direction: column; gap: 5.4mm; }
+  main { background: var(--cream); padding: 11mm 12mm 8mm 11mm; display: flex; flex-direction: column; gap: 4.4mm; }
   h1 { font-size: 25pt; line-height: 1.02; letter-spacing: .06em; text-transform: uppercase; font-weight: 600; margin: 0; }
   .role { margin: 2.4mm 0 0; font-size: 8pt; letter-spacing: .24em; text-transform: uppercase; color: var(--grey); }
   .avail { margin-top: 3mm; display: inline-block; font-size: 8pt; font-weight: 600; color: var(--accent); }
@@ -44,7 +44,7 @@
   main h2::before { content: ""; width: 7mm; height: 1.4px; background: var(--accent); }
   main h2::after { content: ""; flex: 1; height: .6px; background: var(--line); }
   p { margin: 0 0 1.6mm; text-align: justify; hyphens: auto; }
-  .item { display: grid; grid-template-columns: 17mm 1fr; gap: 3mm; margin-bottom: 3mm; }
+  .item { display: grid; grid-template-columns: 17mm 1fr; gap: 3mm; margin-bottom: 2.4mm; }
   .item:last-child { margin-bottom: 0; }
   .when { font-size: 7.2pt; color: var(--grey); font-weight: 600; text-align: right; line-height: 1.35; padding-top: .6mm; }
   .item h3 { margin: 0; font-size: 9pt; letter-spacing: .04em; text-transform: uppercase; font-weight: 600; }
@@ -58,6 +58,13 @@
   .method li::before { content: ""; position: absolute; left: 0; top: 1.5mm; width: 1.4mm; height: 1.4mm; border-radius: 50%; background: var(--accent); }
   .link { font-size: 8pt; margin-top: 1.6mm; }
   .link a { color: var(--accent); font-weight: 600; text-decoration: none; }
+  .inline { color: var(--accent); font-weight: 600; text-decoration: none; }
+  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 6mm; }
+  .cols h3 { margin: 0 0 1.8mm; font-size: 8.6pt; letter-spacing: .04em; text-transform: uppercase; font-weight: 600; }
+  .cols .models { text-transform: none; letter-spacing: 0; font-weight: 500; color: var(--accent); font-size: 7.6pt; margin-left: 1.5mm; }
+  .dots { list-style: none; margin: 0; padding: 0; }
+  .dots li { position: relative; padding-left: 3.4mm; margin-bottom: 1mm; line-height: 1.35; font-size: 8.2pt; }
+  .dots li::before { content: ""; position: absolute; left: 0; top: 1.4mm; width: 1.4mm; height: 1.4mm; border-radius: 50%; background: var(--accent); }
 </style>
 </head>
 <body>
@@ -87,18 +94,6 @@
         </ul>
       </section>
 
-      <section class="ai">
-        <h2>Habilidades con IA</h2>
-        <p class="models">ChatGPT · Claude</p>
-        <ul>
-          <li>Ingeniería de prompts.</li>
-          <li>Optimización de contexto y tokens.</li>
-          <li>Integración de IA con herramientas MCP.</li>
-          <li>Desarrollo asistido por IA (Claude Code).</li>
-          <li>Verificación de resultados: contraste de las respuestas de la IA con fuentes y datos reales para detectar errores y alucinaciones.</li>
-          <li>Uso responsable de la IA: criterio en privacidad y protección de datos (RGPD).</li>
-        </ul>
-      </section>
 
       <section class="langs">
         <h2>Idiomas y otros</h2>
@@ -127,21 +122,8 @@
       <div class="item">
         <div class="when">ago.–oct.<br>2026</div>
         <div>
-          <h3>Cuatro casos de estudio con datos públicos reales</h3>
-          <p class="org">Proyectos propios · INE, MITECO, Inside Airbnb y catálogos online</p>
-          <p>Comercio local en Granada y Málaga, tarjetas de descuento en gasolineras, alquiler turístico legal en Barcelona y posicionamiento de precio de las cadenas de moda. Cada uno parte de una pregunta de negocio y termina en una recomendación con sus limitaciones.</p>
-          <div class="figures">
-            <div><b>277</b><span>municipios medidos uno a uno</span></div>
-            <div><b>11.237</b><span>gasolineras analizadas</span></div>
-            <div><b>15.293</b><span>anuncios depurados</span></div>
-            <div><b>1.697</b><span>modelos de ropa comparados</span></div>
-          </div>
-          <ul class="method">
-            <li>Métricas propias con lo que señalan y lo que no.</li>
-            <li>Embudos de filtrado con el motivo de cada descarte.</li>
-            <li>Hallazgos confirmados con métricas o fuentes independientes.</li>
-          </ul>
-          <p class="link">Casos completos, informes y código: <a href="https://degallo.github.io/#proyectos">degallo.github.io</a></p>
+          <h3>Cuatro proyectos propios con datos públicos</h3>
+          <p>Comercio local, gasolineras, alquiler turístico y precios de moda, con datos del INE, el MITECO, Inside Airbnb y catálogos online. Detalle en <a class="inline" href="https://degallo.github.io/#proyectos">degallo.github.io</a>.</p>
         </div>
       </div>
     </section>
@@ -180,6 +162,33 @@
         <div>
           <h3>Técnico Superior en Marketing y Publicidad</h3>
           <p class="org">IES Ángel Ganivet</p>
+        </div>
+      </div>
+    </section>
+    <section>
+      <h2>Habilidades</h2>
+      <div class="cols">
+        <div>
+          <h3>Con IA <span class="models">ChatGPT · Claude</span></h3>
+          <ul class="dots">
+            <li>Ingeniería de prompts.</li>
+            <li>Optimización de contexto y tokens.</li>
+            <li>Integración de IA con herramientas MCP.</li>
+            <li>Desarrollo asistido por IA (Claude Code).</li>
+            <li>Verificación de resultados: contraste de las respuestas de la IA con fuentes y datos reales para detectar errores y alucinaciones.</li>
+            <li>Uso responsable de la IA: criterio en privacidad y protección de datos (RGPD).</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Personales</h3>
+          <ul class="dots">
+            <li>Gestión de equipos: seis años dirigiendo el equipo del negocio familiar.</li>
+            <li>Trato con clientes y proveedores.</li>
+            <li>Comunicación clara de resultados, pensada para quien decide.</li>
+            <li>Pensamiento crítico: desconfiar del dato llamativo y comprobarlo.</li>
+            <li>Iniciativa y autonomía: proyectos de análisis por cuenta propia.</li>
+            <li>Adaptación a entornos internacionales (Breslavia, Polonia).</li>
+          </ul>
         </div>
       </div>
     </section>
