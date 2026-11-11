@@ -2,197 +2,138 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
-<title>CV · Javier Benítez Escobedo</title>
-<!-- Fuente del CV. Para generar el PDF: ábrelo en Chrome (con el servidor local:
-     python3 -m http.server 8000  →  http://localhost:8000/cv/cv.html), Ctrl+P → Guardar como PDF,
-     Márgenes: Ninguno y «Gráficos de fondo» activado. -->
+<title>CV Javier Benítez Escobedo · Análisis de datos e investigación de mercados</title>
+<meta name="author" content="Javier Benítez Escobedo">
+<!-- CV optimizado para sistemas ATS (lectores automáticos de candidaturas).
+     Reglas que se cumplen y conviene mantener al editarlo:
+     - Una sola columna, en orden de lectura: nombre → contacto → secciones.
+     - Títulos de sección convencionales (Perfil, Experiencia, Formación, Habilidades, Idiomas).
+     - Sin letras espaciadas en mayúsculas (el ATS lee «P E R F I L») ni palabras partidas con guion.
+     - Todo es texto real: nada importante dentro de imágenes o iconos; la foto es decorativa.
+     - Enlaces escritos completos (linkedin.com/in/…), fechas en formato mm/aaaa.
+     Para generar el PDF: python3 -m http.server 8000 → http://localhost:8000/cv/cv.html en Chrome,
+     Ctrl+P → Guardar como PDF, Márgenes: Ninguno, «Gráficos de fondo» activado. -->
 <style>
   @font-face { font-family: "Montserrat"; src: url("../site/assets/fonts/montserrat-latin.woff2") format("woff2"); font-weight: 400 600; }
   @font-face { font-family: "Montserrat"; src: url("../site/assets/fonts/montserrat-latin-ext-l.woff2") format("woff2"); font-weight: 400 600; unicode-range: U+0141-0142; }
   @page { size: A4; margin: 0; }
-  :root { --ink:#191918; --cream:#F6F1E6; --accent:#A4472B; --soft:#E08A68; --grey:#5E5850; --line:#D9D1C1; }
+  :root { --ink:#191918; --cream:#F6F1E6; --accent:#A4472B; --grey:#5E5850; --line:#D9D1C1; --blue:#3C5A78; }
   * { box-sizing: border-box; }
   html, body { margin: 0; }
-  body { font-family: "Montserrat", Arial, sans-serif; color: var(--ink); font-size: 8.6pt; line-height: 1.45; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-  .page { width: 210mm; height: 297mm; display: grid; grid-template-columns: 66mm 1fr; overflow: hidden; }
+  body { font-family: "Montserrat", Arial, sans-serif; color: var(--ink); font-size: 8.7pt; line-height: 1.38;
+         font-variant-ligatures: none; hyphens: manual; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .page { width: 210mm; height: 297mm; background: var(--cream); padding: 10mm 14mm 8mm; overflow: hidden; }
+  a { color: inherit; text-decoration: none; }
 
-  /* Columna lateral */
-  aside { background: var(--ink); color: #EDE8DD; display: flex; flex-direction: column; }
-  .photo { width: 100%; height: 72mm; object-fit: cover; object-position: 50% 18%; display: block; }
-  .side { padding: 5mm 7mm 6mm; display: flex; flex-direction: column; gap: 4.2mm; }
-  .side h2 { font-size: 7.6pt; letter-spacing: .22em; text-transform: uppercase; font-weight: 600; margin: 0 0 2.4mm; padding-bottom: 1.6mm; border-bottom: 1.4px solid var(--accent); color: #fff; }
-  .contact div { margin-bottom: 1.4mm; }
-  .contact .k { display: block; font-size: 6.4pt; letter-spacing: .18em; text-transform: uppercase; color: var(--soft); font-weight: 600; }
-  .contact a, .contact span.v { color: #EDE8DD; text-decoration: none; font-size: 8pt; word-break: break-word; }
-  .skills ul, .ai ul { list-style: none; margin: 0; padding: 0; }
-  .skills li { padding: 1mm 0; border-bottom: 0.5px dashed #4a4844; }
-  .skills li b { font-weight: 600; color: #fff; }
-  .skills li span { color: #B8B1A4; }
-  .ai .models { color: var(--soft); font-size: 7.4pt; margin: 0 0 1.6mm; }
-  .ai li { position: relative; padding: 0 0 1.4mm 3.2mm; color: #DAD4C8; font-size: 7.8pt; line-height: 1.4; }
-  .ai li::before { content: ""; position: absolute; left: 0; top: 1.35mm; width: 1.3mm; height: 1.3mm; border-radius: 50%; background: var(--accent); }
-  .langs div { display: flex; justify-content: space-between; padding: .9mm 0; }
-  .langs span:last-child { color: #9DB0C3; font-size: 7.6pt; font-weight: 600; }
-  .langs .extra { padding-top: 1.2mm; color: #DAD4C8; text-align: left; }
+  /* Cabecera */
+  header { display: grid; grid-template-columns: 1fr 28mm; gap: 7mm; align-items: start; padding-bottom: 3mm; border-bottom: 1.5px solid var(--ink); }
+  h1 { margin: 0; font-size: 22pt; line-height: 1.05; font-weight: 600; letter-spacing: 0; }
+  .title { margin: 1.6mm 0 0; font-size: 10pt; font-weight: 500; color: var(--grey); }
+  .avail { margin: 1.6mm 0 0; font-size: 9pt; font-weight: 600; color: var(--accent); }
+  .contact { margin: 2.6mm 0 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 1mm 4.5mm; font-size: 8.6pt; }
+  .contact li { white-space: nowrap; }
+  .contact b { font-weight: 600; }
+  .portfolio { margin-top: 3mm; display: inline-block; padding: 1.8mm 3.4mm; border-radius: 1.6mm; background: var(--ink); color: #F6F1E6; font-size: 8.6pt; }
+  .portfolio b { color: #E08A68; font-weight: 600; font-size: 10pt; }
+  .photo { width: 28mm; height: 33mm; object-fit: cover; object-position: 50% 18%; border-radius: 1.6mm; display: block; }
 
-  /* Columna principal */
-  main { background: var(--cream); padding: 10mm 12mm 7mm 11mm; display: flex; flex-direction: column; gap: 4mm; }
-  h1 { font-size: 25pt; line-height: 1.02; letter-spacing: .06em; text-transform: uppercase; font-weight: 600; margin: 0; }
-  .role { margin: 2.4mm 0 0; font-size: 8pt; letter-spacing: .24em; text-transform: uppercase; color: var(--grey); }
-  .avail { margin-top: 3mm; display: inline-block; font-size: 8pt; font-weight: 600; color: var(--accent); }
-  main h2 { display: flex; align-items: center; gap: 3mm; font-size: 9.2pt; letter-spacing: .24em; text-transform: uppercase; font-weight: 600; margin: 0 0 2.2mm; }
-  main h2::before { content: ""; width: 7mm; height: 1.4px; background: var(--accent); }
-  main h2::after { content: ""; flex: 1; height: .6px; background: var(--line); }
-  p { margin: 0 0 1.6mm; text-align: justify; hyphens: auto; }
-  .item { display: grid; grid-template-columns: 17mm 1fr; gap: 3mm; margin-bottom: 2.4mm; }
-  .item:last-child { margin-bottom: 0; }
-  .when { font-size: 7.2pt; color: var(--grey); font-weight: 600; text-align: right; line-height: 1.35; padding-top: .6mm; }
-  .item h3 { margin: 0; font-size: 9pt; letter-spacing: .04em; text-transform: uppercase; font-weight: 600; }
-  .org { margin: .4mm 0 1mm; font-style: italic; color: #3C5A78; font-size: 8pt; }
-  .figures { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2.4mm; margin: 2.2mm 0 2.4mm; }
-  .figures div { border-top: 1.2px solid var(--ink); padding-top: 1.4mm; }
-  .figures b { display: block; font-size: 12.5pt; font-weight: 500; letter-spacing: -.02em; }
-  .figures span { font-size: 6.9pt; color: var(--grey); line-height: 1.3; display: block; }
-  .method { margin: 0; padding: 0; list-style: none; }
-  .method li { position: relative; padding-left: 3.4mm; margin-bottom: 1.1mm; }
-  .method li::before { content: ""; position: absolute; left: 0; top: 1.5mm; width: 1.4mm; height: 1.4mm; border-radius: 50%; background: var(--accent); }
-  .link { font-size: 8pt; margin-top: 1.6mm; }
-  .link a { color: var(--accent); font-weight: 600; text-decoration: none; }
-  .inline { color: var(--accent); font-weight: 600; text-decoration: none; }
-  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 6mm; }
-  .cols h3 { margin: 0 0 1.8mm; font-size: 8.6pt; letter-spacing: .04em; text-transform: uppercase; font-weight: 600; }
-  .cols .models { text-transform: none; letter-spacing: 0; font-weight: 500; color: var(--accent); font-size: 7.6pt; margin-left: 1.5mm; }
-  .dots { list-style: none; margin: 0; padding: 0; }
-  .dots li { position: relative; padding-left: 3.4mm; margin-bottom: .8mm; line-height: 1.32; font-size: 8pt; }
-  .dots li::before { content: ""; position: absolute; left: 0; top: 1.4mm; width: 1.4mm; height: 1.4mm; border-radius: 50%; background: var(--accent); }
-  .portfolio { margin-top: 3.4mm; display: flex; justify-content: space-between; align-items: center; gap: 4mm;
-    padding: 2.4mm 4mm; border-radius: 2mm; background: var(--ink); color: #F6F1E6; text-decoration: none; }
-  .portfolio span { font-size: 7.8pt; letter-spacing: .02em; }
-  .portfolio b { font-size: 11pt; font-weight: 600; color: var(--soft); letter-spacing: .01em; white-space: nowrap; }
-  .avail { display: block !important; }
-  .ai-block .dots { columns: 2; column-gap: 6mm; }
-  .ai-block .dots li { font-size: 8.4pt; margin-bottom: 1.4mm; }
-  .ai-models { margin: 0 0 2.2mm; font-size: 8pt; color: var(--grey); }
-  .ai-models b { color: var(--accent); font-weight: 600; }
-  .ai-block .dots li { break-inside: avoid; }
+  /* Secciones */
+  section { margin-top: 4.6mm; }
+  h2 { margin: 0 0 1.5mm; padding-bottom: .8mm; font-size: 10.5pt; font-weight: 600; color: var(--accent); border-bottom: .6px solid var(--line); letter-spacing: 0; }
+  p { margin: 0 0 1.4mm; text-align: left; }
+  .job { margin-bottom: 1.8mm; }
+  .job:last-child { margin-bottom: 0; }
+  .job h3 { margin: 0; font-size: 9.6pt; font-weight: 600; }
+  .meta { margin: .3mm 0 .8mm; color: var(--blue); font-size: 8.6pt; }
+  ul.list { margin: 0; padding-left: 4.2mm; }
+  ul.list li { margin-bottom: .3mm; }
+  ul.list li::marker { color: var(--accent); }
+  .skills p { margin-bottom: 1.1mm; }
+  .skills b { font-weight: 600; }
 </style>
 </head>
 <body>
 <div class="page">
-  <aside>
-    <img class="photo" src="../site/assets/img/javier-benitez-1000.webp" alt="Javier Benítez Escobedo">
-    <div class="side">
-      <section class="contact">
-        <h2>Contacto</h2>
-        <div><span class="k">Email</span><a href="mailto:javibenitez039@gmail.com">javibenitez039@gmail.com</a></div>
-        <div><span class="k">Teléfono</span><a href="tel:+34625790541">625 79 05 41</a></div>
-        <div><span class="k">Portfolio</span><a href="https://degallo.github.io/">degallo.github.io</a></div>
-        <div><span class="k">LinkedIn</span><a href="https://www.linkedin.com/in/javierbenitezescobedo">in/javierbenitezescobedo</a></div>
-        <div><span class="k">GitHub</span><a href="https://github.com/degallo">github.com/degallo</a></div>
-        <div><span class="k">Ubicación</span><span class="v">Granada</span></div>
-      </section>
-
-      <section class="skills">
-        <h2>Herramientas</h2>
-        <ul>
-          <li><b>SQL</b> <span>· SQLite, DB Browser</span></li>
-          <li><b>Looker Studio</b> <span>· cuadros de mando</span></li>
-          <li><b>Datos abiertos</b> <span>· limpieza y modelado de INE y MITECO</span></li>
-          <li><b>Excel / Google Sheets</b></li>
-          <li><b>Python y pandas</b> <span>· en aprendizaje</span></li>
-          <li><b>Git / GitHub</b></li>
-        </ul>
-      </section>
-
-
-      <section class="langs">
-        <h2>Idiomas y otros</h2>
-        <div><span>Español</span><span>nativo</span></div>
-        <div><span>Inglés</span><span>profesional</span></div>
-        <p class="extra">Carnet de conducir y vehículo propio</p>
-      </section>
+  <header>
+    <div>
+      <h1>Javier Benítez Escobedo</h1>
+      <p class="title">Análisis de datos · Investigación de mercados</p>
+      <p class="avail">Disponible para prácticas curriculares a partir de febrero de 2027 (Ícaro, UGR)</p>
+      <ul class="contact">
+        <li><b>Email:</b> <a href="mailto:javibenitez039@gmail.com">javibenitez039@gmail.com</a></li>
+        <li><b>Teléfono:</b> <a href="tel:+34625790541">+34 625 79 05 41</a></li>
+        <li><b>Ubicación:</b> Granada, España</li>
+        <li><b>LinkedIn:</b> <a href="https://www.linkedin.com/in/javierbenitezescobedo">linkedin.com/in/javierbenitezescobedo</a></li>
+        <li><b>GitHub:</b> <a href="https://github.com/degallo">github.com/degallo</a></li>
+      </ul>
+      <a class="portfolio" href="https://degallo.github.io/">Portfolio con casos de estudio, informes y código: <b>https://degallo.github.io</b></a>
     </div>
-  </aside>
+    <img class="photo" src="../site/assets/img/javier-benitez-1000.webp" alt="Foto de Javier Benítez Escobedo">
+  </header>
 
-  <main>
-    <header>
-      <h1>Javier Benítez<br>Escobedo</h1>
-      <p class="role">Investigación de mercados · Análisis de datos</p>
-      <span class="avail">Disponible para prácticas a partir de febrero de 2027 (Ícaro, UGR)</span>
-      <a class="portfolio" href="https://degallo.github.io/"><span>Portfolio con casos de estudio, informes y código</span><b>degallo.github.io&nbsp;→</b></a>
-    </header>
+  <section>
+    <h2>Perfil</h2>
+    <p>Estudiante del Grado en Marketing e Investigación de Mercados (UGR), especializándome en análisis de datos aplicado a negocio. Construyo por iniciativa propia proyectos de análisis con fuentes públicas españolas (INE, MITECO): limpieza y modelado en SQL, dashboards en Looker Studio, y conclusiones accionables para una decisión real.</p>
+    <p>En las prácticas quiero trabajar con datos internos de una empresa, pasar de SQL a Python/pandas en un caso real y aprender cómo se usa un cuadro de mando en un equipo.</p>
+  </section>
 
-    <section>
-      <h2>Perfil</h2>
-      <p>Estudiante del Grado en Marketing e Investigación de Mercados (UGR), especializándome en análisis de datos aplicado a negocio. Construyo por iniciativa propia proyectos de análisis con fuentes públicas españolas (INE, MITECO): limpieza y modelado en SQL, dashboards en Looker Studio, y conclusiones accionables para una decisión real.</p>
-      <p>En las prácticas quiero trabajar con datos internos de una empresa, pasar de SQL a Python/pandas en un caso real y aprender cómo se usa un cuadro de mando en un equipo.</p>
-    </section>
+  <section>
+    <h2>Proyectos</h2>
+    <div class="job">
+      <h3>Proyectos de análisis de datos (por cuenta propia)</h3>
+      <p class="meta">08/2026 – 10/2026 · Detalle en https://degallo.github.io</p>
+      <p>Cuatro proyectos con datos públicos del INE, el MITECO, Inside Airbnb y catálogos online: comercio local, gasolineras, alquiler turístico y precios de moda.</p>
+    </div>
+  </section>
 
-    <section>
-      <h2>Proyectos de datos</h2>
-      <div class="item">
-        <div class="when">ago.–oct.<br>2026</div>
-        <div>
-          <h3>Cuatro proyectos propios con datos públicos</h3>
-          <p>Comercio local, gasolineras, alquiler turístico y precios de moda, con datos del INE, el MITECO, Inside Airbnb y catálogos online. Detalle en <a class="inline" href="https://degallo.github.io/#proyectos">degallo.github.io</a>.</p>
-        </div>
-      </div>
-    </section>
+  <section>
+    <h2>Experiencia</h2>
+    <div class="job">
+      <h3>Gestión del negocio</h3>
+      <p class="meta">Cafetería Bar El Gallo · Alhama de Granada · 6 años, actualidad</p>
+      <p>Dirección integral del negocio familiar: gestión de equipo, control de costes y proveedores, y atención al cliente.</p>
+    </div>
+    <div class="job">
+      <h3>Digital Marketing Manager</h3>
+      <p class="meta">MODE Foundation · Breslavia (Wrocław), Polonia · 04/2023 – 06/2023</p>
+      <p>Gestión de campañas de marketing en redes sociales y seguimiento de KPIs en distintos mercados europeos.</p>
+    </div>
+  </section>
 
-    <section>
-      <h2>Experiencia</h2>
-      <div class="item">
-        <div class="when">6 años<br>actualidad</div>
-        <div>
-          <h3>Gestión del negocio</h3>
-          <p class="org">Cafetería Bar El Gallo · Alhama de Granada</p>
-          <p>Dirección integral del negocio familiar: gestión de equipo, control de costes y proveedores, y atención al cliente.</p>
-        </div>
-      </div>
-      <div class="item">
-        <div class="when">abr.–jun.<br>2023</div>
-        <div>
-          <h3>Digital Marketing Manager</h3>
-          <p class="org">MODE Foundation · Breslavia (Wrocław), Polonia</p>
-          <p>Gestión de campañas de marketing en redes sociales y seguimiento de KPIs en distintos mercados europeos.</p>
-        </div>
-      </div>
-    </section>
+  <section>
+    <h2>Formación</h2>
+    <div class="job">
+      <h3>Grado en Marketing e Investigación de Mercados</h3>
+      <p class="meta">Universidad de Granada (UGR) · 4 años · En curso (último curso)</p>
+    </div>
+    <div class="job">
+      <h3>Técnico Superior en Marketing y Publicidad</h3>
+      <p class="meta">IES Ángel Ganivet · 2 años</p>
+    </div>
+  </section>
 
-    <section>
-      <h2>Formación</h2>
-      <div class="item">
-        <div class="when">En curso<br>último curso</div>
-        <div>
-          <h3>Grado en Marketing e Investigación de Mercados</h3>
-          <p class="org">Universidad de Granada (UGR) · 4 años</p>
-        </div>
-      </div>
-      <div class="item">
-        <div class="when">2 años</div>
-        <div>
-          <h3>Técnico Superior en Marketing y Publicidad</h3>
-          <p class="org">IES Ángel Ganivet</p>
-        </div>
-      </div>
-    </section>
-    <section>
-      <h2>Habilidades con IA</h2>
-      <div class="ai-block">
-        <div>
-          <p class="ai-models">Modelos con los que trabajo: <b>ChatGPT · Claude</b></p>
-          <ul class="dots">
-            <li>Ingeniería de prompts.</li>
-            <li>Optimización de contexto y tokens.</li>
-            <li>Integración de IA con herramientas MCP.</li>
-            <li>Desarrollo asistido por IA (Claude Code).</li>
-            <li>Verificación de resultados: contraste de las respuestas de la IA con fuentes y datos reales para detectar errores y alucinaciones.</li>
-            <li>Uso responsable de la IA: criterio en privacidad y protección de datos (RGPD).</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-  </main>
+  <section class="skills">
+    <h2>Habilidades técnicas</h2>
+    <p><b>SQL</b> (SQLite, DB Browser) · <b>Looker Studio</b> (cuadros de mando) · <b>Datos abiertos</b> (limpieza y modelado de INE y MITECO) · <b>Excel / Google Sheets</b> · <b>Python y pandas</b> (en aprendizaje) · <b>Git / GitHub</b></p>
+  </section>
+
+  <section>
+    <h2>Habilidades con IA</h2>
+    <p>Modelos con los que trabajo: ChatGPT y Claude.</p>
+    <ul class="list">
+      <li>Ingeniería de prompts.</li>
+      <li>Optimización de contexto y tokens.</li>
+      <li>Integración de IA con herramientas MCP.</li>
+      <li>Desarrollo asistido por IA (Claude Code).</li>
+      <li>Verificación de resultados: contraste de las respuestas de la IA con fuentes y datos reales para detectar errores y alucinaciones.</li>
+      <li>Uso responsable de la IA: criterio en privacidad y protección de datos (RGPD).</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Idiomas y otros datos</h2>
+    <p>Español (nativo) · Inglés (profesional) · Carnet de conducir y vehículo propio</p>
+  </section>
 </div>
 </body>
 </html>
