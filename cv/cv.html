@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>CV · Javier Benítez Escobedo</title>
+<!-- Fuente del CV. Para generar el PDF: ábrelo en Chrome (con el servidor local:
+     python3 -m http.server 8000  →  http://localhost:8000/cv/cv.html), Ctrl+P → Guardar como PDF,
+     Márgenes: Ninguno y «Gráficos de fondo» activado. -->
+<style>
+  @font-face { font-family: "Montserrat"; src: url("../site/assets/fonts/montserrat-latin.woff2") format("woff2"); font-weight: 400 600; }
+  @font-face { font-family: "Montserrat"; src: url("../site/assets/fonts/montserrat-latin-ext-l.woff2") format("woff2"); font-weight: 400 600; unicode-range: U+0141-0142; }
+  @page { size: A4; margin: 0; }
+  :root { --ink:#191918; --cream:#F6F1E6; --accent:#A4472B; --soft:#E08A68; --grey:#5E5850; --line:#D9D1C1; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body { font-family: "Montserrat", Arial, sans-serif; color: var(--ink); font-size: 8.6pt; line-height: 1.45; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .page { width: 210mm; height: 297mm; display: grid; grid-template-columns: 66mm 1fr; overflow: hidden; }
+
+  /* Columna lateral */
+  aside { background: var(--ink); color: #EDE8DD; display: flex; flex-direction: column; }
+  .photo { width: 100%; height: 55mm; object-fit: cover; object-position: 50% 18%; display: block; }
+  .side { padding: 5mm 7mm 6mm; display: flex; flex-direction: column; gap: 4.2mm; }
+  .side h2 { font-size: 7.6pt; letter-spacing: .22em; text-transform: uppercase; font-weight: 600; margin: 0 0 2.4mm; padding-bottom: 1.6mm; border-bottom: 1.4px solid var(--accent); color: #fff; }
+  .contact div { margin-bottom: 1.4mm; }
+  .contact .k { display: block; font-size: 6.4pt; letter-spacing: .18em; text-transform: uppercase; color: var(--soft); font-weight: 600; }
+  .contact a, .contact span.v { color: #EDE8DD; text-decoration: none; font-size: 8pt; word-break: break-word; }
+  .skills ul, .ai ul { list-style: none; margin: 0; padding: 0; }
+  .skills li { padding: 1mm 0; border-bottom: 0.5px dashed #4a4844; }
+  .skills li b { font-weight: 600; color: #fff; }
+  .skills li span { color: #B8B1A4; }
+  .ai .models { color: var(--soft); font-size: 7.4pt; margin: 0 0 1.6mm; }
+  .ai li { position: relative; padding: 0 0 1.4mm 3.2mm; color: #DAD4C8; font-size: 7.8pt; line-height: 1.4; }
+  .ai li::before { content: ""; position: absolute; left: 0; top: 1.35mm; width: 1.3mm; height: 1.3mm; border-radius: 50%; background: var(--accent); }
+  .langs div { display: flex; justify-content: space-between; padding: .9mm 0; }
+  .langs span:last-child { color: #9DB0C3; font-size: 7.6pt; font-weight: 600; }
+  .langs .extra { padding-top: 1.2mm; color: #DAD4C8; text-align: left; }
+
+  /* Columna principal */
+  main { background: var(--cream); padding: 13mm 12mm 10mm 11mm; display: flex; flex-direction: column; gap: 5.4mm; }
+  h1 { font-size: 25pt; line-height: 1.02; letter-spacing: .06em; text-transform: uppercase; font-weight: 600; margin: 0; }
+  .role { margin: 2.4mm 0 0; font-size: 8pt; letter-spacing: .24em; text-transform: uppercase; color: var(--grey); }
+  .avail { margin-top: 3mm; display: inline-block; font-size: 8pt; font-weight: 600; color: var(--accent); }
+  main h2 { display: flex; align-items: center; gap: 3mm; font-size: 9.2pt; letter-spacing: .24em; text-transform: uppercase; font-weight: 600; margin: 0 0 2.6mm; }
+  main h2::before { content: ""; width: 7mm; height: 1.4px; background: var(--accent); }
+  main h2::after { content: ""; flex: 1; height: .6px; background: var(--line); }
+  p { margin: 0 0 1.6mm; text-align: justify; hyphens: auto; }
+  .item { display: grid; grid-template-columns: 17mm 1fr; gap: 3mm; margin-bottom: 3mm; }
+  .item:last-child { margin-bottom: 0; }
+  .when { font-size: 7.2pt; color: var(--grey); font-weight: 600; text-align: right; line-height: 1.35; padding-top: .6mm; }
+  .item h3 { margin: 0; font-size: 9pt; letter-spacing: .04em; text-transform: uppercase; font-weight: 600; }
+  .org { margin: .4mm 0 1mm; font-style: italic; color: #3C5A78; font-size: 8pt; }
+  .figures { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2.4mm; margin: 2.2mm 0 2.4mm; }
+  .figures div { border-top: 1.2px solid var(--ink); padding-top: 1.4mm; }
+  .figures b { display: block; font-size: 12.5pt; font-weight: 500; letter-spacing: -.02em; }
+  .figures span { font-size: 6.9pt; color: var(--grey); line-height: 1.3; display: block; }
+  .method { margin: 0; padding: 0; list-style: none; }
+  .method li { position: relative; padding-left: 3.4mm; margin-bottom: 1.1mm; }
+  .method li::before { content: ""; position: absolute; left: 0; top: 1.5mm; width: 1.4mm; height: 1.4mm; border-radius: 50%; background: var(--accent); }
+  .link { font-size: 8pt; margin-top: 1.6mm; }
+  .link a { color: var(--accent); font-weight: 600; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="page">
+  <aside>
+    <img class="photo" src="../site/assets/img/javier-benitez-1000.webp" alt="Javier Benítez Escobedo">
+    <div class="side">
+      <section class="contact">
+        <h2>Contacto</h2>
+        <div><span class="k">Email</span><a href="mailto:javibenitez039@gmail.com">javibenitez039@gmail.com</a></div>
+        <div><span class="k">Teléfono</span><a href="tel:+34625790541">625 79 05 41</a></div>
+        <div><span class="k">Portfolio</span><a href="https://degallo.github.io/">degallo.github.io</a></div>
+        <div><span class="k">LinkedIn</span><a href="https://www.linkedin.com/in/javierbenitezescobedo">in/javierbenitezescobedo</a></div>
+        <div><span class="k">GitHub</span><a href="https://github.com/degallo">github.com/degallo</a></div>
+        <div><span class="k">Ubicación</span><span class="v">Granada</span></div>
+      </section>
+
+      <section class="skills">
+        <h2>Herramientas</h2>
+        <ul>
+          <li><b>SQL</b> <span>· SQLite, DB Browser</span></li>
+          <li><b>Looker Studio</b> <span>· cuadros de mando</span></li>
+          <li><b>Datos abiertos</b> <span>· limpieza y modelado de INE y MITECO</span></li>
+          <li><b>Excel / Google Sheets</b></li>
+          <li><b>Python y pandas</b> <span>· en aprendizaje</span></li>
+          <li><b>Git / GitHub</b></li>
+        </ul>
+      </section>
+
+      <section class="ai">
+        <h2>Habilidades con IA</h2>
+        <p class="models">ChatGPT · Claude</p>
+        <ul>
+          <li>Ingeniería de prompts.</li>
+          <li>Optimización de contexto y tokens.</li>
+          <li>Integración de IA con herramientas MCP.</li>
+          <li>Desarrollo asistido por IA (Claude Code).</li>
+          <li>Verificación de resultados: contraste de las respuestas de la IA con fuentes y datos reales para detectar errores y alucinaciones.</li>
+          <li>Uso responsable de la IA: criterio en privacidad y protección de datos (RGPD).</li>
+        </ul>
+      </section>
+
+      <section class="langs">
+        <h2>Idiomas y otros</h2>
+        <div><span>Español</span><span>nativo</span></div>
+        <div><span>Inglés</span><span>profesional</span></div>
+        <p class="extra">Carnet de conducir y vehículo propio</p>
+      </section>
+    </div>
+  </aside>
+
+  <main>
+    <header>
+      <h1>Javier Benítez<br>Escobedo</h1>
+      <p class="role">Investigación de mercados · Análisis de datos</p>
+      <span class="avail">Disponible para prácticas a partir de febrero de 2027 (Ícaro, UGR)</span>
+    </header>
+
+    <section>
+      <h2>Perfil</h2>
+      <p>Estudiante del Grado en Marketing e Investigación de Mercados (UGR), especializándome en análisis de datos aplicado a negocio. Construyo por iniciativa propia proyectos de análisis con fuentes públicas españolas (INE, MITECO): limpieza y modelado en SQL, dashboards en Looker Studio, y conclusiones accionables para una decisión real.</p>
+      <p>En las prácticas quiero trabajar con datos internos de una empresa, pasar de SQL a Python/pandas en un caso real y aprender cómo se usa un cuadro de mando en un equipo.</p>
+    </section>
+
+    <section>
+      <h2>Proyectos de datos</h2>
+      <div class="item">
+        <div class="when">ago.–oct.<br>2026</div>
+        <div>
+          <h3>Cuatro casos de estudio con datos públicos reales</h3>
+          <p class="org">Proyectos propios · INE, MITECO, Inside Airbnb y catálogos online</p>
+          <p>Comercio local en Granada y Málaga, tarjetas de descuento en gasolineras, alquiler turístico legal en Barcelona y posicionamiento de precio de las cadenas de moda. Cada uno parte de una pregunta de negocio y termina en una recomendación con sus limitaciones.</p>
+          <div class="figures">
+            <div><b>277</b><span>municipios medidos uno a uno</span></div>
+            <div><b>11.237</b><span>gasolineras analizadas</span></div>
+            <div><b>15.293</b><span>anuncios depurados</span></div>
+            <div><b>1.697</b><span>modelos de ropa comparados</span></div>
+          </div>
+          <ul class="method">
+            <li>Métricas propias con lo que señalan y lo que no.</li>
+            <li>Embudos de filtrado con el motivo de cada descarte.</li>
+            <li>Hallazgos confirmados con métricas o fuentes independientes.</li>
+          </ul>
+          <p class="link">Casos completos, informes y código: <a href="https://degallo.github.io/#proyectos">degallo.github.io</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Experiencia</h2>
+      <div class="item">
+        <div class="when">6 años<br>actualidad</div>
+        <div>
+          <h3>Gestión del negocio</h3>
+          <p class="org">Cafetería Bar El Gallo · Alhama de Granada</p>
+          <p>Dirección integral del negocio familiar: gestión de equipo, control de costes y proveedores, y atención al cliente.</p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="when">abr.–jun.<br>2023</div>
+        <div>
+          <h3>Digital Marketing Manager</h3>
+          <p class="org">MODE Foundation · Breslavia (Wrocław), Polonia</p>
+          <p>Gestión de campañas de marketing en redes sociales y seguimiento de KPIs en distintos mercados europeos.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Formación</h2>
+      <div class="item">
+        <div class="when">En curso<br>último curso</div>
+        <div>
+          <h3>Grado en Marketing e Investigación de Mercados</h3>
+          <p class="org">Universidad de Granada (UGR) · 4 años</p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="when">2 años</div>
+        <div>
+          <h3>Técnico Superior en Marketing y Publicidad</h3>
+          <p class="org">IES Ángel Ganivet</p>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+</body>
+</html>
