@@ -36,11 +36,11 @@
   .langs .extra { padding-top: 1.2mm; color: #DAD4C8; text-align: left; }
 
   /* Columna principal */
-  main { background: var(--cream); padding: 11mm 12mm 8mm 11mm; display: flex; flex-direction: column; gap: 4.4mm; }
-  h1 { font-size: 25pt; line-height: 1.02; letter-spacing: .06em; text-transform: uppercase; font-weight: 600; margin: 0; }
+  main { background: var(--cream); padding: 10mm 12mm 7mm 11mm; display: flex; flex-direction: column; gap: 4mm; }
+  h1 { font-size: 22pt; line-height: 1.02; letter-spacing: .06em; text-transform: uppercase; font-weight: 600; margin: 0; }
   .role { margin: 2.4mm 0 0; font-size: 8pt; letter-spacing: .24em; text-transform: uppercase; color: var(--grey); }
   .avail { margin-top: 3mm; display: inline-block; font-size: 8pt; font-weight: 600; color: var(--accent); }
-  main h2 { display: flex; align-items: center; gap: 3mm; font-size: 9.2pt; letter-spacing: .24em; text-transform: uppercase; font-weight: 600; margin: 0 0 2.6mm; }
+  main h2 { display: flex; align-items: center; gap: 3mm; font-size: 9.2pt; letter-spacing: .24em; text-transform: uppercase; font-weight: 600; margin: 0 0 2.2mm; }
   main h2::before { content: ""; width: 7mm; height: 1.4px; background: var(--accent); }
   main h2::after { content: ""; flex: 1; height: .6px; background: var(--line); }
   p { margin: 0 0 1.6mm; text-align: justify; hyphens: auto; }
@@ -63,8 +63,13 @@
   .cols h3 { margin: 0 0 1.8mm; font-size: 8.6pt; letter-spacing: .04em; text-transform: uppercase; font-weight: 600; }
   .cols .models { text-transform: none; letter-spacing: 0; font-weight: 500; color: var(--accent); font-size: 7.6pt; margin-left: 1.5mm; }
   .dots { list-style: none; margin: 0; padding: 0; }
-  .dots li { position: relative; padding-left: 3.4mm; margin-bottom: 1mm; line-height: 1.35; font-size: 8.2pt; }
+  .dots li { position: relative; padding-left: 3.4mm; margin-bottom: .8mm; line-height: 1.32; font-size: 8pt; }
   .dots li::before { content: ""; position: absolute; left: 0; top: 1.4mm; width: 1.4mm; height: 1.4mm; border-radius: 50%; background: var(--accent); }
+  .portfolio { margin-top: 3.4mm; display: flex; justify-content: space-between; align-items: center; gap: 4mm;
+    padding: 2.4mm 4mm; border-radius: 2mm; background: var(--ink); color: #F6F1E6; text-decoration: none; }
+  .portfolio span { font-size: 7.8pt; letter-spacing: .02em; }
+  .portfolio b { font-size: 11pt; font-weight: 600; color: var(--soft); letter-spacing: .01em; white-space: nowrap; }
+  .avail { display: block !important; }
 </style>
 </head>
 <body>
@@ -109,6 +114,7 @@
       <h1>Javier Benítez<br>Escobedo</h1>
       <p class="role">Investigación de mercados · Análisis de datos</p>
       <span class="avail">Disponible para prácticas a partir de febrero de 2027 (Ícaro, UGR)</span>
+      <a class="portfolio" href="https://degallo.github.io/"><span>Portfolio con casos de estudio, informes y código</span><b>degallo.github.io&nbsp;→</b></a>
     </header>
 
     <section>
